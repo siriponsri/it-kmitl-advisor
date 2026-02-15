@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "fetched_at": "2026-02-15T15:57:05.442211",
+    "fetched_at": "2026-02-15T16:50:30.446394",
     "professor_count": 29,
     "total_papers": 520,
     "total_citations": 3639
@@ -177,7 +177,7 @@
       ],
       "document_count": 25,
       "citation_count": 70,
-      "fetched_at": "2026-02-15T15:55:29.876787"
+      "fetched_at": "2026-02-15T16:49:01.910640"
     },
     "6505772070": {
       "name": "Sooksan Panichpapiboon",
@@ -347,7 +347,7 @@
       ],
       "document_count": 25,
       "citation_count": 617,
-      "fetched_at": "2026-02-15T15:55:34.147271"
+      "fetched_at": "2026-02-15T16:49:05.699149"
     },
     "13204394500": {
       "name": "Kitsuchart Pasupa",
@@ -519,7 +519,7 @@
       ],
       "document_count": 25,
       "citation_count": 141,
-      "fetched_at": "2026-02-15T15:55:38.185501"
+      "fetched_at": "2026-02-15T16:49:09.828238"
     },
     "6603350272": {
       "name": "Nopporn Chotikakamthorn",
@@ -687,7 +687,7 @@
       ],
       "document_count": 25,
       "citation_count": 150,
-      "fetched_at": "2026-02-15T15:55:41.875528"
+      "fetched_at": "2026-02-15T16:49:12.860937"
     },
     "15754321600": {
       "name": "Worapoj Kreesuradej",
@@ -861,7 +861,7 @@
       ],
       "document_count": 25,
       "citation_count": 150,
-      "fetched_at": "2026-02-15T15:55:45.432959"
+      "fetched_at": "2026-02-15T16:49:16.024343"
     },
     "6602706754": {
       "name": "Chotipat Pornavalai",
@@ -1032,7 +1032,7 @@
       ],
       "document_count": 25,
       "citation_count": 276,
-      "fetched_at": "2026-02-15T15:55:49.279424"
+      "fetched_at": "2026-02-15T16:49:19.118708"
     },
     "6506825251": {
       "name": "Panwit Tuwanut",
@@ -1202,7 +1202,7 @@
       ],
       "document_count": 25,
       "citation_count": 224,
-      "fetched_at": "2026-02-15T15:55:53.362330"
+      "fetched_at": "2026-02-15T16:49:22.576506"
     },
     "25926696500": {
       "name": "Kuntpong Woraratpanya",
@@ -1374,7 +1374,7 @@
       ],
       "document_count": 25,
       "citation_count": 157,
-      "fetched_at": "2026-02-15T15:55:57.045411"
+      "fetched_at": "2026-02-15T16:49:25.630986"
     },
     "55967009300": {
       "name": "Akharin Khunkitti",
@@ -1442,7 +1442,7 @@
       ],
       "document_count": 8,
       "citation_count": 16,
-      "fetched_at": "2026-02-15T15:56:00.988858"
+      "fetched_at": "2026-02-15T16:49:28.483833"
     },
     "6506301016": {
       "name": "Pattarachai Lalitrojwong",
@@ -1531,7 +1531,7 @@
       ],
       "document_count": 12,
       "citation_count": 206,
-      "fetched_at": "2026-02-15T15:56:04.571221"
+      "fetched_at": "2026-02-15T16:49:31.379665"
     },
     "57196081489": {
       "name": "Pattanapong Chantamit O Pas",
@@ -1594,7 +1594,7 @@
       ],
       "document_count": 7,
       "citation_count": 87,
-      "fetched_at": "2026-02-15T15:56:08.403380"
+      "fetched_at": "2026-02-15T16:49:34.850805"
     },
     "35729106100": {
       "name": "Sumet Prabhavat",
@@ -1733,7 +1733,7 @@
       ],
       "document_count": 20,
       "citation_count": 249,
-      "fetched_at": "2026-02-15T15:56:12.014601"
+      "fetched_at": "2026-02-15T16:49:38.158827"
     },
     "54947306400": {
       "name": "Anuntapat Anuntachai",
@@ -1861,7 +1861,7 @@
       ],
       "document_count": 18,
       "citation_count": 45,
-      "fetched_at": "2026-02-15T15:56:15.468425"
+      "fetched_at": "2026-02-15T16:49:41.108645"
     },
     "55320442600": {
       "name": "Boonprasert Surakratanasakul",
@@ -1917,7 +1917,7 @@
       ],
       "document_count": 6,
       "citation_count": 29,
-      "fetched_at": "2026-02-15T15:56:18.252763"
+      "fetched_at": "2026-02-15T16:49:43.875389"
     },
     "55567253800": {
       "name": "Lapas Pradittasnee",
@@ -1988,7 +1988,7 @@
       ],
       "document_count": 9,
       "citation_count": 50,
-      "fetched_at": "2026-02-15T15:56:21.207637"
+      "fetched_at": "2026-02-15T16:49:46.760400"
     },
     "56413085800": {
       "name": "Supannada Chotipant",
@@ -2101,7 +2101,7 @@
       ],
       "document_count": 15,
       "citation_count": 75,
-      "fetched_at": "2026-02-15T15:56:24.136291"
+      "fetched_at": "2026-02-15T16:49:49.807118"
     },
     "11540032900": {
       "name": "Somkiat Wangsiripitak",
@@ -2270,7 +2270,7 @@
       ],
       "document_count": 25,
       "citation_count": 169,
-      "fetched_at": "2026-02-15T15:56:27.247903"
+      "fetched_at": "2026-02-15T16:49:53.049623"
     },
     "6504273725": {
       "name": "Supakit Nootyaskool",
@@ -2393,7 +2393,7 @@
       ],
       "document_count": 17,
       "citation_count": 34,
-      "fetched_at": "2026-02-15T15:56:30.121139"
+      "fetched_at": "2026-02-15T16:49:55.942452"
     },
     "25926548900": {
       "name": "Manop Phankokkruad",
@@ -2564,7 +2564,7 @@
       ],
       "document_count": 25,
       "citation_count": 108,
-      "fetched_at": "2026-02-15T15:56:33.132592"
+      "fetched_at": "2026-02-15T16:49:59.032300"
     },
     "23388644000": {
       "name": "Kanokwan Atchariyachanvanich",
@@ -2739,7 +2739,7 @@
       ],
       "document_count": 25,
       "citation_count": 156,
-      "fetched_at": "2026-02-15T15:56:36.569946"
+      "fetched_at": "2026-02-15T16:50:02.180571"
     },
     "25032277800": {
       "name": "Sirion Vittayakorn",
@@ -2896,7 +2896,7 @@
       ],
       "document_count": 23,
       "citation_count": 235,
-      "fetched_at": "2026-02-15T15:56:39.534625"
+      "fetched_at": "2026-02-15T16:50:05.401963"
     },
     "22835215900": {
       "name": "Pornsuree Jamsri",
@@ -3011,7 +3011,7 @@
       ],
       "document_count": 16,
       "citation_count": 50,
-      "fetched_at": "2026-02-15T15:56:43.009310"
+      "fetched_at": "2026-02-15T16:50:08.781708"
     },
     "25031594100": {
       "name": "Samart Moodleah",
@@ -3125,7 +3125,7 @@
       ],
       "document_count": 16,
       "citation_count": 68,
-      "fetched_at": "2026-02-15T15:56:46.721727"
+      "fetched_at": "2026-02-15T16:50:11.774474"
     },
     "56347582800": {
       "name": "Taravichet Titijaroonroj",
@@ -3297,7 +3297,7 @@
       ],
       "document_count": 25,
       "citation_count": 71,
-      "fetched_at": "2026-02-15T15:56:50.019505"
+      "fetched_at": "2026-02-15T16:50:14.767571"
     },
     "57211337605": {
       "name": "Praphan Pavarangkoon",
@@ -3470,7 +3470,7 @@
       ],
       "document_count": 25,
       "citation_count": 92,
-      "fetched_at": "2026-02-15T15:56:53.231159"
+      "fetched_at": "2026-02-15T16:50:18.058853"
     },
     "56205725200": {
       "name": "Nont Kanungsukkasem",
@@ -3558,7 +3558,7 @@
       ],
       "document_count": 11,
       "citation_count": 58,
-      "fetched_at": "2026-02-15T15:56:56.228311"
+      "fetched_at": "2026-02-15T16:50:21.244185"
     },
     "56875402500": {
       "name": "Warune Buavirat",
@@ -3587,7 +3587,7 @@
       ],
       "document_count": 2,
       "citation_count": 1,
-      "fetched_at": "2026-02-15T15:56:59.263319"
+      "fetched_at": "2026-02-15T16:50:24.113971"
     },
     "25930767300": {
       "name": "Supawan Tassanaprasert",
@@ -3639,7 +3639,7 @@
       ],
       "document_count": 6,
       "citation_count": 7,
-      "fetched_at": "2026-02-15T15:57:02.386084"
+      "fetched_at": "2026-02-15T16:50:26.894722"
     },
     "56671355400": {
       "name": "Panita Thusaranon",
@@ -3713,7 +3713,7 @@
       ],
       "document_count": 9,
       "citation_count": 48,
-      "fetched_at": "2026-02-15T15:57:05.440406"
+      "fetched_at": "2026-02-15T16:50:30.445684"
     }
   }
 }

@@ -142,7 +142,7 @@ class KnowledgeGraphBuilder:
     
     def build_professor_graph(self, professor_data: Dict) -> str:
         """
-        Build a complete graph for a professor with their topics and papers
+        Build a star schema graph: professor -> topics -> papers
         
         Args:
             professor_data: Dictionary containing professor's complete data
@@ -159,25 +159,48 @@ class KnowledgeGraphBuilder:
         # Add professor node (center)
         self.add_professor_node(prof_id, prof_name, prof_image)
         
-        # Add topics and connect to professor
-        topics = professor_data.get('topics', [])
-        for i, topic in enumerate(topics):
-            topic_id = f"topic_{prof_id}_{i}"
-            self.add_topic_node(topic_id, topic)
-            self.add_edge(prof_id, topic_id, "expertise", width=4, color=EDGE_COLORS['expertise'])
+        # Check if we have topic_groups for star schema
+        topic_groups = professor_data.get('topic_groups', {})
         
-        # Add papers and connect to professor
-        papers = professor_data.get('papers', [])
-        for i, paper in enumerate(papers):
-            paper_id = f"paper_{prof_id}_{i}"
-            self.add_paper_node(
-                paper_id,
-                paper.get('title', 'Untitled'),
-                paper.get('year', ''),
-                paper.get('citations', 0),
-                paper.get('doi', '')
-            )
-            self.add_edge(prof_id, paper_id, "authored", width=2, color=EDGE_COLORS['authored'])
+        if topic_groups:
+            # Star schema: professor -> topics -> papers
+            for topic, papers in topic_groups.items():
+                topic_id = f"topic_{prof_id}_{topic.replace(' ', '_')}"
+                
+                # Add topic node and connect to professor
+                self.add_topic_node(topic_id, topic)
+                self.add_edge(prof_id, topic_id, "expertise", width=4, color=EDGE_COLORS['expertise'])
+                
+                # Add papers for this topic and connect to topic
+                for i, paper in enumerate(papers):
+                    paper_id = f"paper_{prof_id}_{topic_id}_{i}"
+                    self.add_paper_node(
+                        paper_id,
+                        paper.get('title', 'Untitled'),
+                        paper.get('year', ''),
+                        paper.get('citations', 0),
+                        paper.get('doi', '')
+                    )
+                    self.add_edge(topic_id, paper_id, "contains", width=2, color=EDGE_COLORS['authored'])
+        else:
+            # Fallback: flat structure (professor -> papers)
+            topics = professor_data.get('topics', [])
+            for i, topic in enumerate(topics):
+                topic_id = f"topic_{prof_id}_{i}"
+                self.add_topic_node(topic_id, topic)
+                self.add_edge(prof_id, topic_id, "expertise", width=4, color=EDGE_COLORS['expertise'])
+            
+            papers = professor_data.get('papers', [])
+            for i, paper in enumerate(papers):
+                paper_id = f"paper_{prof_id}_{i}"
+                self.add_paper_node(
+                    paper_id,
+                    paper.get('title', 'Untitled'),
+                    paper.get('year', ''),
+                    paper.get('citations', 0),
+                    paper.get('doi', '')
+                )
+                self.add_edge(prof_id, paper_id, "authored", width=2, color=EDGE_COLORS['authored'])
         
         # Create PyVis network
         self.net = Network(
