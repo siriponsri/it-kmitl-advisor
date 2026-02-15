@@ -153,12 +153,23 @@ def save_scopus_cache(scopus_data_cache):
 
 
 def generate_all_graphs(scopus_data_cache):
-    """Pre-generate knowledge graphs for all professors"""
+    """Pre-generate knowledge graphs for all professors using topic_groups"""
     print()
     print("=" * 70)
     print("Generating Knowledge Graphs")
     print("=" * 70)
     print()
+    
+    # Load professors_by_topics.json for star schema (has topic_groups)
+    topics_file = CACHE_DIR / 'professors_by_topics.json'
+    if topics_file.exists():
+        with open(topics_file, 'r', encoding='utf-8') as f:
+            topics_data = json.load(f)
+            professors_by_topics = topics_data.get('professors', {})
+        print(f"✅ Loaded topic_groups data for star schema graphs")
+    else:
+        professors_by_topics = {}
+        print(f"⚠️  professors_by_topics.json not found, using flat structure")
     
     builder = KnowledgeGraphBuilder()
     
@@ -168,6 +179,10 @@ def generate_all_graphs(scopus_data_cache):
         print(f"[{i}/{len(scopus_data_cache)}] Generating graph for {name}...")
         
         try:
+            # Merge topic_groups from professors_by_topics if available
+            if scopus_id in professors_by_topics:
+                professor_data['topic_groups'] = professors_by_topics[scopus_id].get('topic_groups', {})
+            
             graph_html = builder.build_professor_graph(professor_data)
             
             # Save graph
