@@ -1,0 +1,3872 @@
+{
+  "metadata": {
+    "fetched_at": "2026-02-15T15:57:05.442211",
+    "professor_count": 29,
+    "total_papers": 520,
+    "total_citations": 3639,
+    "organization": "grouped_by_topics",
+    "description": "Papers are grouped under their related topics"
+  },
+  "professors": {
+    "6603566678": {
+      "name": "Arit Thammano",
+      "thai_name": "ศ.ดร. อาริต ธรรมโน",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/arit-thammano",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2595-%25E0%25B8%2598%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25A1%25E0%25B9%2582%25E0%25B8%2599-500x500.jpg&w=640&q=75",
+      "scopus_id": "6603566678",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6603566678",
+      "topics": [
+        "Algorithm",
+        "Optimization",
+        "Classification",
+        "Neural Network",
+        "Network",
+        "Genetic Algorithm",
+        "Data Mining",
+        "Clustering"
+      ],
+      "topic_groups": {
+        "Algorithm": [
+          {
+            "title": "A Self-Adaptive Weights for K-Means Classification Algorithm",
+            "year": "2025",
+            "doi": "10.28991/HIJ-2025-06-03-010",
+            "citations": 0
+          },
+          {
+            "title": "Solving Optimization Problems by a Hybrid Algorithm Based on Sand Cat Swarm Optimization and Invasive Weed Optimization Algorithm",
+            "year": "2025",
+            "doi": "10.1109/ECTIDAMTNCON64748.2025.10962032",
+            "citations": 0
+          },
+          {
+            "title": "An Improvement on Exploration Step of Whale Optimization Algorithm with Levy Distribution for Classification Problems",
+            "year": "2024",
+            "doi": "10.1109/IBDAP62940.2024.10689697",
+            "citations": 0
+          },
+          {
+            "title": "Welcome Message from General Co-Chairs",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10346086",
+            "citations": 0
+          },
+          {
+            "title": "An Improved Differential Evolution Algorithm for Numerical Optimization Problems",
+            "year": "2023",
+            "doi": "10.28991/HIJ-2023-04-02-014",
+            "citations": 9
+          },
+          {
+            "title": "Modified Genetic Algorithm with Flexible Crossover for the Capacitated Electric Vehicle Routing Problem",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317770",
+            "citations": 2
+          },
+          {
+            "title": "Welcome Message from General Co-Chairs",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317790",
+            "citations": 0
+          },
+          {
+            "title": "A Novel Discrete Differential Evolution Algorithm for Solving the Traveling Salesman Problem",
+            "year": "2023",
+            "doi": "10.1109/ICITDA60835.2023.10427199",
+            "citations": 1
+          },
+          {
+            "title": "Hybrid Sweep Algorithm and Modified Ant System with Threshold for Travelling Salesman Problem",
+            "year": "2023",
+            "doi": "10.1007/978-3-031-20738-9_36",
+            "citations": 1
+          },
+          {
+            "title": "An Improvement of Whale Optimization Algorithm with Rao Algorithm for Optimization Problems",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317759",
+            "citations": 2
+          },
+          {
+            "title": "Enhancing Genetic Algorithm Performance with Hybrid Strategy for Solving Optimization Problems",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317779",
+            "citations": 1
+          },
+          {
+            "title": "An Adaptive Whale Optimization Algorithm with Mahalanobis Distance for Optimization Problems",
+            "year": "2022",
+            "doi": "10.1109/ECTIDAMTNCON53731.2022.9720342",
+            "citations": 3
+          },
+          {
+            "title": "Modified Ant System with Threshold for the Vehicle Routing Problem",
+            "year": "2022",
+            "doi": "10.1007/978-3-030-99948-3_3",
+            "citations": 0
+          },
+          {
+            "title": "A Self-adaptive Differential Evolution Algorithm for Solving Optimization Problems",
+            "year": "2022",
+            "doi": "10.1007/978-3-030-99948-3_7",
+            "citations": 4
+          },
+          {
+            "title": "Enhanced Hydrozoan Algorithm with Local Searches for Job-Shop Scheduling Problems",
+            "year": "2021",
+            "doi": "10.1007/978-3-030-79757-7_24",
+            "citations": 0
+          },
+          {
+            "title": "Hybrid modified ant system with sweep algorithm and path relinking for the capacitated vehicle routing problem",
+            "year": "2021",
+            "doi": "10.1016/j.heliyon.2021.e08029",
+            "citations": 17
+          }
+        ],
+        "Optimization": [
+          {
+            "title": "Differential Evolution with Self-Adaptive Mutation and Population Improvement Strategy for Optimization Problems",
+            "year": "2024",
+            "doi": "10.1109/ACCESS.2024.3460385",
+            "citations": 1
+          },
+          {
+            "title": "An Adaptive Differential Evolution with Multiple Crossover Strategies for Optimization Problems",
+            "year": "2024",
+            "doi": "10.28991/HIJ-2024-05-02-02",
+            "citations": 12
+          },
+          {
+            "title": "Modification of Sand Cat Swarm Optimization for Classification Problems",
+            "year": "2024",
+            "doi": "10.1109/IBDAP62940.2024.10689683",
+            "citations": 1
+          }
+        ],
+        "Classification": [
+          {
+            "title": "A Novel Classification Model Based on Hybrid K-Means and Neural Network for Classification Problems",
+            "year": "2024",
+            "doi": "10.28991/HIJ-2024-05-03-012",
+            "citations": 10
+          },
+          {
+            "title": "Differential Evolution for Classification: A Novel Classifier Technique in Data Mining",
+            "year": "2024",
+            "doi": "10.1109/KST61284.2024.10499680",
+            "citations": 0
+          },
+          {
+            "title": "Backpropagation Neural Network with Adaptive Learning Rate for Classification",
+            "year": "2023",
+            "doi": "10.1007/978-3-031-20738-9_56",
+            "citations": 2
+          },
+          {
+            "title": "Adaptive Learning Rate For Neural Network Classification Model",
+            "year": "2022",
+            "doi": "10.1109/ICSEC56337.2022.10049365",
+            "citations": 2
+          },
+          {
+            "title": "Adaptive Learning Rate for Dealing with Imbalanced Data in Classification Problems",
+            "year": "2021",
+            "doi": "10.1109/ECTIDAMTNCON51128.2021.9425715",
+            "citations": 0
+          }
+        ],
+        "Data Mining": [
+          {
+            "title": "Deterministic Initialization of k-means Clustering by Data Distribution Guide",
+            "year": "2022",
+            "doi": "10.1109/ECTIDAMTNCON53731.2022.9720377",
+            "citations": 2
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 70
+    },
+    "6505772070": {
+      "name": "Sooksan Panichpapiboon",
+      "thai_name": "ศ.ดร. สุขสันต์ พาณิชพาพิบูล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sooksan-panichpapiboon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%2582%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B9%258C-%25E0%25B8%259E%25E0%25B8%25B2%25E0%25B8%2593%25E0%25B8%25B4%25E0%25B8%258A%25E0%25B8%259E%25E0%25B8%25B2%25E0%25B8%259E%25E0%25B8%25B4%25E0%25B8%259A%25E0%25B8%25B9%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": "6505772070",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6505772070",
+      "topics": [
+        "Mobile",
+        "Network",
+        "Big Data",
+        "Deep Learning",
+        "Prediction"
+      ],
+      "topic_groups": {
+        "Mobile": [
+          {
+            "title": "Modeling the Distributions of Taxi Supply: A Case Study in Bangkok",
+            "year": "2025",
+            "doi": "10.1007/s13177-025-00469-w",
+            "citations": 0
+          },
+          {
+            "title": "Characterizing the Distributions of Taxi Demand: Is Poisson the Right Model?",
+            "year": "2024",
+            "doi": "10.1109/ACCESS.2024.3394497",
+            "citations": 2
+          },
+          {
+            "title": "What Separates High-Performing Taxis From the Rest? A Case Study in Bangkok",
+            "year": "2024",
+            "doi": "10.1109/ACCESS.2024.3519190",
+            "citations": 0
+          },
+          {
+            "title": "Real-Time Vehicle Maneuvering Detection with Digital Compass",
+            "year": "2021",
+            "doi": "10.1109/ACCESS.2021.3097752",
+            "citations": 2
+          },
+          {
+            "title": "Lane Change Detection with Smartphones: A Steering Wheel-Based Approach",
+            "year": "2020",
+            "doi": "10.1109/ACCESS.2020.2994352",
+            "citations": 14
+          },
+          {
+            "title": "Clearance Estimation through Mobile Sensing",
+            "year": "2018",
+            "doi": "10.1109/ICSEC.2017.8443796",
+            "citations": 0
+          },
+          {
+            "title": "Real-Time Lane Change Detection Through Steering Wheel Rotation",
+            "year": "2018",
+            "doi": "10.1109/VNC.2018.8628461",
+            "citations": 7
+          },
+          {
+            "title": "Traffic Density Estimation: A Mobile Sensing Approach",
+            "year": "2017",
+            "doi": "10.1109/MCOM.2017.1700693",
+            "citations": 25
+          },
+          {
+            "title": "Incidents detection through mobile sensing",
+            "year": "2016",
+            "doi": "10.1109/ECTICon.2016.7561238",
+            "citations": 3
+          },
+          {
+            "title": "Effective variables for urban traffic incident detection",
+            "year": "2016",
+            "doi": "10.1109/VNC.2015.7385576",
+            "citations": 9
+          },
+          {
+            "title": "Traffic Sensing Through Accelerometers",
+            "year": "2016",
+            "doi": "10.1109/TVT.2015.2448237",
+            "citations": 19
+          },
+          {
+            "title": "Speed estimation through mobile sensing",
+            "year": "2015",
+            "doi": "10.1109/TENCON.2014.7022319",
+            "citations": 0
+          },
+          {
+            "title": "Time-headway distributions on an expressway: Case of bangkok",
+            "year": "2015",
+            "doi": "10.1061/(ASCE)TE.1943-5436.0000731",
+            "citations": 21
+          },
+          {
+            "title": "Irresponsible forwarding under real intervehicle spacing distributions",
+            "year": "2013",
+            "doi": "10.1109/TVT.2013.2240026",
+            "citations": 45
+          },
+          {
+            "title": "Effects of intervehicle spacing distributions on connectivity of VANET: A case study from measured highway traffic",
+            "year": "2012",
+            "doi": "10.1109/MCOM.2012.6316781",
+            "citations": 57
+          },
+          {
+            "title": "Irresponsible forwarding under general inter-vehicle spacing distributions",
+            "year": "2011",
+            "doi": "10.1109/ECTICON.2011.5947848",
+            "citations": 6
+          },
+          {
+            "title": "Exploiting wireless communication in vehicle density estimation",
+            "year": "2011",
+            "doi": "10.1109/TVT.2011.2158566",
+            "citations": 27
+          },
+          {
+            "title": "An analysis of GPS sampling rates required in travel time estimation",
+            "year": "2009",
+            "doi": "10.1109/VNC.2009.5416367",
+            "citations": 4
+          }
+        ],
+        "Network": [
+          {
+            "title": "A review of information dissemination protocols for vehicular ad hoc networks",
+            "year": "2012",
+            "doi": "10.1109/SURV.2011.070711.00131",
+            "citations": 269
+          },
+          {
+            "title": "Connectivity of ad hoc wireless networks: An alternative to graph-theoretic approaches",
+            "year": "2010",
+            "doi": "10.1007/s11276-009-0169-y",
+            "citations": 18
+          },
+          {
+            "title": "Efficient broadcasting in IEEE 802.11 networks through irresponsible forwarding",
+            "year": "2009",
+            "doi": "10.1109/GLOCOM.2009.5426212",
+            "citations": 27
+          },
+          {
+            "title": "Connectivity requirements for vehicular networks with single-hop broadcasting",
+            "year": "2009",
+            "doi": "10.1109/ITST.2009.5399322",
+            "citations": 3
+          }
+        ],
+        "Big Data": [
+          {
+            "title": "A Big Data Analysis on Urban Mobility: Case of Bangkok",
+            "year": "2022",
+            "doi": "10.1109/ACCESS.2022.3170068",
+            "citations": 11
+          },
+          {
+            "title": "A big data analysis on efficiency of bangkok taxi system",
+            "year": "2021",
+            "doi": "10.1109/ECTI-CON51831.2021.9454833",
+            "citations": 5
+          }
+        ],
+        "Deep Learning": [
+          {
+            "title": "Travel-time prediction with deep learning",
+            "year": "2017",
+            "doi": "10.1109/TENCON.2016.7848343",
+            "citations": 43
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 617
+    },
+    "13204394500": {
+      "name": "Kitsuchart Pasupa",
+      "thai_name": "ศ.ดร. กิติ์สุชาต พสุภาตำแหน่งรองคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kitsuchart-pasupa",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B9%258C%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2595-%25E0%25B8%259E%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%25B2-500x500.jpg&w=640&q=75",
+      "scopus_id": "13204394500",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=13204394500",
+      "topics": [
+        "Network",
+        "Deep Learning",
+        "Prediction",
+        "Mobile",
+        "Algorithm",
+        "Neural Network",
+        "Classification"
+      ],
+      "topic_groups": {
+        "Network": [
+          {
+            "title": "Self-attention hierarchical kernel reservoir state network for inland water level prediction",
+            "year": "2026",
+            "doi": "10.1016/j.engappai.2025.113273",
+            "citations": 0
+          },
+          {
+            "title": "Towards Sentic-Aware Multimodal Models for Cyberbullying Detection in Thai Memes",
+            "year": "2026",
+            "doi": "10.1007/978-981-95-4367-0_16",
+            "citations": 0
+          },
+          {
+            "title": "Fin-Ally: Pioneering the Development of an Advanced, Commonsense-Embedded Conversational AI for Money Matters",
+            "year": "2025",
+            "doi": "10.3233/FAIA251334",
+            "citations": 0
+          },
+          {
+            "title": "Optimizing colorectal polyp detection and localization: Impact of RGB color adjustment on CNN performance",
+            "year": "2025",
+            "doi": "10.1016/j.mex.2025.103187",
+            "citations": 1
+          },
+          {
+            "title": "Correlated Online k-Nearest Neighbors Regressor Chain for Online Multi-output Regression",
+            "year": "2024",
+            "doi": "10.1007/978-981-99-8067-3_3",
+            "citations": 3
+          },
+          {
+            "title": "Preface",
+            "year": "2024",
+            "doi": "10.1109/WI-IAT62293.2024.00005",
+            "citations": 0
+          },
+          {
+            "title": "ToxVI: a Multimodal LLM-based Framework for Generating Intervention in Toxic Code-Mixed Videos",
+            "year": "2024",
+            "doi": "10.1145/3627673.3680004",
+            "citations": 2
+          },
+          {
+            "title": "HateThaiSent: Sentiment-Aided Hate Speech Detection in Thai Language",
+            "year": "2024",
+            "doi": "10.1109/TCSS.2024.3376958",
+            "citations": 13
+          },
+          {
+            "title": "Weighted error-output recurrent Xavier echo state network for concept drift handling in water level prediction",
+            "year": "2024",
+            "doi": "10.1016/j.asoc.2024.112055",
+            "citations": 6
+          },
+          {
+            "title": "Optimizing echo state networks for continuous gesture recognition in mobile devices: A comparative study",
+            "year": "2024",
+            "doi": "10.1016/j.heliyon.2024.e27108",
+            "citations": 5
+          },
+          {
+            "title": "Breast cancer prognosis through the use of multi-modal classifiers: current state of the art and the way forward",
+            "year": "2024",
+            "doi": "10.1093/bfgp/elae015",
+            "citations": 6
+          },
+          {
+            "title": "Enhancing Thai Food Recognition Through Multimodal Fusion of Image and Fourier Spectrum",
+            "year": "2024",
+            "doi": "10.1007/978-981-97-5934-7_7",
+            "citations": 0
+          },
+          {
+            "title": "Preface",
+            "year": "2023",
+            "doi": "",
+            "citations": 0
+          },
+          {
+            "title": "FastThaiCaps: A Transformer Based Capsule Network for Hate Speech Detection in Thai Language",
+            "year": "2023",
+            "doi": "10.1007/978-3-031-30108-7_36",
+            "citations": 2
+          },
+          {
+            "title": "Error-output recurrent multi-layer Kernel Reservoir Network for electricity load time series forecasting",
+            "year": "2023",
+            "doi": "10.1016/j.engappai.2022.105611",
+            "citations": 11
+          },
+          {
+            "title": "Convolutional neural networks based focal loss for class imbalance problem: a case study of canine red blood cells morphology classification",
+            "year": "2023",
+            "doi": "10.1007/s12652-020-01773-x",
+            "citations": 36
+          },
+          {
+            "title": "Ex-ThaiHate: A Generative Multi-task Framework for Sentiment and Emotion Aware Hate Speech Detection with Explanation in Thai",
+            "year": "2023",
+            "doi": "10.1007/978-3-031-43427-3_9",
+            "citations": 2
+          },
+          {
+            "title": "Welcome Message from Technical Program Co-Chairs",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317790",
+            "citations": 0
+          },
+          {
+            "title": "CowXNet: An automated cow estrus detection system",
+            "year": "2023",
+            "doi": "10.1016/j.eswa.2022.118550",
+            "citations": 50
+          },
+          {
+            "title": "Preface",
+            "year": "2023",
+            "doi": "",
+            "citations": 0
+          }
+        ],
+        "Deep Learning": [
+          {
+            "title": "Detecting Cyberbullying in Thai Memes: A Multimodal Approach Using Deep Learning",
+            "year": "2025",
+            "doi": "10.1109/CI-NLPSoMe64976.2025.10970667",
+            "citations": 1
+          },
+          {
+            "title": "Highlight Detection in Podcasts: A Multimodal Deep Learning Approach",
+            "year": "2025",
+            "doi": "10.1007/978-981-96-6599-0_15",
+            "citations": 0
+          },
+          {
+            "title": "Generating Pseudo-labels for Car Damage Segmentation Using Deep Spectral Method",
+            "year": "2024",
+            "doi": "10.1007/978-981-99-8184-7_36",
+            "citations": 1
+          },
+          {
+            "title": "HANCaps: A Two-Channel Deep Learning Framework for Fake News Detection in Thai",
+            "year": "2024",
+            "doi": "10.1007/978-981-99-8184-7_16",
+            "citations": 2
+          },
+          {
+            "title": "Comparative Analysis of Online and Offline Learning Algorithms with Data Drift Detectors in Multi-Target Time Series",
+            "year": "2024",
+            "doi": "10.1109/ICITEE62483.2024.10808868",
+            "citations": 0
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 141
+    },
+    "6603350272": {
+      "name": "Nopporn Chotikakamthorn",
+      "thai_name": "รศ.ดร. นพพร โชติกกำธร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/nopporn-chotikakamthorn",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2599%25E0%25B8%259E%25E0%25B8%259E%25E0%25B8%25A3-%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B3%25E0%25B8%2598%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": "6603350272",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6603350272",
+      "topics": [
+        "Mobile",
+        "Blockchain",
+        "Web"
+      ],
+      "topic_groups": {
+        "Mobile": [
+          {
+            "title": "Item Response Time Analysis Using Ex-Gaussian Distribution for Disengagement Detection in Online Low-Stakes Tests",
+            "year": "2026",
+            "doi": "10.1109/ACCESS.2026.3652353",
+            "citations": 0
+          },
+          {
+            "title": "On-Chain Verifiable Credential with Applications in Education",
+            "year": "2024",
+            "doi": "10.37936/ecti-cit.2024183.256091",
+            "citations": 0
+          },
+          {
+            "title": "Using Mozilla Hubs for Online Teaching: A Case Study of An Innovation Design Method Course",
+            "year": "2023",
+            "doi": "10.54808/IMSCI2023.01.7",
+            "citations": 7
+          },
+          {
+            "title": "A COMPARATIVE STUDY OF FOREARM AND HAND MUSCLE USAGE DURING HANDWRITING PRACTICE USING HANDWRITING TOOL",
+            "year": "2022",
+            "doi": "",
+            "citations": 1
+          },
+          {
+            "title": "Affordable Proctoring Method for Ad-hoc Off-campus Exams",
+            "year": "2020",
+            "doi": "10.1145/3368308.3415421",
+            "citations": 2
+          },
+          {
+            "title": "Handwriting rearrangement for Thai calligraphy",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863249",
+            "citations": 1
+          },
+          {
+            "title": "Enhanced engagement with public displays through mobile phone interaction",
+            "year": "2017",
+            "doi": "10.1145/3132787.3139205",
+            "citations": 2
+          },
+          {
+            "title": "Evaluation of mobile phone interaction with large public displays",
+            "year": "2017",
+            "doi": "10.1109/JCSSE.2017.8025932",
+            "citations": 1
+          },
+          {
+            "title": "Interactive public display using mobile web client",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2017.8250506",
+            "citations": 0
+          },
+          {
+            "title": "Analysis of Factor Influencing the Tablet Acceptance for Library Information Services: A Combination of UTAUT and TTF Model",
+            "year": "2015",
+            "doi": "10.1142/S0219649215500239",
+            "citations": 15
+          },
+          {
+            "title": "Near point light source location estimation from shadow edge correspondence",
+            "year": "2015",
+            "doi": "10.1109/ICCIS.2015.7274543",
+            "citations": 5
+          },
+          {
+            "title": "Query decomposition method for multi-keyword search in P2P systems",
+            "year": "2015",
+            "doi": "10.1049/el.2014.2467",
+            "citations": 0
+          },
+          {
+            "title": "Near light source location estimation using illumination of a diffused planar background",
+            "year": "2014",
+            "doi": "",
+            "citations": 1
+          },
+          {
+            "title": "Analysis of factors influencing the mobile technology acceptance for library information services: Conceptual model",
+            "year": "2013",
+            "doi": "10.1109/ICITEED.2013.6676204",
+            "citations": 4
+          },
+          {
+            "title": "An efficient P2P searching and indexing strategy for multi-keyword query",
+            "year": "2013",
+            "doi": "10.1109/KST.2013.6512798",
+            "citations": 0
+          },
+          {
+            "title": "Using tangible user interfaces in computer-based training systems for low-functioning autistic children",
+            "year": "2012",
+            "doi": "10.1007/s00779-011-0382-4",
+            "citations": 62
+          },
+          {
+            "title": "Weighted hough transform for directional light sources estimation from multi-view images",
+            "year": "2012",
+            "doi": "",
+            "citations": 0
+          },
+          {
+            "title": "Fast haptic simulation of brittle object using bounded force propagation model",
+            "year": "2008",
+            "doi": "10.1109/ISCIT.2008.4700260",
+            "citations": 0
+          },
+          {
+            "title": "Alpha channel digital image watermarking method",
+            "year": "2008",
+            "doi": "10.1109/ICOSP.2008.4697269",
+            "citations": 3
+          },
+          {
+            "title": "Evaluation the efficacy of Computer - Based training using tangible user interface for Low-Function children with autism",
+            "year": "2008",
+            "doi": "10.1109/DIGITEL.2008.28",
+            "citations": 13
+          },
+          {
+            "title": "Line watermark embedding method for affine transformed images",
+            "year": "2007",
+            "doi": "10.1109/ISSPA.2007.4555481",
+            "citations": 1
+          },
+          {
+            "title": "Comparative study of WIMP and tangible user interfaces in training shape matching skill for autistic children",
+            "year": "2007",
+            "doi": "10.1109/TENCON.2007.4428939",
+            "citations": 8
+          },
+          {
+            "title": "Performance of Bayesian-based digital matting techniques",
+            "year": "2007",
+            "doi": "10.1109/ISSPA.2007.4555548",
+            "citations": 0
+          }
+        ],
+        "Blockchain": [
+          {
+            "title": "Blockchain-based Learning Credential Revision and Revocation Method",
+            "year": "2020",
+            "doi": "10.1145/3368308.3415456",
+            "citations": 10
+          },
+          {
+            "title": "Blockchain-based Learning Credential Verification System with Recipient Privacy Control",
+            "year": "2019",
+            "doi": "10.1109/TALE48000.2019.9225878",
+            "citations": 14
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 150
+    },
+    "15754321600": {
+      "name": "Worapoj Kreesuradej",
+      "thai_name": "รศ.ดร. วรพจน์ กรีสุระเดชตำแหน่งคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/worapoj-kreesuradej",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%259E%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%258C-%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%2594%25E0%25B8%258A-500x500.jpg&w=640&q=75",
+      "scopus_id": "15754321600",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=15754321600",
+      "topics": [
+        "Algorithm",
+        "Database",
+        "Neural Network",
+        "Network",
+        "Web",
+        "Cloud Computing",
+        "Prediction",
+        "Optimization",
+        "Clustering"
+      ],
+      "topic_groups": {
+        "Algorithm": [
+          {
+            "title": "A Study of Using GPT-3 to Generate a Thai Sentiment Analysis of COVID-19 Tweets Dataset",
+            "year": "2023",
+            "doi": "10.1109/JCSSE58229.2023.10201994",
+            "citations": 2
+          },
+          {
+            "title": "Incremental Association Rule Mining with a Fast Incremental Updating Frequent Pattern Growth Algorithm",
+            "year": "2021",
+            "doi": "10.1109/ACCESS.2021.3071777",
+            "citations": 43
+          },
+          {
+            "title": "Discovery of incremental association rules based on a new FP-growth algorithm",
+            "year": "2019",
+            "doi": "10.1109/CCOMS.2019.8821700",
+            "citations": 6
+          },
+          {
+            "title": "A Technique for Estimating Updated Frequent Itemsets in ESC-Growth Algorithm",
+            "year": "2019",
+            "doi": "10.1109/SNPD.2019.8935787",
+            "citations": 2
+          },
+          {
+            "title": "The acceptance model of M-payment using smartphone devices in Thailand: A conceptual framework",
+            "year": "2018",
+            "doi": "",
+            "citations": 1
+          },
+          {
+            "title": "Frequent itemsets mining using random walks for record insertion and deletion",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863273",
+            "citations": 3
+          },
+          {
+            "title": "An enhanced incremental association rule discovery with a lower minimum support",
+            "year": "2016",
+            "doi": "10.1007/s10015-016-0288-3",
+            "citations": 6
+          },
+          {
+            "title": "A probability‑based incremental association rule discovery algorithm for record insertion and deletion",
+            "year": "2015",
+            "doi": "10.1007/s10015-015-0210-4",
+            "citations": 6
+          },
+          {
+            "title": "Probability-based incremental association rule discovery using the normal approximation",
+            "year": "2013",
+            "doi": "10.1109/IRI.2013.6642503",
+            "citations": 5
+          },
+          {
+            "title": "Prosody analysis of Thai emotion utterances",
+            "year": "2011",
+            "doi": "10.1007/978-3-642-22327-3_18",
+            "citations": 0
+          },
+          {
+            "title": "Thai emotion words analysis",
+            "year": "2009",
+            "doi": "10.1109/SNLP.2009.5340916",
+            "citations": 4
+          },
+          {
+            "title": "False positive item set algorithm for incremental association rule discovery",
+            "year": "2009",
+            "doi": "",
+            "citations": 2
+          },
+          {
+            "title": "Mining dynamic databases using probability-based incremental association rule discovery algorithm",
+            "year": "2009",
+            "doi": "",
+            "citations": 13
+          },
+          {
+            "title": "State of the art review on thai text-to-speech system",
+            "year": "2008",
+            "doi": "10.1109/ICCSIT.2008.158",
+            "citations": 8
+          },
+          {
+            "title": "Probability-based incremental association rule discovery algorithm",
+            "year": "2008",
+            "doi": "10.1109/CSA.2008.39",
+            "citations": 5
+          },
+          {
+            "title": "Dimensionality reduction of features for text categorization",
+            "year": "2007",
+            "doi": "",
+            "citations": 1
+          },
+          {
+            "title": "Incremental association rule mining using promising frequent itemset algorithm",
+            "year": "2007",
+            "doi": "10.1109/ICICS.2007.4449696",
+            "citations": 11
+          }
+        ],
+        "Database": [
+          {
+            "title": "Maintenance of multi-level association rules discovery in dynamic database under a change of support threshold",
+            "year": "2016",
+            "doi": "10.1109/FSKD.2015.7382014",
+            "citations": 2
+          },
+          {
+            "title": "Incremental multilevel association rule mining of a dynamic database under a change of a minimum support threshold",
+            "year": "2016",
+            "doi": "10.1007/978-3-662-47895-0_11",
+            "citations": 0
+          }
+        ],
+        "Neural Network": [
+          {
+            "title": "Time delay neural network for small time series data sets",
+            "year": "2021",
+            "doi": "",
+            "citations": 0
+          },
+          {
+            "title": "Text processing simplified ARTMAP neural network",
+            "year": "2005",
+            "doi": "",
+            "citations": 0
+          }
+        ],
+        "Web": [
+          {
+            "title": "Webcam based eye gaze prediction system with automatic calibration for web browser",
+            "year": "2019",
+            "doi": "10.1109/ECTI-CON47248.2019.8955149",
+            "citations": 0
+          },
+          {
+            "title": "A new web search result clustering based on true common phrase label discovery",
+            "year": "2006",
+            "doi": "10.1109/CIMCA.2006.22",
+            "citations": 15
+          }
+        ],
+        "Cloud Computing": [
+          {
+            "title": "The framework of government cloud computing adoption with TAM in Thailand",
+            "year": "2019",
+            "doi": "10.1145/3357419.3357458",
+            "citations": 5
+          }
+        ],
+        "Optimization": [
+          {
+            "title": "Input selection using binary particle swarm optimization",
+            "year": "2006",
+            "doi": "10.1109/CIMCA.2006.127",
+            "citations": 10
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 150
+    },
+    "6602706754": {
+      "name": "Chotipat Pornavalai",
+      "thai_name": "รศ.ดร. โชติพัชร์ ภรณวลัย",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/chotipat-pornavalai",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2Fimage-500x500.png&w=640&q=75",
+      "scopus_id": "6602706754",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6602706754",
+      "topics": [
+        "Network",
+        "Algorithm",
+        "Fuzzy",
+        "Optimization",
+        "Clustering",
+        "Mobile"
+      ],
+      "topic_groups": {
+        "Network": [
+          {
+            "title": "EORL: Energy Optimization via Reinforcement Learning in Software-Defined Wireless Sensor Networks",
+            "year": "2024",
+            "doi": "10.1109/InCIT63192.2024.10810492",
+            "citations": 0
+          },
+          {
+            "title": "A Novel Precomputed Optimal Procrastination Time Interval for Re-Clustering to Maximize Operation Time of Wireless Sensor Networks",
+            "year": "2023",
+            "doi": "10.1109/TNSM.2022.3229740",
+            "citations": 3
+          },
+          {
+            "title": "A Practical Circuit of Cyclic Chirp Spread Spectrum Modulation for Long Range Communication",
+            "year": "2022",
+            "doi": "10.1109/ITC-CSCC55581.2022.9895026",
+            "citations": 2
+          },
+          {
+            "title": "Multipath energy balancing for clustered wireless sensor networks",
+            "year": "2019",
+            "doi": "10.1007/s11276-018-1684-5",
+            "citations": 5
+          },
+          {
+            "title": "Experimental performance evaluation of LoRaWAN: A case study in Bangkok",
+            "year": "2017",
+            "doi": "10.1109/JCSSE.2017.8025948",
+            "citations": 46
+          },
+          {
+            "title": "Scanning behavior for efficient energy consumption in delay tolerant network",
+            "year": "2017",
+            "doi": "10.1109/ECTICon.2017.8096327",
+            "citations": 0
+          },
+          {
+            "title": "The fuzzy-based cluster head election algorithm for equal cluster size in wireless sensor networks",
+            "year": "2016",
+            "doi": "10.1109/JCSSE.2016.7748938",
+            "citations": 1
+          },
+          {
+            "title": "Fuzzy-based message scheduling and dropping in delay tolerant networks",
+            "year": "2016",
+            "doi": "10.1109/ECTICon.2016.7561452",
+            "citations": 2
+          },
+          {
+            "title": "Unequal Initial Energy Assignment in Wireless Sensor Networks",
+            "year": "2015",
+            "doi": "10.1109/JCSSE.2015.7219798",
+            "citations": 3
+          },
+          {
+            "title": "Coverage maximization with sleep scheduling for wireless sensor networks",
+            "year": "2015",
+            "doi": "10.1109/ECTICon.2015.7207001",
+            "citations": 14
+          },
+          {
+            "title": "Adaptive multi-hop routing for wireless sensor networks",
+            "year": "2013",
+            "doi": "10.1109/JCSSE.2013.6567328",
+            "citations": 3
+          },
+          {
+            "title": "Optimal multi-path energy-aware routing protocol for wireless sensor networks",
+            "year": "2012",
+            "doi": "10.1109/ECTICon.2012.6254322",
+            "citations": 2
+          },
+          {
+            "title": "Proximity neighbor selection using IP prefix matching in Kademlia-based distributed hash table",
+            "year": "2010",
+            "doi": "",
+            "citations": 5
+          },
+          {
+            "title": "An MLP-based face authentication technique robust to orientation",
+            "year": "2009",
+            "doi": "10.1109/IJCNN.2009.5179002",
+            "citations": 3
+          },
+          {
+            "title": "An adaptive alert message dissemination protocol for VANET to improve road safety",
+            "year": "2009",
+            "doi": "10.1109/FUZZY.2009.5277261",
+            "citations": 59
+          },
+          {
+            "title": "Fuzzy-spray: Efficient routing in delay tolerant ad-hoc network based on fuzzy decision mechanism",
+            "year": "2009",
+            "doi": "10.1109/FUZZY.2009.5277223",
+            "citations": 41
+          },
+          {
+            "title": "A light-weight fault-tolerant time synchronization for wireless sensor networks",
+            "year": "2008",
+            "doi": "10.1109/ITST.2008.4740252",
+            "citations": 5
+          },
+          {
+            "title": "Designing of policy-based negotiation protocol on MANET",
+            "year": "2006",
+            "doi": "10.1109/ISCIT.2006.339962",
+            "citations": 0
+          },
+          {
+            "title": "Firewall rules analysis",
+            "year": "2006",
+            "doi": "",
+            "citations": 11
+          },
+          {
+            "title": "Distributed routing for dynamic multicasting with advance resource reservation information",
+            "year": "2001",
+            "doi": "10.1109/ICOIN.2001.905519",
+            "citations": 2
+          },
+          {
+            "title": "Dynamic multicast routing in advance resource reservation environment",
+            "year": "2000",
+            "doi": "10.1109/ICPADS.2000.857741",
+            "citations": 4
+          },
+          {
+            "title": "Optimal routing for dynamic multipoint connection",
+            "year": "1999",
+            "doi": "10.1002/ett.4460100208",
+            "citations": 7
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "An effective safety alert broadcast algorithm for VANET",
+            "year": "2008",
+            "doi": "10.1109/ISCIT.2008.4700192",
+            "citations": 55
+          },
+          {
+            "title": "An efficient dynamic multicast routing algorithm with advance resource reservation awareness",
+            "year": "2004",
+            "doi": "",
+            "citations": 2
+          }
+        ],
+        "Mobile": [
+          {
+            "title": "A policy based negotiation protocol for services agreement in mobile",
+            "year": "2005",
+            "doi": "",
+            "citations": 1
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 276
+    },
+    "6506825251": {
+      "name": "Panwit Tuwanut",
+      "thai_name": "รศ.ดร. ปานวิทย์ ธุวะนุติ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/panwit-tuwanut",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259B%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25A2%25E0%25B9%258C-%25E0%25B8%2598%25E0%25B8%25B8%25E0%25B8%25A7%25E0%25B8%25B0%25E0%25B8%2599%25E0%25B8%25B8%25E0%25B8%2595%25E0%25B8%25B4-500x500.jpg&w=640&q=75",
+      "scopus_id": "6506825251",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6506825251",
+      "topics": [
+        "Optimization",
+        "Internet of Things",
+        "Network",
+        "Blockchain",
+        "Security"
+      ],
+      "topic_groups": {
+        "Optimization": [
+          {
+            "title": "Simplified Derivative-Based Carrierless PPM Using VCO and Monostable Multivibrator",
+            "year": "2025",
+            "doi": "10.3390/app15116272",
+            "citations": 0
+          },
+          {
+            "title": "EORL: Energy Optimization via Reinforcement Learning in Software-Defined Wireless Sensor Networks",
+            "year": "2024",
+            "doi": "10.1109/InCIT63192.2024.10810492",
+            "citations": 0
+          },
+          {
+            "title": "New pulse oximetry detection based on the light absorbance ratio as determined from amplitude modulation indexes in the time and frequency domains",
+            "year": "2022",
+            "doi": "10.1016/j.bspc.2022.103627",
+            "citations": 7
+          },
+          {
+            "title": "An Image Resizing Function Embedded in an Inverse Discrete Cosine Transform",
+            "year": "2022",
+            "doi": "10.1109/ICTC55196.2022.9952480",
+            "citations": 0
+          },
+          {
+            "title": "A check-in system supporting multiple attendees check-in at a time by proximity-based methods",
+            "year": "2021",
+            "doi": "10.1109/ECTI-CON51831.2021.9454680",
+            "citations": 0
+          },
+          {
+            "title": "Breathing sound detection from the external auditory canal with condenser microphones",
+            "year": "2021",
+            "doi": "10.1109/ECTI-CON51831.2021.9454867",
+            "citations": 3
+          },
+          {
+            "title": "Optimization of multithread for long digit multiplier: By using ancient India Vedic mathematic",
+            "year": "2017",
+            "doi": "10.1109/ECTICon.2017.8096322",
+            "citations": 3
+          },
+          {
+            "title": "FM bandwidth scaling by Frequency operation under injection locked phenomena based on multi-time variable analysis",
+            "year": "2017",
+            "doi": "10.1109/ICEEE2.2017.7935837",
+            "citations": 0
+          },
+          {
+            "title": "Phase noise phenomenon explanation based multi-time variables differential equation technique",
+            "year": "2016",
+            "doi": "10.1109/ECTICon.2016.7561434",
+            "citations": 0
+          },
+          {
+            "title": "Image watermarking using joined wavelet and time domain",
+            "year": "2014",
+            "doi": "10.1109/ICT-ISPC.2014.6923215",
+            "citations": 3
+          },
+          {
+            "title": "A novel versatile modulator circuit",
+            "year": "2009",
+            "doi": "10.1016/j.aeue.2008.02.010",
+            "citations": 11
+          },
+          {
+            "title": "A simple and economic PWM and ΣΔ modulator circuit based on modified source-couple oscillator",
+            "year": "2006",
+            "doi": "10.1109/TENCON.2006.343951",
+            "citations": 0
+          },
+          {
+            "title": "A novel versatile modulator circuit",
+            "year": "2005",
+            "doi": "10.1109/ISCIT.2005.1567044",
+            "citations": 3
+          },
+          {
+            "title": "A simple circuit for sigma-delta /delta modulation",
+            "year": "2005",
+            "doi": "10.1109/ISSCS.2005.1509871",
+            "citations": 3
+          },
+          {
+            "title": "A novel monostable multivibrator circuit",
+            "year": "2005",
+            "doi": "10.1109/TENCON.2005.300946",
+            "citations": 10
+          },
+          {
+            "title": "Time quantization derivative PWM based one-bit DPCM",
+            "year": "2004",
+            "doi": "",
+            "citations": 0
+          }
+        ],
+        "Internet of Things": [
+          {
+            "title": "Pulse Oximetry Based on Quadrature Multiplexing of the Amplitude Modulated Photoplethysmographic Signals",
+            "year": "2023",
+            "doi": "10.3390/s23136106",
+            "citations": 4
+          },
+          {
+            "title": "A Practical Circuit of Cyclic Chirp Spread Spectrum Modulation for Long Range Communication",
+            "year": "2022",
+            "doi": "10.1109/ITC-CSCC55581.2022.9895026",
+            "citations": 2
+          },
+          {
+            "title": "Using of an Arithmetic Sequence to Estimate Undetected Existing Circle Choice Locations",
+            "year": "2022",
+            "doi": "10.1109/ITC-CSCC55581.2022.9895053",
+            "citations": 2
+          },
+          {
+            "title": "A performance evaluation for Internet of Things based on Blockchain technology",
+            "year": "2019",
+            "doi": "10.1109/ICEAST.2019.8802524",
+            "citations": 4
+          },
+          {
+            "title": "Influence of Light Intensity on a Motion Artifact Signal in a Photoplethysmographic Signal",
+            "year": "2018",
+            "doi": "10.1109/ICIIBMS.2018.8549938",
+            "citations": 1
+          },
+          {
+            "title": "Experimental performance evaluation of LoRaWAN: A case study in Bangkok",
+            "year": "2017",
+            "doi": "10.1109/JCSSE.2017.8025948",
+            "citations": 46
+          },
+          {
+            "title": "A survey on internet of things architecture, protocols, possible applications, security, privacy, real-world implementation and future trends",
+            "year": "2016",
+            "doi": "10.1109/ICCT.2015.7399787",
+            "citations": 115
+          },
+          {
+            "title": "Implementation of vedic multiplier technique on multicore processor",
+            "year": "2015",
+            "doi": "10.1109/TENCON.2014.7022325",
+            "citations": 1
+          },
+          {
+            "title": "New analytic solution of second-order oscillator using multi-time variables technique",
+            "year": "2005",
+            "doi": "10.1109/ispacs.2005.1595490",
+            "citations": 6
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 224
+    },
+    "25926696500": {
+      "name": "Kuntpong Woraratpanya",
+      "thai_name": "รศ.ดร. กันต์พงษ์ วรรัตน์ปัญญาตำแหน่งรองคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kuntpong-woraratpanya",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2581%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C-%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B9%258C%25E0%25B8%259B%25E0%25B8%25B1%25E0%25B8%258D%25E0%25B8%258D%25E0%25B8%25B2-500x500.jpg&w=640&q=75",
+      "scopus_id": "25926696500",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25926696500",
+      "topics": [
+        "Deep Learning",
+        "Algorithm",
+        "Neural Network",
+        "Network",
+        "Prediction",
+        "Semantic",
+        "Classification"
+      ],
+      "topic_groups": {
+        "Deep Learning": [
+          {
+            "title": "Advancing GAN Evaluation: The Advanced Mahalanobis Distance Learning Metric for Realistic Car Damage Image Assessment",
+            "year": "2026",
+            "doi": "10.1109/ACCESS.2026.3657196",
+            "citations": 0
+          },
+          {
+            "title": "Evaluating the effectiveness of facial actions features for the early detection of driver drowsiness in driving safety monitoring system",
+            "year": "2025",
+            "doi": "10.21924/cst.10.1.2025.1594",
+            "citations": 0
+          },
+          {
+            "title": "Anomaly Signal Imputation Using Latent Coordination Relations",
+            "year": "2024",
+            "doi": "10.1109/ACCESS.2024.3448236",
+            "citations": 1
+          },
+          {
+            "title": "Enhancing Thai Food Recognition Through Multimodal Fusion of Image and Fourier Spectrum",
+            "year": "2024",
+            "doi": "10.1007/978-981-97-5934-7_7",
+            "citations": 0
+          },
+          {
+            "title": "Exploring the i3DVAE-LSTM Framework for Generating Exceptionally Rare Anomaly Signals",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317760",
+            "citations": 0
+          },
+          {
+            "title": "Fractal Dimension in Deep Learning",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317679",
+            "citations": 0
+          },
+          {
+            "title": "AI-enabled Exit Strategy of Emergency Vehicle Preemption",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317753",
+            "citations": 1
+          },
+          {
+            "title": "Exploring LSTM and CNN Architectures for Sign Language Translation",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317660",
+            "citations": 5
+          },
+          {
+            "title": "3DVAE-LSTM for Extremely Rare Anomaly Signal Generation",
+            "year": "2022",
+            "doi": "10.1109/ICITEE56407.2022.9954112",
+            "citations": 2
+          },
+          {
+            "title": "Vector learning representation for generalized speech emotion recognition",
+            "year": "2022",
+            "doi": "10.1016/j.heliyon.2022.e09196",
+            "citations": 11
+          },
+          {
+            "title": "Evaluation of deep learning algorithms for semantic segmentation of car parts",
+            "year": "2022",
+            "doi": "10.1007/s40747-021-00397-8",
+            "citations": 41
+          },
+          {
+            "title": "ADGAS: An Advanced Data Generation for Anomalous Signals",
+            "year": "2021",
+            "doi": "10.1007/978-3-030-79757-7_14",
+            "citations": 2
+          },
+          {
+            "title": "A Unified Framework for Saliency Segmentation",
+            "year": "2021",
+            "doi": "10.1007/978-3-030-79757-7_19",
+            "citations": 1
+          },
+          {
+            "title": "Enhancement of Anime Imaging Enlargement using Modified Super-Resolution CNN",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611842",
+            "citations": 3
+          },
+          {
+            "title": "3DVAE-ERSG: 3D Variational Autoencoder for Extremely Rare Signal Generation",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611955",
+            "citations": 5
+          },
+          {
+            "title": "A data generation framework for extremely rare case signals",
+            "year": "2021",
+            "doi": "10.1016/j.heliyon.2021.e07687",
+            "citations": 8
+          },
+          {
+            "title": "Local Sigmoid Method: Non-Iterative Deterministic Learning Algorithm for Automatic Model Construction of Neural Network",
+            "year": "2020",
+            "doi": "10.1109/ACCESS.2020.2968983",
+            "citations": 7
+          },
+          {
+            "title": "An Efficient Hola Filter for Saliency Detection",
+            "year": "2020",
+            "doi": "10.1109/ICITEE49829.2020.9271690",
+            "citations": 2
+          },
+          {
+            "title": "Deep Residual Local Feature Learning for Speech Emotion Recognition",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-63830-6_21",
+            "citations": 6
+          },
+          {
+            "title": "Robust and Unified VLC Decoding System for Square Wave Quadrature Amplitude Modulation Using Deep Learning Approach",
+            "year": "2019",
+            "doi": "10.1109/ACCESS.2019.2952465",
+            "citations": 14
+          },
+          {
+            "title": "Square Wave Quadrature Amplitude Modulation for Visible Light Communication Using Image Sensor",
+            "year": "2019",
+            "doi": "10.1109/ACCESS.2019.2928417",
+            "citations": 10
+          },
+          {
+            "title": "Thai Dependency Parsing with Character Embedding",
+            "year": "2019",
+            "doi": "10.1109/ICITEED.2019.8930002",
+            "citations": 13
+          }
+        ],
+        "Neural Network": [
+          {
+            "title": "A robust-texture convolutional neural network",
+            "year": "2019",
+            "doi": "10.22452/mjcs.sp2019no2.9",
+            "citations": 0
+          }
+        ],
+        "Prediction": [
+          {
+            "title": "LSCR: Latent Space Coordination Relation for Anomaly Prediction",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317782",
+            "citations": 0
+          }
+        ],
+        "Classification": [
+          {
+            "title": "Car Damage Detection and Classification",
+            "year": "2020",
+            "doi": "10.1145/3406601.3406651",
+            "citations": 25
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 157
+    },
+    "55967009300": {
+      "name": "Akharin Khunkitti",
+      "thai_name": "ผศ. อัครินทร์ คุณกิตติ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/akharin-khunkitti",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2599%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B9%258C-%25E0%25B8%2584%25E0%25B8%25B8%25E0%25B8%2593%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%2595%25E0%25B8%25B4-500x500.jpg&w=640&q=75",
+      "scopus_id": "55967009300",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=55967009300",
+      "topics": [
+        "Neural Network",
+        "Network",
+        "Algorithm",
+        "Classification",
+        "Web"
+      ],
+      "topic_groups": {
+        "Neural Network": [
+          {
+            "title": "A rule-based training for artificial neural network packet filtering firewall",
+            "year": "2019",
+            "doi": "10.1109/ICSAI48974.2019.9010431",
+            "citations": 5
+          },
+          {
+            "title": "Dynamic policy-based routing using firewall rules",
+            "year": "2009",
+            "doi": "10.1109/EMS.2009.33",
+            "citations": 3
+          },
+          {
+            "title": "Continuous Migration Container for upgrading object",
+            "year": "2004",
+            "doi": "",
+            "citations": 1
+          },
+          {
+            "title": "Content-based load balancing with multicast and TCP-handoff",
+            "year": "2003",
+            "doi": "",
+            "citations": 6
+          },
+          {
+            "title": "Service enhancement using resource evolutionary management",
+            "year": "2001",
+            "doi": "10.1109/ICON.2001.962325",
+            "citations": 0
+          },
+          {
+            "title": "Recursive Digital Filters With Predetermined Group Delay And Chebyshev Stopband Attenuation",
+            "year": "1988",
+            "doi": "10.1049/el:19881056",
+            "citations": 1
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "A packet classification's algorithm: Bitmap intersection lookup using cache",
+            "year": "2010",
+            "doi": "10.1109/ICCAE.2010.5451979",
+            "citations": 0
+          }
+        ],
+        "Web": [
+          {
+            "title": "Web object life measurement using Squid log file",
+            "year": "2001",
+            "doi": "10.1109/ICON.2001.962324",
+            "citations": 0
+          }
+        ]
+      },
+      "total_papers": 8,
+      "citation_count": 16
+    },
+    "6506301016": {
+      "name": "Pattarachai Lalitrojwong",
+      "thai_name": "ผศ.ดร. ภัทรชัย ลลิตโรจน์วงศ์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/pattarachai-lalitrojwong",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A0%25E0%25B8%25B1%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%258A%25E0%25B8%25B1%25E0%25B8%25A2-%25E0%25B8%25A5%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%258C%25E0%25B8%25A7%25E0%25B8%2587%25E0%25B8%25A8%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "6506301016",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6506301016",
+      "topics": [
+        "Semantic",
+        "Web"
+      ],
+      "topic_groups": {
+        "Semantic": [
+          {
+            "title": "Generative AI for Industrial Applications: Synthetic Dataset",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317774",
+            "citations": 3
+          },
+          {
+            "title": "Intelligent Triage Assistant",
+            "year": "2021",
+            "doi": "10.1007/978-3-030-79757-7_27",
+            "citations": 1
+          },
+          {
+            "title": "OntoPop: An ontology population system for the semantic web",
+            "year": "2012",
+            "doi": "10.1587/transinf.E95.D.921",
+            "citations": 6
+          },
+          {
+            "title": "Mining feature-opinion in online customer reviews for opinion summarization",
+            "year": "2010",
+            "doi": "",
+            "citations": 126
+          },
+          {
+            "title": "Classifying instances into lexical ontology concepts using latent semantic analysis",
+            "year": "2010",
+            "doi": "10.1109/ICCAE.2010.5451997",
+            "citations": 4
+          },
+          {
+            "title": "Extracting product features and opinions from product reviews using dependency analysis",
+            "year": "2010",
+            "doi": "10.1109/FSKD.2010.5569865",
+            "citations": 12
+          },
+          {
+            "title": "Automatic product feature extraction from online product reviews using maximum entropy with lexical and syntactic features",
+            "year": "2008",
+            "doi": "10.1109/IRI.2008.4583038",
+            "citations": 34
+          },
+          {
+            "title": "A maximum entropy model for product feature extraction in online customer reviews",
+            "year": "2008",
+            "doi": "10.1109/ICCIS.2008.4670882",
+            "citations": 14
+          },
+          {
+            "title": "The use of computer technology by visually impaired high school students in integrated classrooms in Bangkok",
+            "year": "2004",
+            "doi": "",
+            "citations": 0
+          },
+          {
+            "title": "An Ontology-based Multi-agent System for Matchmaking",
+            "year": "2002",
+            "doi": "",
+            "citations": 5
+          },
+          {
+            "title": "CIM — the hybrid symbolic/connectionist rule-based inference system",
+            "year": "2000",
+            "doi": "10.1007/3-540-45049-1_65",
+            "citations": 0
+          },
+          {
+            "title": "A connectionist inference mechanism for a natural language understanding system",
+            "year": "1999",
+            "doi": "10.1109/ICIIS.1999.810349",
+            "citations": 1
+          }
+        ]
+      },
+      "total_papers": 12,
+      "citation_count": 206
+    },
+    "57196081489": {
+      "name": "Pattanapong Chantamit O Pas",
+      "thai_name": "ผศ.ดร. พัฒนพงษ์ ฉันทมิตรโอภาสตำแหน่งประธานสาขาวิชาเทคโนโลยีสารสนเทศ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/pattanapong-chantamit-o-pas",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C-%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2597%25E0%25B8%25A1%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25A3%25E0%25B9%2582%25E0%25B8%25AD%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%25AA-500x500.jpg&w=640&q=75",
+      "scopus_id": "57196081489",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=57196081489",
+      "topics": [
+        "Prediction",
+        "Deep Learning",
+        "Neural Network",
+        "Network",
+        "Mobile",
+        "Algorithm"
+      ],
+      "topic_groups": {
+        "Prediction": [
+          {
+            "title": "Knowledge Acquisition, Representation and Transfer in the Metamodel for Software Development Methodologies",
+            "year": "2019",
+            "doi": "10.1109/ICITEED.2019.8929942",
+            "citations": 0
+          },
+          {
+            "title": "Long Short-Term Memory Recurrent Neural Network for Stroke Prediction",
+            "year": "2018",
+            "doi": "10.1007/978-3-319-96136-1_25",
+            "citations": 40
+          },
+          {
+            "title": "A case-based reasoning framework for prediction of stroke",
+            "year": "2018",
+            "doi": "10.1007/978-981-10-5508-9_21",
+            "citations": 3
+          },
+          {
+            "title": "Prediction of stroke using deep learning model",
+            "year": "2017",
+            "doi": "10.1007/978-3-319-70139-4_78",
+            "citations": 39
+          }
+        ],
+        "Deep Learning": [
+          {
+            "title": "Deep Learning Based Automobile Identification Application",
+            "year": "2023",
+            "doi": "10.1007/978-981-99-1648-1_45",
+            "citations": 0
+          }
+        ],
+        "Neural Network": [
+          {
+            "title": "Thai Recipe Retrieval Application Using Convolutional Neural Network",
+            "year": "2022",
+            "doi": "10.1007/978-3-031-16538-2_14",
+            "citations": 2
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "Road Traffic Injury Prevention Using DBSCAN Algorithm",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-63823-8_22",
+            "citations": 3
+          }
+        ]
+      },
+      "total_papers": 7,
+      "citation_count": 87
+    },
+    "35729106100": {
+      "name": "Sumet Prabhavat",
+      "thai_name": "ผศ.ดร. สุเมธ ประภาวัต",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sumet-prabhavat",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%2598-%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%2595-500x500.jpg&w=640&q=75",
+      "scopus_id": "35729106100",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=35729106100",
+      "topics": [
+        "Network",
+        "Mobile",
+        "Deep Learning",
+        "Prediction"
+      ],
+      "topic_groups": {
+        "Network": [
+          {
+            "title": "Global-Scale Flow Routing for Load-Balancing in In-Band Software-Defined MANET",
+            "year": "2025",
+            "doi": "10.1109/ACCESS.2025.3634763",
+            "citations": 0
+          },
+          {
+            "title": "Deep Learning-Based Early Detection and Avoidance of Traffic Congestion in Software-Defined Networks",
+            "year": "2022",
+            "doi": "10.1109/ICITEE56407.2022.9954107",
+            "citations": 1
+          },
+          {
+            "title": "Integration of MANET with In-Band SDN Controller",
+            "year": "2021",
+            "doi": "10.1007/978-3-030-79757-7_31",
+            "citations": 2
+          },
+          {
+            "title": "Low overhead localized routing in mobile Ad Hoc networks",
+            "year": "2019",
+            "doi": "10.1155/2019/9652481",
+            "citations": 16
+          },
+          {
+            "title": "A dynamic routing for load distribution in mobile Ad-Hoc network",
+            "year": "2018",
+            "doi": "10.1007/978-3-319-60663-7_22",
+            "citations": 2
+          },
+          {
+            "title": "Overhead reduction for route repair in mobile ad hoc networks",
+            "year": "2018",
+            "doi": "10.1007/978-3-319-60663-7_21",
+            "citations": 1
+          },
+          {
+            "title": "Adaptive gateway discovery for load distribution in hybrid wireless networks",
+            "year": "2018",
+            "doi": "10.1109/ICSEC.2018.8712756",
+            "citations": 0
+          },
+          {
+            "title": "Overhead reduction of location-Aided gateway discovery protocols",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863240",
+            "citations": 5
+          },
+          {
+            "title": "A new explicit congestion notification scheme for satellite IP networks",
+            "year": "2016",
+            "doi": "10.1016/j.jnca.2016.08.027",
+            "citations": 8
+          },
+          {
+            "title": "An efficient spreading Epidemic Routing for Delay-Tolerant Network",
+            "year": "2016",
+            "doi": "10.1109/CCNC.2016.7444825",
+            "citations": 8
+          },
+          {
+            "title": "A study on overhead reduction for GPS-assisted mobile ad-hoc networks",
+            "year": "2015",
+            "doi": "10.1109/TENCON.2014.7022463",
+            "citations": 3
+          },
+          {
+            "title": "An Epidemic Routing with Low Message Exchange Overhead for Delay Tolerant Networks",
+            "year": "2015",
+            "doi": "10.1007/978-3-319-08422-0_63",
+            "citations": 7
+          },
+          {
+            "title": "An efficient message flooding scheme in delay-tolerant networks",
+            "year": "2015",
+            "doi": "10.1109/ICITEED.2015.7408959",
+            "citations": 7
+          },
+          {
+            "title": "Reserch and development of the city commuter installed ICT functions in consideration of usability",
+            "year": "2015",
+            "doi": "10.1109/ICITEED.2015.7409017",
+            "citations": 0
+          },
+          {
+            "title": "Load distribution using modified RED for multipath TCP communication",
+            "year": "2013",
+            "doi": "10.1109/ICITEED.2013.6676253",
+            "citations": 1
+          },
+          {
+            "title": "On load distribution over multipath networks",
+            "year": "2012",
+            "doi": "10.1109/SURV.2011.082511.00013",
+            "citations": 99
+          },
+          {
+            "title": "Effective delay-controlled load distribution over multipath networks",
+            "year": "2011",
+            "doi": "10.1109/TPDS.2011.43",
+            "citations": 67
+          },
+          {
+            "title": "On the performance analysis of traffic splitting on load imbalancing and packet reordering of bursty traffic",
+            "year": "2009",
+            "doi": "10.1109/ICNIDC.2009.5360896",
+            "citations": 15
+          },
+          {
+            "title": "Load distribution with queuing delay bound over multipath networks: Rate control using stochastic delay prediction",
+            "year": "2008",
+            "doi": "",
+            "citations": 2
+          },
+          {
+            "title": "Throughput improvement on RED mechanism",
+            "year": "2002",
+            "doi": "10.1109/ICCS.2002.1182545",
+            "citations": 5
+          }
+        ]
+      },
+      "total_papers": 20,
+      "citation_count": 249
+    },
+    "54947306400": {
+      "name": "Anuntapat Anuntachai",
+      "thai_name": "ผศ.ดร. อนันตพัฒน์ อนันตชัยตำแหน่งผู้ช่วยคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/anuntapat-anuntachai",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B9%258C-%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%258A%25E0%25B8%25B1%25E0%25B8%25A2-500x500.jpg&w=640&q=75",
+      "scopus_id": "54947306400",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=54947306400",
+      "topics": [
+        "Algorithm",
+        "Mobile",
+        "Image Processing",
+        "Optimization",
+        "Prediction"
+      ],
+      "topic_groups": {
+        "Algorithm": [
+          {
+            "title": "Spacing and Stressing Extracting of Sentences System",
+            "year": "2024",
+            "doi": "10.1109/ISCIT63075.2024.10793694",
+            "citations": 0
+          },
+          {
+            "title": "System for Analysis and Verification of Exercise Postures with Equipment",
+            "year": "2024",
+            "doi": "10.23919/ICCAS63016.2024.10773343",
+            "citations": 0
+          },
+          {
+            "title": "Adapted ACO Algorithm for Energy-Efficient Path Finding of Waste Collection Robot",
+            "year": "2022",
+            "doi": "10.23919/ICCAS55662.2022.10003892",
+            "citations": 5
+          },
+          {
+            "title": "Performance Measurement of Energy Optimal Path Finding for Waste Collection Robot Using ACO Algorithm",
+            "year": "2022",
+            "doi": "10.1109/ACCESS.2022.3219416",
+            "citations": 11
+          },
+          {
+            "title": "Energy optimal path finding for waste collection robot using ant colony optimization algorithm",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611924",
+            "citations": 5
+          },
+          {
+            "title": "Runner BIB number recognition system",
+            "year": "2017",
+            "doi": "10.23919/ICCAS.2017.8204235",
+            "citations": 2
+          },
+          {
+            "title": "Searching optimization route by using Pareto solution with ant algorithm for mobile robot in rough terrain environment",
+            "year": "2016",
+            "doi": "10.1109/ICARCV.2016.7838835",
+            "citations": 1
+          },
+          {
+            "title": "An application of ant algorithm for searching energy-efficient route a mobile robot takes using energy as a weighting factor",
+            "year": "2014",
+            "doi": "10.1007/s10015-014-0175-8",
+            "citations": 5
+          },
+          {
+            "title": "Searching energy-efficient route in rough terrain for mobile robot with ant algorithm",
+            "year": "2012",
+            "doi": "10.1007/978-3-642-33503-7_20",
+            "citations": 4
+          },
+          {
+            "title": "Searching energy-efficient route for mobile robot with ant algorithm",
+            "year": "2011",
+            "doi": "",
+            "citations": 6
+          }
+        ],
+        "Mobile": [
+          {
+            "title": "Mobile application for recovering paralysis patient’s motion",
+            "year": "2018",
+            "doi": "",
+            "citations": 0
+          },
+          {
+            "title": "An application of Pareto solution with adapted ACO for searching optimal route of a mobile robot in rough terrain environment",
+            "year": "2016",
+            "doi": "10.1109/ICCAS.2016.7832348",
+            "citations": 0
+          }
+        ],
+        "Image Processing": [
+          {
+            "title": "Skill Level Recognition in Writing for Elementary School Students in Thailand Using Image Processing Technology",
+            "year": "2024",
+            "doi": "10.23919/ICCAS63016.2024.10773088",
+            "citations": 0
+          },
+          {
+            "title": "Lung Cancer Prediction Model from Chest X-Ray Images",
+            "year": "2024",
+            "doi": "10.1109/ISCIT63075.2024.10793645",
+            "citations": 0
+          },
+          {
+            "title": "Weapon Detection in X-ray Image of Baggages",
+            "year": "2024",
+            "doi": "10.1109/ISCIT63075.2024.10793527",
+            "citations": 1
+          },
+          {
+            "title": "Writing Test with Image Processing Technique",
+            "year": "2023",
+            "doi": "10.23919/ICCAS59377.2023.10316932",
+            "citations": 2
+          },
+          {
+            "title": "Analyze traffic conditions and events with sound processing",
+            "year": "2020",
+            "doi": "10.23919/ICCAS50221.2020.9268304",
+            "citations": 1
+          },
+          {
+            "title": "An Image-based Sea Turtle Identification using Postorbital Facial Feature Points Matching Technique",
+            "year": "2019",
+            "doi": "10.23919/ICCAS47443.2019.8971623",
+            "citations": 2
+          }
+        ]
+      },
+      "total_papers": 18,
+      "citation_count": 45
+    },
+    "55320442600": {
+      "name": "Boonprasert Surakratanasakul",
+      "thai_name": "ผศ.ดร. บุญประเสริฐ สุรักษ์รัตนสกุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/boonprasert-surakratanasakul",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259A%25E0%25B8%25B8%25E0%25B8%258D%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2590-%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B9%258C%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B8%25AA%25E0%25B8%2581%25E0%25B8%25B8%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": "55320442600",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=55320442600",
+      "topics": [
+        "Neural Network",
+        "Network",
+        "Classification",
+        "Cloud Computing",
+        "Internet of Things"
+      ],
+      "topic_groups": {
+        "Neural Network": [
+          {
+            "title": "Adaptive Learning Rate For Neural Network Classification Model",
+            "year": "2022",
+            "doi": "10.1109/ICSEC56337.2022.10049365",
+            "citations": 2
+          },
+          {
+            "title": "Lightweight CommonKADS in knowledge intensive organization",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2017.8250504",
+            "citations": 3
+          },
+          {
+            "title": "An approach to design a virtual space to support knowledge methodological environment",
+            "year": "2014",
+            "doi": "10.1541/ieejeiss.134.1897",
+            "citations": 1
+          },
+          {
+            "title": "CommonKADS's knowledge model using UML architectural view and extension mechanism",
+            "year": "2011",
+            "doi": "",
+            "citations": 6
+          }
+        ],
+        "Cloud Computing": [
+          {
+            "title": "A study of integration Internet of Things with health level 7 protocol for real-time healthcare monitoring by using cloud computing",
+            "year": "2017",
+            "doi": "10.1109/BMEiCON.2017.8229134",
+            "citations": 16
+          }
+        ],
+        "Internet of Things": [
+          {
+            "title": "Conjugate of knowledge items between abstract and organization knowledge models",
+            "year": "2014",
+            "doi": "10.1109/DICTAP.2014.6821687",
+            "citations": 1
+          }
+        ]
+      },
+      "total_papers": 6,
+      "citation_count": 29
+    },
+    "55567253800": {
+      "name": "Lapas Pradittasnee",
+      "thai_name": "ผศ.ดร. ลภัส ประดิษฐ์ทัศนีย์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/lapas-pradittasnee",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A5%25E0%25B8%25A0%25E0%25B8%25B1%25E0%25B8%25AA-%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2594%25E0%25B8%25B4%25E0%25B8%25A9%25E0%25B8%2590%25E0%25B9%258C%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%25A8%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "55567253800",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=55567253800",
+      "topics": [
+        "Network",
+        "Algorithm"
+      ],
+      "topic_groups": {
+        "Network": [
+          {
+            "title": "Resolving Load Imbalance State for SDN by Minimizing Maximum Load of Controllers",
+            "year": "2021",
+            "doi": "10.1007/s10922-021-09612-w",
+            "citations": 14
+          },
+          {
+            "title": "Algorithm to Balance Load of Controllers in Software-Defined Network",
+            "year": "2019",
+            "doi": "10.1109/ISCIT.2019.8905174",
+            "citations": 2
+          },
+          {
+            "title": "A Study of Improving Traffic Distribution Mechanism in Software-Defined Networking",
+            "year": "2018",
+            "doi": "10.1109/TENCON.2018.8650302",
+            "citations": 0
+          },
+          {
+            "title": "A study of the neighbor unreachability detection mechanism to improve performance of RPL protocol",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863233",
+            "citations": 2
+          },
+          {
+            "title": "Efficient Route Update and Maintenance for Reliable Routing in Large-Scale Sensor Networks",
+            "year": "2017",
+            "doi": "10.1109/TII.2016.2569523",
+            "citations": 23
+          },
+          {
+            "title": "Improving performance of route maintenance processes in RPL protocol",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2017.8250505",
+            "citations": 1
+          },
+          {
+            "title": "Predicting path quality with cross-layer information in multi-hop wireless networks",
+            "year": "2015",
+            "doi": "10.1109/ICITEED.2015.7408991",
+            "citations": 2
+          },
+          {
+            "title": "An efficient proactive route maintenance process for reliable data transmissions in sensor networks",
+            "year": "2013",
+            "doi": "10.1109/ICSPCS.2013.6723922",
+            "citations": 1
+          },
+          {
+            "title": "Efficient route update and maintenance processes for multipath routing in large-scale industrial wireless sensor networks",
+            "year": "2012",
+            "doi": "10.1109/ATNAC.2012.6398081",
+            "citations": 5
+          }
+        ]
+      },
+      "total_papers": 9,
+      "citation_count": 50
+    },
+    "56413085800": {
+      "name": "Supannada Chotipant",
+      "thai_name": "ผศ.ดร. สุพัณณดา โชติพันธ์ตำแหน่งผู้ช่วยคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/supannada-chotipant",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2593%25E0%25B8%2593%25E0%25B8%2594%25E0%25B8%25B2-%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "56413085800",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56413085800",
+      "topics": [
+        "Semantic",
+        "Recommendation",
+        "Algorithm",
+        "Fuzzy",
+        "Classification",
+        "Optimization",
+        "Neural Network",
+        "Network"
+      ],
+      "topic_groups": {
+        "Semantic": [
+          {
+            "title": "Development of WLAN Topology Display System",
+            "year": "2023",
+            "doi": "10.1109/ICOIN56518.2023.10048958",
+            "citations": 1
+          },
+          {
+            "title": "Semantic-based Thai Recipe Recommendation",
+            "year": "2022",
+            "doi": "10.1109/JCSSE54890.2022.9836293",
+            "citations": 5
+          },
+          {
+            "title": "Differentiative Feature-based Fall Detection System",
+            "year": "2021",
+            "doi": "10.23919/ICCAS52745.2021.9650068",
+            "citations": 2
+          },
+          {
+            "title": "Emotion-based music player",
+            "year": "2019",
+            "doi": "10.1109/ICEAST.2019.8802550",
+            "citations": 10
+          },
+          {
+            "title": "SERNOTATE: An automated approach for business service description annotation for efficient service retrieval and composition",
+            "year": "2018",
+            "doi": "10.1002/cpe.4189",
+            "citations": 3
+          },
+          {
+            "title": "Examining the critical success factors of startup in Thailand using structural equation model",
+            "year": "2018",
+            "doi": "10.1109/ICITEED.2018.8534854",
+            "citations": 18
+          },
+          {
+            "title": "A system for research community annotation",
+            "year": "2017",
+            "doi": "10.1145/3133264.3133302",
+            "citations": 0
+          },
+          {
+            "title": "A neural network based approach for semantic service annotation",
+            "year": "2015",
+            "doi": "10.1007/978-3-319-26535-3_34",
+            "citations": 2
+          },
+          {
+            "title": "An automated and fuzzy approach for semantically annotating services",
+            "year": "2015",
+            "doi": "10.1109/FUZZ-IEEE.2015.7337977",
+            "citations": 3
+          },
+          {
+            "title": "A fuzzy VSM-based approach for semantic service retrieval",
+            "year": "2014",
+            "doi": "10.1007/978-3-319-12643-2_82",
+            "citations": 1
+          }
+        ],
+        "Recommendation": [
+          {
+            "title": "ThinkMeal: Ingredient Classification and Recipe Recommendation Application",
+            "year": "2024",
+            "doi": "10.1109/ICITEE62483.2024.10808549",
+            "citations": 0
+          },
+          {
+            "title": "A Personalized Food Recommendation Chatbot System for Diabetes Patients",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-60816-3_3",
+            "citations": 9
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "Adapted ACO Algorithm for Energy-Efficient Path Finding of Waste Collection Robot",
+            "year": "2022",
+            "doi": "10.23919/ICCAS55662.2022.10003892",
+            "citations": 5
+          },
+          {
+            "title": "Performance Measurement of Energy Optimal Path Finding for Waste Collection Robot Using ACO Algorithm",
+            "year": "2022",
+            "doi": "10.1109/ACCESS.2022.3219416",
+            "citations": 11
+          },
+          {
+            "title": "Energy optimal path finding for waste collection robot using ant colony optimization algorithm",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611924",
+            "citations": 5
+          }
+        ]
+      },
+      "total_papers": 15,
+      "citation_count": 75
+    },
+    "11540032900": {
+      "name": "Somkiat Wangsiripitak",
+      "thai_name": "ผศ.ดร. สมเกียรติ วังศิริพิทักษ์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/somkiat-wangsiripitak",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%25A3%25E0%25B8%2595%25E0%25B8%25B4-%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%25A8%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%259E%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "11540032900",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=11540032900",
+      "topics": [
+        "Classification",
+        "Network",
+        "Deep Learning",
+        "Neural Network"
+      ],
+      "topic_groups": {
+        "Classification": [
+          {
+            "title": "The Applications of Deep Learning in ECG Classification for Disease Diagnosis: A Systematic Review and Meta-Data Analysis",
+            "year": "2024",
+            "doi": "10.4186/ej.2024.28.8.45",
+            "citations": 7
+          },
+          {
+            "title": "Vision-Based Human Movement Matching for Muay Thai Training Support System",
+            "year": "2024",
+            "doi": "10.1109/ECTI-CON60892.2024.10594986",
+            "citations": 0
+          },
+          {
+            "title": "Enhanced Cross-Modality MRI Segmentation Using Dilated Convolutions and Multi-Scale Gradient Map",
+            "year": "2024",
+            "doi": "10.1109/ICSEC62781.2024.10770713",
+            "citations": 0
+          },
+          {
+            "title": "Traffic Light and Crosswalk Detection and Localization Using Vehicular Camera",
+            "year": "2022",
+            "doi": "10.1109/KST53302.2022.9729066",
+            "citations": 3
+          },
+          {
+            "title": "Improvement of Text-Independent Speaker Verification Using Gender-like Feature",
+            "year": "2021",
+            "doi": "10.1109/KST51265.2021.9415832",
+            "citations": 0
+          },
+          {
+            "title": "Hybrid Training of Speaker and Sentence Models for One-Shot Lip Password",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-63830-6_31",
+            "citations": 5
+          },
+          {
+            "title": "Pixel-based foreground detection in repetitive time-series region",
+            "year": "2019",
+            "doi": "10.22452/mjcs.sp2019no2.4",
+            "citations": 0
+          },
+          {
+            "title": "Sketch image classification using component based k-Nn",
+            "year": "2019",
+            "doi": "10.1109/CCOMS.2019.8821693",
+            "citations": 4
+          },
+          {
+            "title": "Comparison of gesture in Thai boxing framework using angular dynamic time warping",
+            "year": "2019",
+            "doi": "10.1109/ECTI-CON47248.2019.8955434",
+            "citations": 5
+          },
+          {
+            "title": "Real-Time Vision Based Human Height Measurement Using Sliding Window on Selected Candidates",
+            "year": "2018",
+            "doi": "10.1109/TENCON.2018.8650380",
+            "citations": 3
+          },
+          {
+            "title": "CDoTS: Change detection on time series background for video foreground segmentation",
+            "year": "2017",
+            "doi": "10.1109/ECTICon.2017.8096258",
+            "citations": 2
+          },
+          {
+            "title": "Feature-based motion detection and tracking on approximate 3D ground plane",
+            "year": "2017",
+            "doi": "10.1109/VCIP.2016.7805481",
+            "citations": 2
+          },
+          {
+            "title": "Real-time monocular human height estimation using bimodal background subtraction",
+            "year": "2017",
+            "doi": "10.1109/TENCON.2017.8227847",
+            "citations": 3
+          },
+          {
+            "title": "Printed Thai character recognition using shape classification in video sequence along a line",
+            "year": "2017",
+            "doi": "10.4186/ej.2017.21.6.37",
+            "citations": 3
+          },
+          {
+            "title": "Tracking-based human entry/exit detection on various video resolutions (A study on parameter effects)",
+            "year": "2015",
+            "doi": "10.1109/ICITEED.2015.7408985",
+            "citations": 2
+          },
+          {
+            "title": "Vision-based system for automatic detection of suspicious objects on ATM",
+            "year": "2015",
+            "doi": "10.1007/978-3-319-23192-1_48",
+            "citations": 3
+          },
+          {
+            "title": "In-building navigation system using a camera",
+            "year": "2014",
+            "doi": "10.1109/kst.2014.6775390",
+            "citations": 1
+          },
+          {
+            "title": "Reducing mismatching under time-pressure by reasoning about visibility and occlusion",
+            "year": "2010",
+            "doi": "10.5244/C.24.54",
+            "citations": 4
+          },
+          {
+            "title": "Avoiding moving outliers in visual slam by tracking moving objects",
+            "year": "2009",
+            "doi": "10.1109/ROBOT.2009.5152290",
+            "citations": 77
+          },
+          {
+            "title": "Visual programming using flowchart",
+            "year": "2006",
+            "doi": "10.1109/ISCIT.2006.339940",
+            "citations": 22
+          },
+          {
+            "title": "Cursor position estimation model for virtual touch screen using camera",
+            "year": "2005",
+            "doi": "",
+            "citations": 0
+          }
+        ],
+        "Network": [
+          {
+            "title": "Ensemble Modeling for Emotion Recognition Using a Frame Attention Network on Faces With and Without Mouth Occlusion",
+            "year": "2025",
+            "doi": "10.1007/978-981-96-0695-5_26",
+            "citations": 0
+          },
+          {
+            "title": "Multimodal Biometrics Recognition Using a Deep Convolutional Neural Network with Transfer Learning in Surveillance Videos",
+            "year": "2022",
+            "doi": "10.3390/computation10070127",
+            "citations": 18
+          }
+        ],
+        "Deep Learning": [
+          {
+            "title": "Learning Extended Term Frequency-Inverse Document Frequency (TF-IDF++) for Depression Screening From Sentences in Thai Blog Post",
+            "year": "2023",
+            "doi": "10.1109/ICBIR57571.2023.10147692",
+            "citations": 2
+          },
+          {
+            "title": "Human height estimation using visual geometry and feature learning",
+            "year": "2021",
+            "doi": "10.1109/ISCAS51556.2021.9401250",
+            "citations": 3
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 169
+    },
+    "6504273725": {
+      "name": "Supakit Nootyaskool",
+      "thai_name": "ผศ.ดร. สุภกิจ นุตยะสกุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/supakit-nootyaskool",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588-%25E0%25B8%2599%25E0%25B8%25B8%25E0%25B8%2595%25E0%25B8%25A2%25E0%25B8%25B0%25E0%25B8%25AA%25E0%25B8%2581%25E0%25B8%25B8%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": "6504273725",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6504273725",
+      "topics": [
+        "Optimization",
+        "Algorithm",
+        "Genetic Algorithm",
+        "Neural Network",
+        "Network",
+        "Deep Learning"
+      ],
+      "topic_groups": {
+        "Optimization": [
+          {
+            "title": "Gold Investment Model on RNN and Finding Best Investment Strategy on PSO",
+            "year": "2022",
+            "doi": "10.1109/ICMLC56445.2022.9941321",
+            "citations": 0
+          },
+          {
+            "title": "Smart collar design to predict cow behavior",
+            "year": "2020",
+            "doi": "10.1109/JCSSE49651.2020.9268342",
+            "citations": 6
+          },
+          {
+            "title": "Reinforcement learning applied to scrum team towards large-scale global optimization",
+            "year": "2019",
+            "doi": "10.1109/ICSP.2018.8652286",
+            "citations": 0
+          },
+          {
+            "title": "Classifying Vehicle Traffic Messages from Twitter to Organize Traffic Services",
+            "year": "2019",
+            "doi": "10.1109/IEA.2019.8714777",
+            "citations": 0
+          },
+          {
+            "title": "Case study psychological questionnaire evaluated by hidden Markov models",
+            "year": "2017",
+            "doi": "10.1109/TENCON.2017.8228312",
+            "citations": 2
+          },
+          {
+            "title": "Introducing scrum process optimization",
+            "year": "2017",
+            "doi": "10.1109/ICMLC.2017.8107761",
+            "citations": 2
+          },
+          {
+            "title": "Roulette wheel selection applied to PSO on numerical function in discrete and continuous space",
+            "year": "2016",
+            "doi": "10.1109/TENCONSpring.2016.7519433",
+            "citations": 2
+          },
+          {
+            "title": "Optimization algorithm using scrum process",
+            "year": "2016",
+            "doi": "10.1109/ICMLC.2016.7860908",
+            "citations": 4
+          },
+          {
+            "title": "Hidden Markov Models predict foreign exchange rate",
+            "year": "2015",
+            "doi": "10.1109/ISCIT.2014.7011878",
+            "citations": 3
+          },
+          {
+            "title": "Roulette wheel selection to encourage discrete Particle Swarm Optimization solving toll-keeper scheduling problem",
+            "year": "2015",
+            "doi": "10.1109/TICST.2015.7369392",
+            "citations": 2
+          },
+          {
+            "title": "The hybrid implementation genetic algorithm with particle swarm optimization to solve the unconstrained optimization problems",
+            "year": "2012",
+            "doi": "10.1109/KST.2012.6287739",
+            "citations": 2
+          },
+          {
+            "title": "HMM Parameters Optimization using Combine Genetic Algorithm and Iterative Training",
+            "year": "2003",
+            "doi": "",
+            "citations": 1
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "Comparison solving discrete space on flower pollination algorithm, PSO and GA",
+            "year": "2016",
+            "doi": "10.1109/KST.2016.7440499",
+            "citations": 9
+          },
+          {
+            "title": "Hybrid Genetic Algorithm with Baum-Welch Algorithm by using diversity population technique",
+            "year": "2006",
+            "doi": "10.1109/ISCIT.2006.339879",
+            "citations": 1
+          }
+        ],
+        "Neural Network": [
+          {
+            "title": "Predicting Fuel Burn with Neural Network to Adjust Contingency Fuel of Airplane",
+            "year": "2023",
+            "doi": "10.1109/ICACI58115.2023.10146159",
+            "citations": 0
+          },
+          {
+            "title": "Categorize Level of Crystal Sugar Making with Recurrent Neural Network",
+            "year": "2022",
+            "doi": "10.1109/JCSSE54890.2022.9836272",
+            "citations": 0
+          }
+        ],
+        "Deep Learning": [
+          {
+            "title": "DEEP LEARNING PREDICTING POWER COSTS FOR POWER PLANNING",
+            "year": "2025",
+            "doi": "10.24507/icicelb.16.05.549",
+            "citations": 0
+          }
+        ]
+      },
+      "total_papers": 17,
+      "citation_count": 34
+    },
+    "25926548900": {
+      "name": "Manop Phankokkruad",
+      "thai_name": "ผศ.ดร. มานพ พันธ์โคกกรวด",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/manop-phankokkruad",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%259E-%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C%25E0%25B9%2582%25E0%25B8%2584%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%2594-500x500.jpg&w=640&q=75",
+      "scopus_id": "25926548900",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25926548900",
+      "topics": [
+        "Classification",
+        "Neural Network",
+        "Network",
+        "Prediction",
+        "Clustering",
+        "Algorithm"
+      ],
+      "topic_groups": {
+        "Classification": [
+          {
+            "title": "Improving the Sound Classification Accuracy Using CNN-LSTM and MFCC with Audio Augmentation for Diagnosing Respiratory Disease",
+            "year": "2025",
+            "doi": "10.1109/ICAIBD64986.2025.11082034",
+            "citations": 0
+          },
+          {
+            "title": "Subcellular Protein Patterns Classification Using Extreme Gradient Boosting with Deep Transfer Learning as Feature Extractor",
+            "year": "2024",
+            "doi": "10.1007/978-3-031-56388-1_9",
+            "citations": 0
+          },
+          {
+            "title": "Morphology and Properties of Poly(Lactic Acid) and Polybutylene Succinate and Ethylene-co-Methyl Acrylate-co-Glycidyl Methacrylate Ternary Blends",
+            "year": "2023",
+            "doi": "10.4028/p-jl4d18",
+            "citations": 1
+          },
+          {
+            "title": "Improving Classification Efficiency Based on Combination of Extreme Gradient Boosting and Deep Transfer Learning",
+            "year": "2023",
+            "doi": "10.1109/ICCC59590.2023.10507377",
+            "citations": 2
+          },
+          {
+            "title": "Mechanical, Thermal and Morphological Properties of Poly(Lactic Acid) and Poly(Butylene Adipate-co-Terephthalate) Blends with Organoclay",
+            "year": "2022",
+            "doi": "10.4028/p-z5i0zm",
+            "citations": 0
+          },
+          {
+            "title": "Stages of Progression Classification of Alzheimer's Disease Using Deep Transfer Learning Models with Over-Sampling",
+            "year": "2022",
+            "doi": "10.1109/ICoDSE56892.2022.9971931",
+            "citations": 3
+          },
+          {
+            "title": "Ensemble Transfer Learning for Lung Cancer Detection",
+            "year": "2021",
+            "doi": "10.1145/3478905.3478995",
+            "citations": 38
+          },
+          {
+            "title": "Influence of cellulose fiber content on morphology and properties of poly(Lactic acid)/propylene-ethylene copolymer/cellulose composites",
+            "year": "2021",
+            "doi": "10.4028/www.scientific.net/SSP.315.128",
+            "citations": 1
+          },
+          {
+            "title": "Evaluation of Deep Transfer Learning Models in Glaucoma Detection for Clinical Application",
+            "year": "2021",
+            "doi": "10.1109/ICOIACT53268.2021.9563969",
+            "citations": 5
+          },
+          {
+            "title": "Improvement of poly(Lactic acid) properties by ethylene-octene copolymer and organoclay",
+            "year": "2020",
+            "doi": "10.4028/www.scientific.net/MSF.1009.43",
+            "citations": 1
+          },
+          {
+            "title": "Morphology and properties of poly(lactic acid)/ethylene-octene copolymer blends with different organoclay types",
+            "year": "2020",
+            "doi": "",
+            "citations": 0
+          },
+          {
+            "title": "Cost-Sensitive Extreme Gradient Boosting for Imbalanced Classification of Breast Cancer Diagnosis",
+            "year": "2020",
+            "doi": "10.1109/ICCSCE50387.2020.9204948",
+            "citations": 17
+          },
+          {
+            "title": "Morphology and properties of poly(Lactic acid)/ethylene-octene copolymer nanocomposites",
+            "year": "2019",
+            "doi": "10.4028/www.scientific.net/MSF.953.47",
+            "citations": 0
+          },
+          {
+            "title": "Improvement of poly(Lactic acid) properties by using acrylonitrile-butadiene rubber and polyethylene-g-maleic anhydride",
+            "year": "2019",
+            "doi": "10.4028/www.scientific.net/MSF.972.178",
+            "citations": 1
+          },
+          {
+            "title": "Morphology, mechanical and thermal properties of poly(Lactic acid)/propylene-ethylene copolymer/cellulose composites",
+            "year": "2019",
+            "doi": "10.4028/www.scientific.net/MSF.972.172",
+            "citations": 2
+          },
+          {
+            "title": "Morphology and mechanical properties of poly(Lactic acid) with propylene-ethylene copolymer and α-cellulose",
+            "year": "2019",
+            "doi": "10.4028/www.scientific.net/MSF.947.200",
+            "citations": 0
+          },
+          {
+            "title": "Classification of file duplication by hierarchical clustering based on similarity relations",
+            "year": "2018",
+            "doi": "10.1109/FSKD.2017.8393004",
+            "citations": 2
+          },
+          {
+            "title": "Mechanical properties and phase morphology of poly(lactic acid)/acrylonitrile-butadiene rubber/organoclay nanocomposites prepared by melt blending",
+            "year": "2018",
+            "doi": "10.4028/www.scientific.net/KEM.775.13",
+            "citations": 4
+          }
+        ],
+        "Neural Network": [
+          {
+            "title": "A Comparison of Extreme Gradient Boosting and Convolutional Neural Network-Long Short-Term Memory for Service Demand Forecasting",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-32456-8_60",
+            "citations": 2
+          },
+          {
+            "title": "COVID-19 Pneumonia detection in chest X-ray images using transfer learning of convolutional neural networks",
+            "year": "2020",
+            "doi": "10.1145/3414274.3414496",
+            "citations": 11
+          },
+          {
+            "title": "An application of convolutional neural network-long short-term memory model for service demand forecasting",
+            "year": "2019",
+            "doi": "10.1109/ICOIACT46704.2019.8938553",
+            "citations": 3
+          },
+          {
+            "title": "A comparison of efficiency improvement for long short-term memory model using convolutional operations and convolutional neural network",
+            "year": "2019",
+            "doi": "10.1109/ICOIACT46704.2019.8938410",
+            "citations": 5
+          }
+        ],
+        "Prediction": [
+          {
+            "title": "Performance Analysis and Comparison of Cerebral Stroke Prediction Models on Imbalanced Datasets",
+            "year": "2022",
+            "doi": "10.1109/BCD54882.2022.9900833",
+            "citations": 2
+          },
+          {
+            "title": "Prediction of mechanical properties of polymer materials using extreme gradient boosting on high molecular weight polymers",
+            "year": "2019",
+            "doi": "10.1007/978-3-319-93659-8_33",
+            "citations": 7
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "Efficient similarity measurement by the combination of distance algorithms to identify the duplication relativity",
+            "year": "2018",
+            "doi": "10.1007/978-3-319-60170-0_17",
+            "citations": 1
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 108
+    },
+    "23388644000": {
+      "name": "Kanokwan Atchariyachanvanich",
+      "thai_name": "ผศ.ดร. กนกวรรณ อัจฉริยะชาญวณิช",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kanokwan-atchariyachanvanich",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2581%25E0%25B8%2599%25E0%25B8%2581%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2593-%25E0%25B8%25AD%25E0%25B8%25B1%25E0%25B8%2588%25E0%25B8%2589%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25A2%25E0%25B8%25B0%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25A7%25E0%25B8%2593%25E0%25B8%25B4%25E0%25B8%258A-500x500.jpg&w=640&q=75",
+      "scopus_id": "23388644000",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=23388644000",
+      "topics": [
+        "Algorithm",
+        "Web",
+        "Mobile",
+        "Big Data",
+        "Machine Learning",
+        "Neural Network",
+        "Network",
+        "IoT",
+        "Deep Learning",
+        "Prediction"
+      ],
+      "topic_groups": {
+        "Algorithm": [
+          {
+            "title": "Comparative Foot Traffic Analysis During Normal Periods and Firework Events Using Wi-Fi Sensors",
+            "year": "2024",
+            "doi": "10.1109/SCISISIS61014.2024.10760113",
+            "citations": 1
+          },
+          {
+            "title": "Exploring User Attitudes and Innovative System Design for Remote Lighting Control Systems in Thailand's Creative Industries",
+            "year": "2024",
+            "doi": "10.1109/IEEM62345.2024.10857167",
+            "citations": 0
+          },
+          {
+            "title": "Improvement of a Machine Learning Model Using a Sentiment Analysis Algorithm to Detect Fake News: A Case Study of Health and Medical Articles on Thai Language Websites",
+            "year": "2024",
+            "doi": "10.4018/JCIT.344812",
+            "citations": 2
+          },
+          {
+            "title": "BMA for the BMA: Boosting Mobility Analysis for the Bangkok Metropolitan Administration via Automated Pedestrian Counting from CCTV",
+            "year": "2024",
+            "doi": "10.1109/SCISISIS61014.2024.10760155",
+            "citations": 0
+          },
+          {
+            "title": "Foot Traffic Analysis Using Wi-Fi Sensor During the Tokyo 2020 Olympics and Paralympics",
+            "year": "2023",
+            "doi": "10.1109/InCIT60207.2023.10413175",
+            "citations": 2
+          },
+          {
+            "title": "A statistical model for estimating statistical contingency fuel",
+            "year": "2022",
+            "doi": "10.1109/ICTKE55848.2022.9983084",
+            "citations": 1
+          },
+          {
+            "title": "Reverse SQL question generation algorithm in the dblearn adaptive e-learning system",
+            "year": "2019",
+            "doi": "10.1109/ACCESS.2019.2912522",
+            "citations": 18
+          },
+          {
+            "title": "RSQLG: The Reverse SQL Question Generation Algorithm",
+            "year": "2019",
+            "doi": "10.1109/IEA.2019.8715233",
+            "citations": 4
+          },
+          {
+            "title": "Classifying attitudes of thai business organizations toward the perceived benefit of customer predictive analytics",
+            "year": "2018",
+            "doi": "10.1109/SCIS-ISIS.2018.00118",
+            "citations": 2
+          },
+          {
+            "title": "Development of a MySQL Sandbox for processing SQL statements: Case of DML and DDL statements",
+            "year": "2017",
+            "doi": "10.1109/JCSSE.2017.8025930",
+            "citations": 5
+          }
+        ],
+        "Web": [
+          {
+            "title": "Detection of Unreliable Medical Articles on Thai Websites",
+            "year": "2021",
+            "doi": "10.1109/KST51265.2021.9415756",
+            "citations": 6
+          },
+          {
+            "title": "The study of the local community products (OTOP) website characteristics toward buyer decision using eye tracking",
+            "year": "2018",
+            "doi": "10.23919/ICITST.2017.8356434",
+            "citations": 4
+          }
+        ],
+        "Mobile": [
+          {
+            "title": "Innovative Mobile Application for Measuring Big Data Maturity: Case of SMEs in Thailand",
+            "year": "2020",
+            "doi": "10.3991/ijim.v14i18.16295",
+            "citations": 9
+          },
+          {
+            "title": "Determinants of Personal Health Information Disclosure: A Case of Mobile Application",
+            "year": "2018",
+            "doi": "10.4018/IJSI.2018010103",
+            "citations": 2
+          },
+          {
+            "title": "Factors affecting disclosure of personal health information via mobile application",
+            "year": "2017",
+            "doi": "10.1109/ICIS.2017.7959994",
+            "citations": 4
+          }
+        ],
+        "Big Data": [
+          {
+            "title": "Adaptive big data maturity model using latent class analysis for small and medium businesses in Thailand",
+            "year": "2022",
+            "doi": "10.1016/j.eswa.2022.117965",
+            "citations": 16
+          },
+          {
+            "title": "A Data Visualization for Helping Students Decide Which General Education Courses to Enroll: Case of Chulalongkorn University",
+            "year": "2019",
+            "doi": "10.1007/978-3-030-35343-8_66",
+            "citations": 1
+          },
+          {
+            "title": "The study of public organization's intention to use an open government data assessment application: Testing with an applicable TAM",
+            "year": "2018",
+            "doi": "10.23919/ICITST.2017.8356389",
+            "citations": 3
+          },
+          {
+            "title": "DBLearn: Adaptive e-learning for practical database course - An integrated architecture approach",
+            "year": "2017",
+            "doi": "10.1109/SNPD.2017.8022708",
+            "citations": 13
+          }
+        ],
+        "Machine Learning": [
+          {
+            "title": "Interactive SQL Learning Tool with Automated Grading using MySQL Sandbox",
+            "year": "2019",
+            "doi": "10.1109/IEA.2019.8715175",
+            "citations": 5
+          },
+          {
+            "title": "Bridge Sub Structure Defect Inspection Assistance by using Deep Learning",
+            "year": "2019",
+            "doi": "10.1109/ICAwST.2019.8923507",
+            "citations": 20
+          },
+          {
+            "title": "ScrambleSQL: A Novel Drag-and-drop SQL Learning Tool",
+            "year": "2019",
+            "doi": "10.1109/ICSEC47112.2019.8974815",
+            "citations": 2
+          }
+        ],
+        "Neural Network": [
+          {
+            "title": "Predicting Fuel Burn with Neural Network to Adjust Contingency Fuel of Airplane",
+            "year": "2023",
+            "doi": "10.1109/ICACI58115.2023.10146159",
+            "citations": 0
+          }
+        ],
+        "IoT": [
+          {
+            "title": "A Study of Using the IoT-based Angklung Smart Band System to Support Music Group Activities for the Elderly in Nursing Homes",
+            "year": "2022",
+            "doi": "10.1109/SCISISIS55246.2022.10001930",
+            "citations": 0
+          }
+        ],
+        "Prediction": [
+          {
+            "title": "Comparative Study of Prediction Models for Final GPA Score: A Case Study of Rajabhat Rajanagarindra University",
+            "year": "2018",
+            "doi": "10.1109/ICIS.2018.8466475",
+            "citations": 36
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 156
+    },
+    "25032277800": {
+      "name": "Sirion Vittayakorn",
+      "thai_name": "ผศ.ดร. สิริอร วิทยากร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sirion-vittayakorn",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25AD%25E0%25B8%25A3-%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25A2%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": "25032277800",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25032277800",
+      "topics": [
+        "Neural Network",
+        "Network",
+        "Prediction",
+        "Algorithm"
+      ],
+      "topic_groups": {
+        "Neural Network": [
+          {
+            "title": "AfterDay Horizon: A Cross-Platform Co-op Game for Communication and Strategic Skills",
+            "year": "2026",
+            "doi": "10.1007/978-3-032-06952-8_11",
+            "citations": 0
+          },
+          {
+            "title": "PyraMaze VR: An Immersive Gameplay for Ancient Egypt Learning",
+            "year": "2024",
+            "doi": "10.1109/ICITEE62483.2024.10808623",
+            "citations": 0
+          },
+          {
+            "title": "Enhancing Auto Insurance Fraud Detection Using Convolutional Neural Networks",
+            "year": "2024",
+            "doi": "10.1109/JCSSE61278.2024.10613702",
+            "citations": 3
+          },
+          {
+            "title": "Incomplete Adventure: An Educational Game for the TOEIC Exam",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317737",
+            "citations": 1
+          },
+          {
+            "title": "DropQuest: Game-Based Learning for Chemistry",
+            "year": "2022",
+            "doi": "10.1109/ECTI-CON54298.2022.9795383",
+            "citations": 2
+          },
+          {
+            "title": "Cyberbullying detection on Tweets",
+            "year": "2021",
+            "doi": "10.1109/ECTI-CON51831.2021.9454848",
+            "citations": 12
+          },
+          {
+            "title": "Thinkercise: An educational VR game for Python programming",
+            "year": "2021",
+            "doi": "10.1109/ECTI-CON51831.2021.9454730",
+            "citations": 7
+          },
+          {
+            "title": "SEPBO: Trash separator bot VR game",
+            "year": "2021",
+            "doi": "10.1109/JCSSE53117.2021.9493830",
+            "citations": 5
+          },
+          {
+            "title": "Pig Carcass Assessment on Image Segmentation",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611930",
+            "citations": 0
+          },
+          {
+            "title": "Elemem: Interactive digital card game for chemistry",
+            "year": "2020",
+            "doi": "10.1109/EDUCON45650.2020.9125339",
+            "citations": 7
+          },
+          {
+            "title": "Electronic map systems for tourist attractions",
+            "year": "2020",
+            "doi": "10.1109/iEECON48109.2020.229480",
+            "citations": 2
+          },
+          {
+            "title": "Concurrent self-identification applying QR code to record class attendance (QRClass)",
+            "year": "2019",
+            "doi": "10.1109/ICEIEC.2019.8784518",
+            "citations": 4
+          },
+          {
+            "title": "WiseMed: Medication reminder for seniors",
+            "year": "2019",
+            "doi": "10.1109/ICSEC47112.2019.8974675",
+            "citations": 4
+          },
+          {
+            "title": "Text and object detection on billboards",
+            "year": "2018",
+            "doi": "10.1109/ICITEED.2018.8534879",
+            "citations": 9
+          },
+          {
+            "title": "AR Development for Room Design",
+            "year": "2018",
+            "doi": "10.1109/JCSSE.2018.8457343",
+            "citations": 7
+          },
+          {
+            "title": "Facial expression recognition using local Gabor filters and PCA plus LDA",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2017.8250446",
+            "citations": 12
+          },
+          {
+            "title": "When was that made?",
+            "year": "2017",
+            "doi": "10.1109/WACV.2017.85",
+            "citations": 12
+          },
+          {
+            "title": "Automatic attribute discovery with neural activations",
+            "year": "2016",
+            "doi": "10.1007/978-3-319-46493-0_16",
+            "citations": 27
+          },
+          {
+            "title": "Runway to realway: Visual analysis of fashion",
+            "year": "2015",
+            "doi": "10.1109/WACV.2015.131",
+            "citations": 94
+          },
+          {
+            "title": "Quality assessment for crowdsourced object annotations",
+            "year": "2011",
+            "doi": "10.5244/C.25.109",
+            "citations": 25
+          },
+          {
+            "title": "The parallel complexities of the K-medians related problems",
+            "year": "2008",
+            "doi": "10.1109/ECTICON.2008.4600360",
+            "citations": 2
+          }
+        ],
+        "Prediction": [
+          {
+            "title": "Location-Based Score Prediction for Condominiums in Bangkok",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317699",
+            "citations": 0
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "Protobot: An Educational Game for Algorithmic Thinking",
+            "year": "2022",
+            "doi": "10.1109/ICITEE56407.2022.9954081",
+            "citations": 0
+          }
+        ]
+      },
+      "total_papers": 23,
+      "citation_count": 235
+    },
+    "22835215900": {
+      "name": "Pornsuree Jamsri",
+      "thai_name": "ผศ.ดร. พรสุรีย์ แจ่มศรี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/pornsuree-jamsri",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B9%258C-%25E0%25B9%2581%25E0%25B8%2588%25E0%25B9%2588%25E0%25B8%25A1%25E0%25B8%25A8%25E0%25B8%25A3%25E0%25B8%25B5-500x500.jpg&w=640&q=75",
+      "scopus_id": "22835215900",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=22835215900",
+      "topics": [
+        "Deep Learning",
+        "Mobile",
+        "Web",
+        "Recommendation"
+      ],
+      "topic_groups": {
+        "Deep Learning": [
+          {
+            "title": "A Computer Assembly Training With VR Technology",
+            "year": "2024",
+            "doi": "10.1109/ICITEE62483.2024.10808925",
+            "citations": 0
+          },
+          {
+            "title": "Novice Behavior Analysis in Business Training by Using Tobii Eye Tracking Technology",
+            "year": "2023",
+            "doi": "10.1007/978-3-031-43815-8_10",
+            "citations": 1
+          },
+          {
+            "title": "A Game to Promote Safe Use of Online Media with Mixed Reality Technology",
+            "year": "2022",
+            "doi": "10.1007/978-3-031-16538-2_13",
+            "citations": 0
+          },
+          {
+            "title": "The Waste Separation Game to Promote Computational Thinking Through Mixed Reality Technology",
+            "year": "2022",
+            "doi": "10.1109/ICITEE56407.2022.9954123",
+            "citations": 5
+          },
+          {
+            "title": "Chertify: Wood Identification-Based Mobile Cross-platform by Deep Learning Technique",
+            "year": "2022",
+            "doi": "10.1007/978-3-030-99948-3_8",
+            "citations": 1
+          },
+          {
+            "title": "A Game Development to Promote Computational Thinking",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611850",
+            "citations": 6
+          },
+          {
+            "title": "Differentiative Feature-based Fall Detection System",
+            "year": "2021",
+            "doi": "10.23919/ICCAS52745.2021.9650068",
+            "citations": 2
+          },
+          {
+            "title": "A Sufficiency Agriculture Learning Platform for the Development of New Agriculturists",
+            "year": "2021",
+            "doi": "10.1007/978-3-030-88207-5_29",
+            "citations": 0
+          },
+          {
+            "title": "SATSEARCHTORY: Searching online platform for niche product in a metropolitan area",
+            "year": "2020",
+            "doi": "10.13052/jmm1550-4646.16125",
+            "citations": 0
+          },
+          {
+            "title": "Pros and Cons of Tangible and Digital Wireframes",
+            "year": "2020",
+            "doi": "10.1109/FIE44824.2020.9274234",
+            "citations": 6
+          },
+          {
+            "title": "The effectiveness of RPA in fine-tuning tedious tasks",
+            "year": "2020",
+            "doi": "10.1109/ICEAST50382.2020.9165452",
+            "citations": 15
+          },
+          {
+            "title": "UltraSight: Device for head-level obstacle warning for the visually impaired",
+            "year": "2019",
+            "doi": "10.1109/ICEAST.2019.8802525",
+            "citations": 2
+          },
+          {
+            "title": "SATSEARCHTORY: Search tool that guarantees satisfaction in your searches",
+            "year": "2019",
+            "doi": "10.1109/ICEAST.2019.8802544",
+            "citations": 0
+          },
+          {
+            "title": "EventStream: Integrated transit information system",
+            "year": "2007",
+            "doi": "10.1145/1240866.1240950",
+            "citations": 2
+          }
+        ],
+        "Web": [
+          {
+            "title": "The Development of an Asynchronous Web Application for Family Social Media Communication",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-60816-3_25",
+            "citations": 1
+          }
+        ],
+        "Recommendation": [
+          {
+            "title": "A Personalized Food Recommendation Chatbot System for Diabetes Patients",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-60816-3_3",
+            "citations": 9
+          }
+        ]
+      },
+      "total_papers": 16,
+      "citation_count": 50
+    },
+    "25031594100": {
+      "name": "Samart Moodleah",
+      "thai_name": "ผศ.ดร. สามารถ หมุดและ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/samart-moodleah",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%2596-%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B8%25B0-500x500.jpg&w=640&q=75",
+      "scopus_id": "25031594100",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25031594100",
+      "topics": [
+        "Deep Learning",
+        "Machine Learning",
+        "Classification"
+      ],
+      "topic_groups": {
+        "Deep Learning": [
+          {
+            "title": "Multi-agent deep learning on tensor fields for segmentation of ultrasound images",
+            "year": "2026",
+            "doi": "10.1016/j.array.2026.100686",
+            "citations": 0
+          },
+          {
+            "title": "AI-Powered MetaHuman Interviewer: Serious Game for Student Job Interview Skills",
+            "year": "2025",
+            "doi": "10.1109/ACCESS.2025.3640017",
+            "citations": 0
+          },
+          {
+            "title": "Automated Classification of User Exercise Poses in Virtual Reality Using Machine Learning-Based Human Pose Estimation",
+            "year": "2025",
+            "doi": "10.1109/ACCESS.2025.3622115",
+            "citations": 0
+          },
+          {
+            "title": "Learning by Doing: The Impact of Virtual Reality Scenarios on First Aid Training Effectiveness",
+            "year": "2024",
+            "doi": "10.1109/RI2C64012.2024.10784384",
+            "citations": 0
+          },
+          {
+            "title": "Human Posture Detection in Virtual Reality Applications for Stress Reduction",
+            "year": "2024",
+            "doi": "10.1109/RI2C64012.2024.10784374",
+            "citations": 0
+          },
+          {
+            "title": "Naval Wargame Prototyping: Multiplayer Real-Time Strategy Game Simulation Using Unreal Engine",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317764",
+            "citations": 2
+          },
+          {
+            "title": "Adaptive Slicing of Point Cloud Directly with Discrete Interpolable-Area Error Profile in Additive Manufacturing",
+            "year": "2023",
+            "doi": "10.4271/05-16-02-0014",
+            "citations": 5
+          },
+          {
+            "title": "Edge-Driven Multi-Agent Reinforcement Learning: A Novel Approach to Ultrasound Breast Tumor Segmentation",
+            "year": "2023",
+            "doi": "10.3390/diagnostics13243611",
+            "citations": 4
+          },
+          {
+            "title": "A Development of Game-Based Learning in Virtual Reality for Fire Safety Training in Thailand",
+            "year": "2021",
+            "doi": "10.1109/JCSSE53117.2021.9493836",
+            "citations": 4
+          },
+          {
+            "title": "Pig Carcass Assessment on Image Segmentation",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611930",
+            "citations": 0
+          },
+          {
+            "title": "Points using Localized Distance for Contour Generation from Point Cloud for 3D Printing",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611956",
+            "citations": 0
+          },
+          {
+            "title": "Automatic white matter hyperintensities segmentation from brain magnetic resonance images using polar transform",
+            "year": "2020",
+            "doi": "10.1109/JCSSE49651.2020.9268440",
+            "citations": 1
+          },
+          {
+            "title": "Pattern detection for toolpath generation on triangular meshes for 5-axis CNC machining",
+            "year": "2020",
+            "doi": "10.14733/cadaps.2020.1294-1304",
+            "citations": 0
+          },
+          {
+            "title": "Five-axis machining of STL surfaces by adaptive curvilinear toolpaths",
+            "year": "2016",
+            "doi": "10.1080/00207543.2016.1176265",
+            "citations": 20
+          },
+          {
+            "title": "5-axis machining using a curvilinear tool path aligned with the direction of the maximum removal rate",
+            "year": "2015",
+            "doi": "10.1007/s00170-015-6958-9",
+            "citations": 32
+          },
+          {
+            "title": "Low-complexity turbo equalization using E-BAD detector combine with LDPC codes for high-density magnetic recording",
+            "year": "2008",
+            "doi": "10.1109/ECTICON.2008.4600457",
+            "citations": 0
+          }
+        ]
+      },
+      "total_papers": 16,
+      "citation_count": 68
+    },
+    "56347582800": {
+      "name": "Taravichet Titijaroonroj",
+      "thai_name": "ผศ.ดร. ธราวิเชษฐ์ ธิติจรูญโรจน์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/taravichet-titijaroonroj",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2598%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B9%2580%25E0%25B8%258A%25E0%25B8%25A9%25E0%25B8%2590%25E0%25B9%258C-%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%2588%25E0%25B8%25A3%25E0%25B8%25B9%25E0%25B8%258D%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "56347582800",
+      "scopus_url": "http://www.scopus.com/authid/detail.url?authorId=56347582800",
+      "topics": [
+        "Deep Learning",
+        "Classification",
+        "Neural Network",
+        "Network",
+        "Machine Learning",
+        "Mobile",
+        "Semantic"
+      ],
+      "topic_groups": {
+        "Deep Learning": [
+          {
+            "title": "Comparative performance of deep learning models and non-dermatologists in diagnosing psoriasis, dermatophytosis, and eczema",
+            "year": "2026",
+            "doi": "10.1038/s41598-025-29562-6",
+            "citations": 0
+          },
+          {
+            "title": "Deep learning-based classification of lymphedema and other lower limb edema diseases using clinical images",
+            "year": "2025",
+            "doi": "10.1038/s41598-025-97564-5",
+            "citations": 1
+          },
+          {
+            "title": "LymphoNet: A Deep Learning for Lymph Node Detection from Histological Image",
+            "year": "2024",
+            "doi": "10.1109/ACCESS.2024.3487260",
+            "citations": 0
+          },
+          {
+            "title": "Skin Video-based Blood Pressure Approximation Using CHROM with LSTM-NN",
+            "year": "2023",
+            "doi": "10.1109/KST57286.2023.10086816",
+            "citations": 4
+          },
+          {
+            "title": "Spatial-Frequency Redistribution-based Saliency Region Detection for Thai Text Localisation",
+            "year": "2022",
+            "doi": "10.37936/ecti-cit.2022161.245320",
+            "citations": 0
+          },
+          {
+            "title": "Automatic Thai Ticket Classification By Using Machine Learning For IT Infrastructure Company",
+            "year": "2022",
+            "doi": "10.1109/JCSSE54890.2022.9836250",
+            "citations": 3
+          },
+          {
+            "title": "Chertify: Wood Identification-Based Mobile Cross-platform by Deep Learning Technique",
+            "year": "2022",
+            "doi": "10.1007/978-3-030-99948-3_8",
+            "citations": 1
+          },
+          {
+            "title": "Heart Rate Estimation by PCA with LSTM from Video-based Plethysmography Under Periodic Noise",
+            "year": "2022",
+            "doi": "10.1109/ICSEC56337.2022.10049315",
+            "citations": 3
+          },
+          {
+            "title": "Seven Segment Display Detection and Recognition via Deep Learning Technique",
+            "year": "2022",
+            "doi": "10.1109/ECTI-CON54298.2022.9795620",
+            "citations": 2
+          },
+          {
+            "title": "Drugtionary: Drug Pill Image Detection and Recognition Based on Deep Learning",
+            "year": "2022",
+            "doi": "10.1007/978-3-030-99948-3_5",
+            "citations": 4
+          },
+          {
+            "title": "Blood Vessels Detection by Regional-based CNN for CT Scan of Lower Extremities",
+            "year": "2022",
+            "doi": "10.1109/ICSEC56337.2022.10049364",
+            "citations": 1
+          },
+          {
+            "title": "Proposed Structural Validation-based Testing for Object-Oriented Programming",
+            "year": "2021",
+            "doi": "10.1109/KST51265.2021.9415812",
+            "citations": 0
+          },
+          {
+            "title": "Intelligent approach to automated star-schema construction using a knowledge base",
+            "year": "2021",
+            "doi": "10.1016/j.eswa.2021.115226",
+            "citations": 7
+          },
+          {
+            "title": "Data augmentation based on multiscale radon transform for seven segment display recognition",
+            "year": "2020",
+            "doi": "10.1109/KST48564.2020.9059315",
+            "citations": 2
+          },
+          {
+            "title": "Regional covariance matrix-based two-dimensional PCA for face recognition",
+            "year": "2020",
+            "doi": "10.1109/KST48564.2020.9059421",
+            "citations": 8
+          },
+          {
+            "title": "Improved adaptive spectrum scale-space in frequency domain for saliency detection",
+            "year": "2020",
+            "doi": "10.1109/KST48564.2020.9059527",
+            "citations": 1
+          },
+          {
+            "title": "An Individual Local Mean-based 2DPCA for Face Recognition under Illumination Effects",
+            "year": "2019",
+            "doi": "10.1109/JCSSE.2019.8864163",
+            "citations": 7
+          },
+          {
+            "title": "Seven Segment Display Detection and Recognition using Predefined HSV Color Slicing Technique",
+            "year": "2019",
+            "doi": "10.1109/JCSSE.2019.8864189",
+            "citations": 11
+          },
+          {
+            "title": "Modified Scale-Space Analysis in Frequency Domain Based on Adaptive Multiscale Gaussian Filter for Saliency Detection",
+            "year": "2019",
+            "doi": "10.1109/JCSSE.2019.8864211",
+            "citations": 5
+          },
+          {
+            "title": "Modified Stroke Width Transform for Thai Text Detection",
+            "year": "2018",
+            "doi": "10.23919/INCIT.2018.8584869",
+            "citations": 4
+          },
+          {
+            "title": "Image Denoising Based on Structural BIMF",
+            "year": "2018",
+            "doi": "10.1109/ICSEC.2017.8443804",
+            "citations": 1
+          },
+          {
+            "title": "Texture analysis assessment for images",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863254",
+            "citations": 1
+          }
+        ],
+        "Classification": [
+          {
+            "title": "Chatbot-Powered Orchid Leaf Disease Classification and Management for Improved Farming",
+            "year": "2023",
+            "doi": "10.1109/InCIT60207.2023.10413171",
+            "citations": 0
+          },
+          {
+            "title": "Automatic Lymph Node Classification with Convolutional Neural Network",
+            "year": "2022",
+            "doi": "10.1109/ICITEE56407.2022.9954045",
+            "citations": 2
+          }
+        ],
+        "Semantic": [
+          {
+            "title": "A semantic approach to automated design and construction of star schemas",
+            "year": "2021",
+            "doi": "10.14456/easr.2021.54",
+            "citations": 3
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 71
+    },
+    "57211337605": {
+      "name": "Praphan Pavarangkoon",
+      "thai_name": "ผศ.ดร. ประพันธ์ ปวรางกูร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/praphan-pavarangkoon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C-%25E0%25B8%259B%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2581%25E0%25B8%25B9%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": "57211337605",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=57211337605",
+      "topics": [
+        "Network",
+        "IoT",
+        "Prediction",
+        "Web",
+        "Machine Learning",
+        "Mobile",
+        "Deep Learning",
+        "Semantic"
+      ],
+      "topic_groups": {
+        "Network": [
+          {
+            "title": "Energy-Efficient and Fair Computation Offloading for Multi-user MEC with EH Devices",
+            "year": "2025",
+            "doi": "10.12720/jcm.20.6.747-757",
+            "citations": 0
+          },
+          {
+            "title": "Scale-Based Slicer Placement in Elastic Optical Networks",
+            "year": "2023",
+            "doi": "10.1109/OECC56963.2023.10209654",
+            "citations": 0
+          },
+          {
+            "title": "Reducing Bandwidth Blocking Rate in Elastic Optical Networks Through Scale-Based Slicer Placement Strategy",
+            "year": "2023",
+            "doi": "10.1109/ACCESS.2023.3274660",
+            "citations": 5
+          },
+          {
+            "title": "Semantic Bird'View Map Prediction Using Horizontally-Aware Pyramid Occupancy Network",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317701",
+            "citations": 0
+          },
+          {
+            "title": "Cache Node Placement Scheme Considering Maximum Traffic in Content-Centric Networks",
+            "year": "2023",
+            "doi": "10.1109/ICOIN56518.2023.10048983",
+            "citations": 0
+          },
+          {
+            "title": "Spectrum Slicer Placement for Elastic Optical Network With Sparse Slicers",
+            "year": "2023",
+            "doi": "10.1109/ACCESS.2023.3285394",
+            "citations": 0
+          },
+          {
+            "title": "Elastic optical network for fragmented bandwidth allocation with limited slicers",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611931",
+            "citations": 5
+          },
+          {
+            "title": "Large L-shape Fit Spectrum Allocation for Elastic Optical Network with Spectrum Slicing",
+            "year": "2021",
+            "doi": "10.1109/icoin50884.2021.9333870",
+            "citations": 10
+          },
+          {
+            "title": "Spectrum allocation scheme considering spectrum slicing in elastic optical networks",
+            "year": "2021",
+            "doi": "10.1364/JOCN.422915",
+            "citations": 16
+          },
+          {
+            "title": "Performance Evaluation of High-Performance and Flexible Protocol on Data Mover Challenge",
+            "year": "2020",
+            "doi": "10.1109/InCIT50588.2020.9310956",
+            "citations": 2
+          },
+          {
+            "title": "Visual-Based Positioning and Pose Estimation",
+            "year": "2020",
+            "doi": "10.1007/978-3-030-63820-7_68",
+            "citations": 2
+          },
+          {
+            "title": "Elastic optical network with spectrum slicing for fragmented bandwidth allocation",
+            "year": "2020",
+            "doi": "10.1016/j.osn.2020.100583",
+            "citations": 25
+          },
+          {
+            "title": "Performance improvement of high-speed file transfer over JHPCN",
+            "year": "2019",
+            "doi": "10.1109/DASC/PiCom/CBDCom/CyberSciTech.2019.00195",
+            "citations": 1
+          },
+          {
+            "title": "Children Activity Descriptions from Visual and Textual Associations",
+            "year": "2019",
+            "doi": "10.1007/978-3-030-33709-4_11",
+            "citations": 2
+          },
+          {
+            "title": "Design of satellite network-based remote control and monitoring system for power plants",
+            "year": "2019",
+            "doi": "10.1109/ICCSN.2019.8905371",
+            "citations": 1
+          }
+        ],
+        "IoT": [
+          {
+            "title": "Automatic Smoke/Forest Fire Detecting System based on Visual IoT",
+            "year": "2025",
+            "doi": "10.1109/ICCAI66501.2025.00087",
+            "citations": 0
+          },
+          {
+            "title": "International Deployment of Visual IoT for Disaster Mitigation",
+            "year": "2023",
+            "doi": "10.1109/ITNAC59571.2023.10368538",
+            "citations": 4
+          },
+          {
+            "title": "An Image Stabilization Technique for Long-durational Outdoor Footages Obtained by Visual IoT Systems",
+            "year": "2021",
+            "doi": "10.1109/WPMC52694.2021.9700467",
+            "citations": 2
+          },
+          {
+            "title": "A programming environment for visual IoT on raspberry Pi",
+            "year": "2019",
+            "doi": "10.1109/DASC/PiCom/CBDCom/CyberSciTech.2019.00180",
+            "citations": 5
+          }
+        ],
+        "Prediction": [
+          {
+            "title": "Prediction of Medication-Related Osteonecrosis of the Jaw in Patients Receiving Antiresorptive Therapy Using Machine Learning Models",
+            "year": "2025",
+            "doi": "10.1016/j.joms.2024.11.013",
+            "citations": 4
+          }
+        ],
+        "Web": [
+          {
+            "title": "Development of international mirroring system for real-time web of meteorological satellite data",
+            "year": "2020",
+            "doi": "10.1007/s12145-020-00488-z",
+            "citations": 3
+          },
+          {
+            "title": "Development of high-performance and flexible protocol handler for international web accesses",
+            "year": "2019",
+            "doi": "10.1109/HPCC/SmartCity/DSS.2019.00270",
+            "citations": 2
+          }
+        ],
+        "Machine Learning": [
+          {
+            "title": "Impact of Rhythm, Tempo, and Rest Variations on Pitch Detection in Deep Learning-Based Piano Transcription Models",
+            "year": "2024",
+            "doi": "10.1109/ICITEE62483.2024.10808545",
+            "citations": 0
+          },
+          {
+            "title": "Dynamic load balancing with learning model for Sudoku solving system",
+            "year": "2020",
+            "doi": "10.1016/j.dcan.2019.03.002",
+            "citations": 1
+          }
+        ],
+        "Mobile": [
+          {
+            "title": "Fairness-Aware Computation Offloading for Mobile Edge Computing with Energy Harvesting",
+            "year": "2025",
+            "doi": "10.1109/ACCESS.2025.3552498",
+            "citations": 2
+          }
+        ]
+      },
+      "total_papers": 25,
+      "citation_count": 92
+    },
+    "56205725200": {
+      "name": "Nont Kanungsukkasem",
+      "thai_name": "ผศ.ดร. นนท์ คนึงสุขเกษม",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/nont-kanungsukkasem",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%2520%25E0%25B8%2599%25E0%25B8%2599-500x500.jpg&w=640&q=75",
+      "scopus_id": "56205725200",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56205725200",
+      "topics": [
+        "Deep Learning",
+        "Neural Network",
+        "Network",
+        "Classification",
+        "Data Mining",
+        "Prediction",
+        "Web"
+      ],
+      "topic_groups": {
+        "Deep Learning": [
+          {
+            "title": "Impact of Rhythm, Tempo, and Rest Variations on Pitch Detection in Deep Learning-Based Piano Transcription Models",
+            "year": "2024",
+            "doi": "10.1109/ICITEE62483.2024.10808545",
+            "citations": 0
+          },
+          {
+            "title": "Deep Neural Networks for the Qualitative Analysis of Myocardial Perfusion Emission Computed Tomography Images",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317700",
+            "citations": 0
+          },
+          {
+            "title": "A Scalable Service Architecture with Request Queuing for Resource-Intensive Tasks",
+            "year": "2020",
+            "doi": "10.1109/ECTI-CON49241.2020.9158114",
+            "citations": 0
+          },
+          {
+            "title": "Discover Underlying Topics in Thai News Articles: A Comparative Study of Probabilistic and Matrix Factorization Approaches",
+            "year": "2020",
+            "doi": "10.1109/ECTI-CON49241.2020.9158065",
+            "citations": 5
+          },
+          {
+            "title": "Power of crowdsourcing in Twitter to find similar/related users",
+            "year": "2016",
+            "doi": "10.1109/JCSSE.2016.7748852",
+            "citations": 3
+          },
+          {
+            "title": "Finding potential influences of a specific financial market in Twitter",
+            "year": "2015",
+            "doi": "10.1109/ICITEED.2015.7408982",
+            "citations": 4
+          },
+          {
+            "title": "Recognition of NASDAQ stock symbols in tweets",
+            "year": "2014",
+            "doi": "10.1109/kst.2014.6775386",
+            "citations": 2
+          }
+        ],
+        "Classification": [
+          {
+            "title": "Keyword-Text Graph Representation for Short Text Classification",
+            "year": "2021",
+            "doi": "10.1109/ICITEE53064.2021.9611935",
+            "citations": 6
+          }
+        ],
+        "Data Mining": [
+          {
+            "title": "When are Latent Topics Useful for Text Mining?: Enriching Bag-of-Words Representations with Information Extraction in Thai News Articles",
+            "year": "2023",
+            "doi": "10.1007/978-3-031-42430-4_17",
+            "citations": 2
+          },
+          {
+            "title": "Financial Latent Dirichlet Allocation (FinLDA): Feature Extraction in Text and Data Mining for Financial Time Series Prediction",
+            "year": "2019",
+            "doi": "10.1109/ACCESS.2019.2919993",
+            "citations": 34
+          }
+        ],
+        "Web": [
+          {
+            "title": "Snapboard: A shared space of visual snippets - A study in individual and asynchronous collaborative web search",
+            "year": "2015",
+            "doi": "10.1007/978-3-319-28940-3_13",
+            "citations": 2
+          }
+        ]
+      },
+      "total_papers": 11,
+      "citation_count": 58
+    },
+    "56875402500": {
+      "name": "Warune Buavirat",
+      "thai_name": "วท.บ. (สถิติ) มหาวิทยาลัยศิลปากร, 2539",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/warune-buavirat",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A7%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B8%25E0%25B8%2599%25E0%25B8%25B5-%25E0%25B8%259A%25E0%25B8%25B1%25E0%25B8%25A7%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "56875402500",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56875402500",
+      "topics": [
+        "Neural Network",
+        "Network"
+      ],
+      "topic_groups": {
+        "Neural Network": [
+          {
+            "title": "A statistical model for estimating statistical contingency fuel",
+            "year": "2022",
+            "doi": "10.1109/ICTKE55848.2022.9983084",
+            "citations": 1
+          },
+          {
+            "title": "A text processing Kohonen neural network",
+            "year": "2003",
+            "doi": "10.1109/CIRA.2003.1222059",
+            "citations": 0
+          }
+        ]
+      },
+      "total_papers": 2,
+      "citation_count": 1
+    },
+    "25930767300": {
+      "name": "Supawan Tassanaprasert",
+      "thai_name": "ดร. สุภวรรณ ทัศนประเสริฐ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/supawan-tassanaprasert",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2593-%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%25A8%25E0%25B8%2599%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2590-500x500.jpg&w=640&q=75",
+      "scopus_id": "25930767300",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25930767300",
+      "topics": [
+        "Computer Science"
+      ],
+      "topic_groups": {
+        "Computer Science": [
+          {
+            "title": "Handwriting rearrangement for Thai calligraphy",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863249",
+            "citations": 1
+          },
+          {
+            "title": "Fascilitating education instruction using gesture control",
+            "year": "2016",
+            "doi": "10.1109/KST.2016.7440489",
+            "citations": 0
+          },
+          {
+            "title": "Advanced MIMO STBC adaptive array with PSAM in fast fading channel",
+            "year": "2010",
+            "doi": "10.1587/transcom.E93.B.660",
+            "citations": 0
+          },
+          {
+            "title": "Asynchronous MIMO STBC adaptive array transmission scheme for multiuser over fast fading channel",
+            "year": "2008",
+            "doi": "10.1093/ietcom/e91-b.8.2666",
+            "citations": 1
+          },
+          {
+            "title": "Multiuser asynchronous MIMO STBC adaptive array transmission scheme in fast fading channel",
+            "year": "2008",
+            "doi": "10.1109/VETECF.2008.128",
+            "citations": 2
+          },
+          {
+            "title": "MIMO STBC adaptive array for fast fading channel",
+            "year": "2007",
+            "doi": "10.1093/ietcom/e90-b.9.2321",
+            "citations": 3
+          }
+        ]
+      },
+      "total_papers": 6,
+      "citation_count": 7
+    },
+    "56671355400": {
+      "name": "Panita Thusaranon",
+      "thai_name": "ดร. ปาณิตา ธูสรานนท์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/panita-thusaranon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2FPanita%2520-%2520web-500x500.jpg&w=640&q=75",
+      "scopus_id": "56671355400",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56671355400",
+      "topics": [
+        "Classification",
+        "Algorithm",
+        "Recommendation",
+        "Deep Learning",
+        "Semantic"
+      ],
+      "topic_groups": {
+        "Classification": [
+          {
+            "title": "SmartAir: Enhancing Air Quality Classification with Deep Learning and Two-State Q-Learning",
+            "year": "2025",
+            "doi": "10.1109/IBDAP65587.2025.11145834",
+            "citations": 0
+          },
+          {
+            "title": "Forecasting Customer Baseline Load Based on Similar Electricity Usage Patterns",
+            "year": "2025",
+            "doi": "10.1109/ECTIDAMTNCON64748.2025.10962073",
+            "citations": 1
+          },
+          {
+            "title": "Integrated Rearrange Processing of Hybrid Model with Weighted Values for PM2.5 Forecasting",
+            "year": "2023",
+            "doi": "10.1109/ICITEE59582.2023.10317678",
+            "citations": 0
+          },
+          {
+            "title": "Movie genre in multi-label classification using semantic extraction from only movie poster",
+            "year": "2019",
+            "doi": "10.1145/3348445.3348475",
+            "citations": 11
+          },
+          {
+            "title": "Frequent itemsets mining using random walks for record insertion and deletion",
+            "year": "2017",
+            "doi": "10.1109/ICITEED.2016.7863273",
+            "citations": 3
+          }
+        ],
+        "Algorithm": [
+          {
+            "title": "Applying a saving algorithm for vehicle routing problems to optimize the maintenance route of the transmission station",
+            "year": "2023",
+            "doi": "10.1109/ECTIDAMTNCON57770.2023.10139534",
+            "citations": 2
+          },
+          {
+            "title": "A probability‑based incremental association rule discovery algorithm for record insertion and deletion",
+            "year": "2015",
+            "doi": "10.1007/s10015-015-0210-4",
+            "citations": 6
+          }
+        ],
+        "Recommendation": [
+          {
+            "title": "A collaborative filtering based library book recommendation system",
+            "year": "2018",
+            "doi": "10.1109/ICBIR.2018.8391175",
+            "citations": 18
+          },
+          {
+            "title": "A preprocessing matrix factorization on collaborative filtering based library book recommendation system",
+            "year": "2018",
+            "doi": "10.1145/3239283.3239302",
+            "citations": 7
+          }
+        ]
+      },
+      "total_papers": 9,
+      "citation_count": 48
+    }
+  }
+}

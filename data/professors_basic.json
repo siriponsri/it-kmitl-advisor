@@ -1,0 +1,343 @@
+{
+  "fetched_at": "2026-02-15T15:54:35.176433",
+  "source": "https://www.it.kmitl.ac.th/th/staffs/academic",
+  "count": 42,
+  "professors": [
+    {
+      "name": "Arit Thammano",
+      "thai_name": "ศ.ดร. อาริต ธรรมโน",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/arit-thammano",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2595-%25E0%25B8%2598%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25A1%25E0%25B9%2582%25E0%25B8%2599-500x500.jpg&w=640&q=75",
+      "scopus_id": "6603566678",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6603566678"
+    },
+    {
+      "name": "Sooksan Panichpapiboon",
+      "thai_name": "ศ.ดร. สุขสันต์ พาณิชพาพิบูล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sooksan-panichpapiboon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%2582%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B9%258C-%25E0%25B8%259E%25E0%25B8%25B2%25E0%25B8%2593%25E0%25B8%25B4%25E0%25B8%258A%25E0%25B8%259E%25E0%25B8%25B2%25E0%25B8%259E%25E0%25B8%25B4%25E0%25B8%259A%25E0%25B8%25B9%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": "6505772070",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6505772070"
+    },
+    {
+      "name": "Kitsuchart Pasupa",
+      "thai_name": "ศ.ดร. กิติ์สุชาต พสุภาตำแหน่งรองคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kitsuchart-pasupa",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B9%258C%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%2595-%25E0%25B8%259E%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%25B2-500x500.jpg&w=640&q=75",
+      "scopus_id": "13204394500",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=13204394500"
+    },
+    {
+      "name": "Nopporn Chotikakamthorn",
+      "thai_name": "รศ.ดร. นพพร โชติกกำธร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/nopporn-chotikakamthorn",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2599%25E0%25B8%259E%25E0%25B8%259E%25E0%25B8%25A3-%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25B3%25E0%25B8%2598%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": "6603350272",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6603350272"
+    },
+    {
+      "name": "Worapoj Kreesuradej",
+      "thai_name": "รศ.ดร. วรพจน์ กรีสุระเดชตำแหน่งคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/worapoj-kreesuradej",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%259E%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%258C-%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%2594%25E0%25B8%258A-500x500.jpg&w=640&q=75",
+      "scopus_id": "15754321600",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=15754321600"
+    },
+    {
+      "name": "Chotipat Pornavalai",
+      "thai_name": "รศ.ดร. โชติพัชร์ ภรณวลัย",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/chotipat-pornavalai",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2Fimage-500x500.png&w=640&q=75",
+      "scopus_id": "6602706754",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6602706754"
+    },
+    {
+      "name": "Panwit Tuwanut",
+      "thai_name": "รศ.ดร. ปานวิทย์ ธุวะนุติ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/panwit-tuwanut",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259B%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25A2%25E0%25B9%258C-%25E0%25B8%2598%25E0%25B8%25B8%25E0%25B8%25A7%25E0%25B8%25B0%25E0%25B8%2599%25E0%25B8%25B8%25E0%25B8%2595%25E0%25B8%25B4-500x500.jpg&w=640&q=75",
+      "scopus_id": "6506825251",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6506825251"
+    },
+    {
+      "name": "Kuntpong Woraratpanya",
+      "thai_name": "รศ.ดร. กันต์พงษ์ วรรัตน์ปัญญาตำแหน่งรองคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kuntpong-woraratpanya",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2581%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B9%258C%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C-%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B9%258C%25E0%25B8%259B%25E0%25B8%25B1%25E0%25B8%258D%25E0%25B8%258D%25E0%25B8%25B2-500x500.jpg&w=640&q=75",
+      "scopus_id": "25926696500",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25926696500"
+    },
+    {
+      "name": "Boonlert Watjatrakul",
+      "thai_name": "รศ.ดร. บุญเลิศ วัจจะตรากุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/boonlert-watjatrakul",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD.%25E0%25B8%259A%25E0%25B8%25B8%25E0%25B8%258D%25E0%25B9%2580%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B8%25A802-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Olarn Wongwirat",
+      "thai_name": "ผศ.ดร. โอฬาร วงศ์วิรัตน์ตำแหน่งรองคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/olarn-wongwirat",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B9%2582%25E0%25B8%25AD%25E0%25B8%25AC%25E0%25B8%25B2%25E0%25B8%25A3-%25E0%25B8%25A7%25E0%25B8%2587%25E0%25B8%25A8%25E0%25B9%258C%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Akharin Khunkitti",
+      "thai_name": "ผศ. อัครินทร์ คุณกิตติ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/akharin-khunkitti",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2599%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B9%258C-%25E0%25B8%2584%25E0%25B8%25B8%25E0%25B8%2593%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%2595%25E0%25B8%25B4-500x500.jpg&w=640&q=75",
+      "scopus_id": "55967009300",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=55967009300"
+    },
+    {
+      "name": "Pattarachai Lalitrojwong",
+      "thai_name": "ผศ.ดร. ภัทรชัย ลลิตโรจน์วงศ์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/pattarachai-lalitrojwong",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A0%25E0%25B8%25B1%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%258A%25E0%25B8%25B1%25E0%25B8%25A2-%25E0%25B8%25A5%25E0%25B8%25A5%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%258C%25E0%25B8%25A7%25E0%25B8%2587%25E0%25B8%25A8%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "6506301016",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6506301016"
+    },
+    {
+      "name": "Kamol Wasapinyokul",
+      "thai_name": "ผศ.ดร. กมล วสะภิญโญกุลส่วนงานผู้บริหารตำแหน่งรองคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kamol-wasapinyokul",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2FKamol%252001-1-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Pattanapong Chantamit O Pas",
+      "thai_name": "ผศ.ดร. พัฒนพงษ์ ฉันทมิตรโอภาสตำแหน่งประธานสาขาวิชาเทคโนโลยีสารสนเทศ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/pattanapong-chantamit-o-pas",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B8%259E%25E0%25B8%2587%25E0%25B8%25A9%25E0%25B9%258C-%25E0%25B8%2589%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2597%25E0%25B8%25A1%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25A3%25E0%25B9%2582%25E0%25B8%25AD%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%25AA-500x500.jpg&w=640&q=75",
+      "scopus_id": "57196081489",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=57196081489"
+    },
+    {
+      "name": "Sumet Prabhavat",
+      "thai_name": "ผศ.ดร. สุเมธ ประภาวัต",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sumet-prabhavat",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B9%2580%25E0%25B8%25A1%25E0%25B8%2598-%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%25A0%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%2595-500x500.jpg&w=640&q=75",
+      "scopus_id": "35729106100",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=35729106100"
+    },
+    {
+      "name": "Anuntapat Anuntachai",
+      "thai_name": "ผศ.ดร. อนันตพัฒน์ อนันตชัยตำแหน่งผู้ช่วยคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/anuntapat-anuntachai",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2592%25E0%25B8%2599%25E0%25B9%258C-%25E0%25B8%25AD%25E0%25B8%2599%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B8%258A%25E0%25B8%25B1%25E0%25B8%25A2-500x500.jpg&w=640&q=75",
+      "scopus_id": "54947306400",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=54947306400"
+    },
+    {
+      "name": "Boonprasert Surakratanasakul",
+      "thai_name": "ผศ.ดร. บุญประเสริฐ สุรักษ์รัตนสกุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/boonprasert-surakratanasakul",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259A%25E0%25B8%25B8%25E0%25B8%258D%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2590-%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B9%258C%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B8%25AA%25E0%25B8%2581%25E0%25B8%25B8%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": "55320442600",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=55320442600"
+    },
+    {
+      "name": "Lapas Pradittasnee",
+      "thai_name": "ผศ.ดร. ลภัส ประดิษฐ์ทัศนีย์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/lapas-pradittasnee",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A5%25E0%25B8%25A0%25E0%25B8%25B1%25E0%25B8%25AA-%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2594%25E0%25B8%25B4%25E0%25B8%25A9%25E0%25B8%2590%25E0%25B9%258C%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%25A8%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "55567253800",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=55567253800"
+    },
+    {
+      "name": "Supannada Chotipant",
+      "thai_name": "ผศ.ดร. สุพัณณดา โชติพันธ์ตำแหน่งผู้ช่วยคณบดี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/supannada-chotipant",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2593%25E0%25B8%2593%25E0%25B8%2594%25E0%25B8%25B2-%25E0%25B9%2582%25E0%25B8%258A%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "56413085800",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56413085800"
+    },
+    {
+      "name": "Somkiat Wangsiripitak",
+      "thai_name": "ผศ.ดร. สมเกียรติ วังศิริพิทักษ์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/somkiat-wangsiripitak",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B8%25A3%25E0%25B8%2595%25E0%25B8%25B4-%25E0%25B8%25A7%25E0%25B8%25B1%25E0%25B8%2587%25E0%25B8%25A8%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%259E%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%2581%25E0%25B8%25A9%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "11540032900",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=11540032900"
+    },
+    {
+      "name": "Supakit Nootyaskool",
+      "thai_name": "ผศ.ดร. สุภกิจ นุตยะสกุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/supakit-nootyaskool",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%2581%25E0%25B8%25B4%25E0%25B8%2588-%25E0%25B8%2599%25E0%25B8%25B8%25E0%25B8%2595%25E0%25B8%25A2%25E0%25B8%25B0%25E0%25B8%25AA%25E0%25B8%2581%25E0%25B8%25B8%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": "6504273725",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=6504273725"
+    },
+    {
+      "name": "Manop Phankokkruad",
+      "thai_name": "ผศ.ดร. มานพ พันธ์โคกกรวด",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/manop-phankokkruad",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%259E-%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C%25E0%25B9%2582%25E0%25B8%2584%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%2594-500x500.jpg&w=640&q=75",
+      "scopus_id": "25926548900",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25926548900"
+    },
+    {
+      "name": "Kanokwan Atchariyachanvanich",
+      "thai_name": "ผศ.ดร. กนกวรรณ อัจฉริยะชาญวณิช",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/kanokwan-atchariyachanvanich",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2581%25E0%25B8%2599%25E0%25B8%2581%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2593-%25E0%25B8%25AD%25E0%25B8%25B1%25E0%25B8%2588%25E0%25B8%2589%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25A2%25E0%25B8%25B0%25E0%25B8%258A%25E0%25B8%25B2%25E0%25B8%258D%25E0%25B8%25A7%25E0%25B8%2593%25E0%25B8%25B4%25E0%25B8%258A-500x500.jpg&w=640&q=75",
+      "scopus_id": "23388644000",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=23388644000"
+    },
+    {
+      "name": "Sirion Vittayakorn",
+      "thai_name": "ผศ.ดร. สิริอร วิทยากร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sirion-vittayakorn",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%25AD%25E0%25B8%25A3-%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%25A2%25E0%25B8%25B2%25E0%25B8%2581%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": "25032277800",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25032277800"
+    },
+    {
+      "name": "Pornsuree Jamsri",
+      "thai_name": "ผศ.ดร. พรสุรีย์ แจ่มศรี",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/pornsuree-jamsri",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259E%25E0%25B8%25A3%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A3%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B9%258C-%25E0%25B9%2581%25E0%25B8%2588%25E0%25B9%2588%25E0%25B8%25A1%25E0%25B8%25A8%25E0%25B8%25A3%25E0%25B8%25B5-500x500.jpg&w=640&q=75",
+      "scopus_id": "22835215900",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=22835215900"
+    },
+    {
+      "name": "Samart Moodleah",
+      "thai_name": "ผศ.ดร. สามารถ หมุดและ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/samart-moodleah",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%2596-%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B8%25B0-500x500.jpg&w=640&q=75",
+      "scopus_id": "25031594100",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25031594100"
+    },
+    {
+      "name": "Taravichet Titijaroonroj",
+      "thai_name": "ผศ.ดร. ธราวิเชษฐ์ ธิติจรูญโรจน์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/taravichet-titijaroonroj",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%2598%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B9%2580%25E0%25B8%258A%25E0%25B8%25A9%25E0%25B8%2590%25E0%25B9%258C-%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B8%2595%25E0%25B8%25B4%25E0%25B8%2588%25E0%25B8%25A3%25E0%25B8%25B9%25E0%25B8%258D%25E0%25B9%2582%25E0%25B8%25A3%25E0%25B8%2588%25E0%25B8%2599%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "56347582800",
+      "scopus_url": "http://www.scopus.com/authid/detail.url?authorId=56347582800"
+    },
+    {
+      "name": "Praphan Pavarangkoon",
+      "thai_name": "ผศ.ดร. ประพันธ์ ปวรางกูร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/praphan-pavarangkoon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C-%25E0%25B8%259B%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2581%25E0%25B8%25B9%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": "57211337605",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=57211337605"
+    },
+    {
+      "name": "Tuchsanai Ploysuwan",
+      "thai_name": "ผศ.ดร. ทัศนัย พลอยสุวรรณ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/tuchsanai-ploysuwan",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2FTuchsanai-300x300%2520023-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Suvit Poomrittigul",
+      "thai_name": "ผศ.ดร. สุวิทย์ ภูมิฤทธิกุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/suvit-poomrittigul",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%2520%25E0%25B9%2580%25E0%25B8%259A%25E0%25B8%25A5-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Nont Kanungsukkasem",
+      "thai_name": "ผศ.ดร. นนท์ คนึงสุขเกษม",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/nont-kanungsukkasem",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%2520%25E0%25B8%2599%25E0%25B8%2599-500x500.jpg&w=640&q=75",
+      "scopus_id": "56205725200",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56205725200"
+    },
+    {
+      "name": "Warune Buavirat",
+      "thai_name": "วท.บ. (สถิติ) มหาวิทยาลัยศิลปากร, 2539",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/warune-buavirat",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A7%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%25B8%25E0%25B8%2599%25E0%25B8%25B5-%25E0%25B8%259A%25E0%25B8%25B1%25E0%25B8%25A7%25E0%25B8%25A7%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%2595%25E0%25B8%2599%25E0%25B9%258C-500x500.jpg&w=640&q=75",
+      "scopus_id": "56875402500",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56875402500"
+    },
+    {
+      "name": "Supawan Tassanaprasert",
+      "thai_name": "ดร. สุภวรรณ ทัศนประเสริฐ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/supawan-tassanaprasert",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%25A0%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25A3%25E0%25B8%2593-%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%25A8%25E0%25B8%2599%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B9%2580%25E0%25B8%25AA%25E0%25B8%25A3%25E0%25B8%25B4%25E0%25B8%2590-500x500.jpg&w=640&q=75",
+      "scopus_id": "25930767300",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=25930767300"
+    },
+    {
+      "name": "Sirasit Lochanachit",
+      "thai_name": "ดร. ศิรสิทธิ์ โล่ห์ชนะจิต",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sirasit-lochanachit",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A8%25E0%25B8%25B4%25E0%25B8%25A3%25E0%25B8%25AA%25E0%25B8%25B4%25E0%25B8%2597%25E0%25B8%2598%25E0%25B8%25B4%25E0%25B9%258C-%25E0%25B9%2582%25E0%25B8%25A5%25E0%25B9%2588%25E0%25B8%25AB%25E0%25B9%258C%25E0%25B8%258A%25E0%25B8%2599%25E0%25B8%25B0%25E0%25B8%2588%25E0%25B8%25B4%25E0%25B8%2595-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Nat Dilokthanakul",
+      "thai_name": "ดร. ณัฏฐ์ ดิลกธนากุล",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/nat-dilokthanakul",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%2520%25E0%25B8%2593%25E0%25B8%25B1%25E0%25B8%2590-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Bhattarabhorn Wattanacheep",
+      "thai_name": "ดร. ภัทรภร วัฒนาชีพ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/bhattarabhorn-wattanacheep",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%2520%25E0%25B8%25A5%25E0%25B8%25B9%25E0%25B8%2581%25E0%25B8%25A8%25E0%25B8%25A3-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Issarapong Khuankrue",
+      "thai_name": "ดร. อิสสระพงศ์ ค้วนเครือตำแหน่งรักษาการแทนหัวหน้าศูนย์ความเป็นเลิศทางเทคโนโลยีเชิงลึก",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/issarapong-khuankrue",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AD%2520%25E0%25B9%2580%25E0%25B8%259A%25E0%25B8%2599-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Panita Thusaranon",
+      "thai_name": "ดร. ปาณิตา ธูสรานนท์",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/panita-thusaranon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2FPanita%2520-%2520web-500x500.jpg&w=640&q=75",
+      "scopus_id": "56671355400",
+      "scopus_url": "https://www.scopus.com/authid/detail.uri?authorId=56671355400"
+    },
+    {
+      "name": "Chaloemphon Sirikayon",
+      "thai_name": "อาจารย์ เฉลิมพล ศิริกายน",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/chaloemphon-Sirikayon",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2FChaloemphon-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Sarayut Nonsiri",
+      "thai_name": "ดร. ศรายุทธ นนท์ศิริ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/Sarayut-Nonsiri",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A3%25E0%25B8%25B9%25E0%25B8%259B%2520%25E0%25B8%2594%25E0%25B8%25A3.%25E0%25B8%25A8%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%25A2%25E0%25B8%25B8%25E0%25B8%2597%25E0%25B8%2598-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Thananop Thongthavorn",
+      "thai_name": "ดร. ธนานพ ทองถาวร",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/thananop-thongthavorn",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2Ffor%2520web%2520re-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    },
+    {
+      "name": "Sittikrai Chorrojprasert",
+      "thai_name": "ดร. สิทธิไกร ฉ.โรจน์ประเสริฐ",
+      "profile_url": "https://www.it.kmitl.ac.th/th/staffs/s/sittikrai-chorrojprasert",
+      "image_url": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2FSittikrai-500x500.jpg&w=640&q=75",
+      "scopus_id": null,
+      "scopus_url": null
+    }
+  ]
+}
