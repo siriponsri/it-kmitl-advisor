@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #f8fafc;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+             /* position absolute is important and the container has to be relative or absolute as well. */
+          div.popup {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 display:none;
+                 background-color:#f5f4ed;
+                 -moz-border-radius: 3px;
+                 -webkit-border-radius: 3px;
+                 border-radius: 3px;
+                 border: 1px solid #808074;
+                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          /* hide the original tooltip */
+          .vis-tooltip {
+            display:none;
+          }
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 4, "borderWidthSelected": 6, "color": {"background": "#f59e0b", "border": "#d97706", "highlight": {"background": "#fbbf24", "border": "#f59e0b"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "25031594100", "image": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%25A3%25E0%25B8%2596-%25E0%25B8%25AB%25E0%25B8%25A1%25E0%25B8%25B8%25E0%25B8%2594%25E0%25B9%2581%25E0%25B8%25A5%25E0%25B8%25B0-500x500.jpg\u0026w=640\u0026q=75", "label": "Samart Moodleah", "margin": 12, "node_type": "professor", "physics": false, "shape": "circularImage", "size": 60, "title": "\u003cb\u003eSamart Moodleah\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eClick to view profile\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25031594100_0", "label": "Deep Learning", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eDeep Learning\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25031594100_1", "label": "Machine Learning", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eMachine Learning\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25031594100_2", "label": "Classification", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eClassification\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_0", "label": "Multi-agent deep learning on t...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMulti-agent deep learning on tensor fields for segmentation of ultrasound images\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2026\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1016/j.array.2026.100686\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1016/j.array.2026.100686"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_1", "label": "AI-Powered MetaHuman Interview...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAI-Powered MetaHuman Interviewer: Serious Game for Student Job Interview Skills\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2025.3640017\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2025.3640017"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_2", "label": "Automated Classification of Us...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAutomated Classification of User Exercise Poses in Virtual Reality Using Machine Learning-Based Human Pose Estimation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2025.3622115\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2025.3622115"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_3", "label": "Learning by Doing: The Impact ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eLearning by Doing: The Impact of Virtual Reality Scenarios on First Aid Training Effectiveness\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2024\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/RI2C64012.2024.10784384\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/RI2C64012.2024.10784384"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_4", "label": "Human Posture Detection in Vir...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eHuman Posture Detection in Virtual Reality Applications for Stress Reduction\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2024\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/RI2C64012.2024.10784374\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/RI2C64012.2024.10784374"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_5", "label": "Naval Wargame Prototyping: Mul...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eNaval Wargame Prototyping: Multiplayer Real-Time Strategy Game Simulation Using Unreal Engine\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEE59582.2023.10317764\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEE59582.2023.10317764"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_6", "label": "Adaptive Slicing of Point Clou...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAdaptive Slicing of Point Cloud Directly with Discrete Interpolable-Area Error Profile in Additive Manufacturing\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.4271/05-16-02-0014\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4271/05-16-02-0014"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_7", "label": "Edge-Driven Multi-Agent Reinfo...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEdge-Driven Multi-Agent Reinforcement Learning: A Novel Approach to Ultrasound Breast Tumor Segmentation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 4\u003cbr\u003e\u003ca href=\"https://doi.org/10.3390/diagnostics13243611\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.3390/diagnostics13243611"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_8", "label": "A Development of Game-Based Le...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA Development of Game-Based Learning in Virtual Reality for Fire Safety Training in Thailand\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 4\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/JCSSE53117.2021.9493836\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/JCSSE53117.2021.9493836"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_9", "label": "Pig Carcass Assessment on Imag...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePig Carcass Assessment on Image Segmentation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEE53064.2021.9611930\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEE53064.2021.9611930"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_10", "label": "Points using Localized Distanc...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePoints using Localized Distance for Contour Generation from Point Cloud for 3D Printing\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEE53064.2021.9611956\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEE53064.2021.9611956"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_11", "label": "Automatic white matter hyperin...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAutomatic white matter hyperintensities segmentation from brain magnetic resonance images using polar transform\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/JCSSE49651.2020.9268440\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/JCSSE49651.2020.9268440"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_12", "label": "Pattern detection for toolpath...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePattern detection for toolpath generation on triangular meshes for 5-axis CNC machining\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.14733/cadaps.2020.1294-1304\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.14733/cadaps.2020.1294-1304"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_13", "label": "Five-axis machining of STL sur...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 41, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eFive-axis machining of STL surfaces by adaptive curvilinear toolpaths\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2016\u003cbr\u003eCitations: 20\u003cbr\u003e\u003ca href=\"https://doi.org/10.1080/00207543.2016.1176265\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1080/00207543.2016.1176265"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_14", "label": "5-axis machining using a curvi...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 45, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003e5-axis machining using a curvilinear tool path aligned with the direction of the maximum removal rate\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2015\u003cbr\u003eCitations: 32\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/s00170-015-6958-9\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/s00170-015-6958-9"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25031594100_15", "label": "Low-complexity turbo equalizat...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eLow-complexity turbo equalization using E-BAD detector combine with LDPC codes for high-density magnetic recording\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2008\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ECTICON.2008.4600457\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ECTICON.2008.4600457"}]);
+                  edges = new vis.DataSet([{"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25031594100_0", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25031594100_1", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25031594100_2", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_0", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_1", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_2", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_3", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_4", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_5", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_6", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_7", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_8", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_9", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_10", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_11", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_12", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_13", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_14", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25031594100", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25031594100_15", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shadow": {"enabled": true, "color": "rgba(0,0,0,0.15)", "size": 12, "x": 3, "y": 3}, "font": {"size": 16, "face": "Arial,sans-serif", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": {"enabled": true, "type": "curvedCW", "roundness": 0.2}, "color": {"inherit": false}, "width": 2}, "physics": {"enabled": false}, "interaction": {"hover": true, "tooltipDelay": 100, "navigationButtons": true, "keyboard": {"enabled": true}, "zoomView": true, "dragView": true, "dragNodes": true}, "layout": {"randomSeed": 42, "improvedLayout": true, "hierarchical": {"enabled": true, "direction": "LR", "sortMethod": "directed", "nodeSpacing": 200, "levelSeparation": 250, "treeSpacing": 200, "blockShifting": true, "edgeMinimization": true, "parentCentralization": true}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+                  // make a custom popup
+                      var popup = document.createElement("div");
+                      popup.className = 'popup';
+                      popupTimeout = null;
+                      popup.addEventListener('mouseover', function () {
+                          console.log(popup)
+                          if (popupTimeout !== null) {
+                              clearTimeout(popupTimeout);
+                              popupTimeout = null;
+                          }
+                      });
+                      popup.addEventListener('mouseout', function () {
+                          if (popupTimeout === null) {
+                              hidePopup();
+                          }
+                      });
+                      container.appendChild(popup);
+
+
+                      // use the popup event to show
+                      network.on("showPopup", function (params) {
+                          showPopup(params);
+                      });
+
+                      // use the hide event to hide it
+                      network.on("hidePopup", function (params) {
+                          hidePopup();
+                      });
+
+                      // hiding the popup through css
+                      function hidePopup() {
+                          popupTimeout = setTimeout(function () { popup.style.display = 'none'; }, 500);
+                      }
+
+                      // showing the popup
+                      function showPopup(nodeId) {
+                          // get the data from the vis.DataSet
+                          var nodeData = nodes.get([nodeId]);
+                          popup.innerHTML = nodeData[0].title;
+
+                          // get the position of the node
+                          var posCanvas = network.getPositions([nodeId])[nodeId];
+
+                          // get the bounding box of the node
+                          var boundingBox = network.getBoundingBox(nodeId);
+
+                          //position tooltip:
+                          posCanvas.x = posCanvas.x + 0.5 * (boundingBox.right - boundingBox.left);
+
+                          // convert coordinates to the DOM space
+                          var posDOM = network.canvasToDOM(posCanvas);
+
+                          // Give it an offset
+                          posDOM.x += 10;
+                          posDOM.y -= 20;
+
+                          // show and place the tooltip.
+                          popup.style.display = 'block';
+                          popup.style.top = posDOM.y + 'px';
+                          popup.style.left = posDOM.x + 'px';
+                      }
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+        <script type="text/javascript">
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                var nodeId = params.nodes[0];
+                var node = nodes.get(nodeId);
+                if (node && node.url) {
+                    window.open(node.url, '_blank');
+                }
+            }
+        });
+        </script>
+        </body>
+</html>

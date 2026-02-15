@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #f8fafc;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+             /* position absolute is important and the container has to be relative or absolute as well. */
+          div.popup {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 display:none;
+                 background-color:#f5f4ed;
+                 -moz-border-radius: 3px;
+                 -webkit-border-radius: 3px;
+                 border-radius: 3px;
+                 border: 1px solid #808074;
+                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          /* hide the original tooltip */
+          .vis-tooltip {
+            display:none;
+          }
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 4, "borderWidthSelected": 6, "color": {"background": "#f59e0b", "border": "#d97706", "highlight": {"background": "#fbbf24", "border": "#f59e0b"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "55567253800", "image": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A5%25E0%25B8%25A0%25E0%25B8%25B1%25E0%25B8%25AA-%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%2594%25E0%25B8%25B4%25E0%25B8%25A9%25E0%25B8%2590%25E0%25B9%258C%25E0%25B8%2597%25E0%25B8%25B1%25E0%25B8%25A8%25E0%25B8%2599%25E0%25B8%25B5%25E0%25B8%25A2%25E0%25B9%258C-500x500.jpg\u0026w=640\u0026q=75", "label": "Lapas Pradittasnee", "margin": 12, "node_type": "professor", "physics": false, "shape": "circularImage", "size": 60, "title": "\u003cb\u003eLapas Pradittasnee\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eClick to view profile\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_55567253800_0", "label": "Network", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eNetwork\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_55567253800_1", "label": "Algorithm", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eAlgorithm\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_0", "label": "Resolving Load Imbalance State...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 39, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eResolving Load Imbalance State for SDN by Minimizing Maximum Load of Controllers\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 14\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/s10922-021-09612-w\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/s10922-021-09612-w"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_1", "label": "Algorithm to Balance Load of C...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAlgorithm to Balance Load of Controllers in Software-Defined Network\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ISCIT.2019.8905174\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ISCIT.2019.8905174"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_2", "label": "A Study of Improving Traffic D...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA Study of Improving Traffic Distribution Mechanism in Software-Defined Networking\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2018\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TENCON.2018.8650302\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TENCON.2018.8650302"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_3", "label": "A study of the neighbor unreac...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA study of the neighbor unreachability detection mechanism to improve performance of RPL protocol\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2017\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEED.2016.7863233\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEED.2016.7863233"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_4", "label": "Efficient Route Update and Mai...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 42, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEfficient Route Update and Maintenance for Reliable Routing in Large-Scale Sensor Networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2017\u003cbr\u003eCitations: 23\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TII.2016.2569523\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TII.2016.2569523"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_5", "label": "Improving performance of route...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eImproving performance of route maintenance processes in RPL protocol\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2017\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEED.2017.8250505\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEED.2017.8250505"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_6", "label": "Predicting path quality with c...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePredicting path quality with cross-layer information in multi-hop wireless networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2015\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEED.2015.7408991\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEED.2015.7408991"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_7", "label": "An efficient proactive route m...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAn efficient proactive route maintenance process for reliable data transmissions in sensor networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2013\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICSPCS.2013.6723922\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICSPCS.2013.6723922"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_55567253800_8", "label": "Efficient route update and mai...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEfficient route update and maintenance processes for multipath routing in large-scale industrial wireless sensor networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2012\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ATNAC.2012.6398081\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ATNAC.2012.6398081"}]);
+                  edges = new vis.DataSet([{"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_55567253800_0", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_55567253800_1", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_0", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_1", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_2", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_3", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_4", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_5", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_6", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_7", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "55567253800", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_55567253800_8", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shadow": {"enabled": true, "color": "rgba(0,0,0,0.15)", "size": 12, "x": 3, "y": 3}, "font": {"size": 16, "face": "Arial,sans-serif", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": {"enabled": true, "type": "curvedCW", "roundness": 0.2}, "color": {"inherit": false}, "width": 2}, "physics": {"enabled": false}, "interaction": {"hover": true, "tooltipDelay": 100, "navigationButtons": true, "keyboard": {"enabled": true}, "zoomView": true, "dragView": true, "dragNodes": true}, "layout": {"randomSeed": 42, "improvedLayout": true, "hierarchical": {"enabled": true, "direction": "LR", "sortMethod": "directed", "nodeSpacing": 200, "levelSeparation": 250, "treeSpacing": 200, "blockShifting": true, "edgeMinimization": true, "parentCentralization": true}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+                  // make a custom popup
+                      var popup = document.createElement("div");
+                      popup.className = 'popup';
+                      popupTimeout = null;
+                      popup.addEventListener('mouseover', function () {
+                          console.log(popup)
+                          if (popupTimeout !== null) {
+                              clearTimeout(popupTimeout);
+                              popupTimeout = null;
+                          }
+                      });
+                      popup.addEventListener('mouseout', function () {
+                          if (popupTimeout === null) {
+                              hidePopup();
+                          }
+                      });
+                      container.appendChild(popup);
+
+
+                      // use the popup event to show
+                      network.on("showPopup", function (params) {
+                          showPopup(params);
+                      });
+
+                      // use the hide event to hide it
+                      network.on("hidePopup", function (params) {
+                          hidePopup();
+                      });
+
+                      // hiding the popup through css
+                      function hidePopup() {
+                          popupTimeout = setTimeout(function () { popup.style.display = 'none'; }, 500);
+                      }
+
+                      // showing the popup
+                      function showPopup(nodeId) {
+                          // get the data from the vis.DataSet
+                          var nodeData = nodes.get([nodeId]);
+                          popup.innerHTML = nodeData[0].title;
+
+                          // get the position of the node
+                          var posCanvas = network.getPositions([nodeId])[nodeId];
+
+                          // get the bounding box of the node
+                          var boundingBox = network.getBoundingBox(nodeId);
+
+                          //position tooltip:
+                          posCanvas.x = posCanvas.x + 0.5 * (boundingBox.right - boundingBox.left);
+
+                          // convert coordinates to the DOM space
+                          var posDOM = network.canvasToDOM(posCanvas);
+
+                          // Give it an offset
+                          posDOM.x += 10;
+                          posDOM.y -= 20;
+
+                          // show and place the tooltip.
+                          popup.style.display = 'block';
+                          popup.style.top = posDOM.y + 'px';
+                          popup.style.left = posDOM.x + 'px';
+                      }
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+        <script type="text/javascript">
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                var nodeId = params.nodes[0];
+                var node = nodes.get(nodeId);
+                if (node && node.url) {
+                    window.open(node.url, '_blank');
+                }
+            }
+        });
+        </script>
+        </body>
+</html>

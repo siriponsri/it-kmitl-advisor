@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #f8fafc;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+             /* position absolute is important and the container has to be relative or absolute as well. */
+          div.popup {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 display:none;
+                 background-color:#f5f4ed;
+                 -moz-border-radius: 3px;
+                 -webkit-border-radius: 3px;
+                 border-radius: 3px;
+                 border: 1px solid #808074;
+                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          /* hide the original tooltip */
+          .vis-tooltip {
+            display:none;
+          }
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 4, "borderWidthSelected": 6, "color": {"background": "#f59e0b", "border": "#d97706", "highlight": {"background": "#fbbf24", "border": "#f59e0b"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "57211337605", "image": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B8%25B0%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C-%25E0%25B8%259B%25E0%25B8%25A7%25E0%25B8%25A3%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2581%25E0%25B8%25B9%25E0%25B8%25A3-500x500.jpg\u0026w=640\u0026q=75", "label": "Praphan Pavarangkoon", "margin": 12, "node_type": "professor", "physics": false, "shape": "circularImage", "size": 60, "title": "\u003cb\u003ePraphan Pavarangkoon\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eClick to view profile\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_0", "label": "Network", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eNetwork\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_1", "label": "IoT", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eIoT\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_2", "label": "Prediction", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003ePrediction\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_3", "label": "Web", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eWeb\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_4", "label": "Machine Learning", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eMachine Learning\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_5", "label": "Mobile", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eMobile\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_6", "label": "Deep Learning", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eDeep Learning\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_57211337605_7", "label": "Semantic", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eSemantic\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_0", "label": "Energy-Efficient and Fair Comp...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEnergy-Efficient and Fair Computation Offloading for Multi-user MEC with EH Devices\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.12720/jcm.20.6.747-757\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.12720/jcm.20.6.747-757"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_1", "label": "Automatic Smoke/Forest Fire De...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAutomatic Smoke/Forest Fire Detecting System based on Visual IoT\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICCAI66501.2025.00087\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICCAI66501.2025.00087"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_2", "label": "Prediction of Medication-Relat...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePrediction of Medication-Related Osteonecrosis of the Jaw in Patients Receiving Antiresorptive Therapy Using Machine Learning Models\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 4\u003cbr\u003e\u003ca href=\"https://doi.org/10.1016/j.joms.2024.11.013\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1016/j.joms.2024.11.013"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_3", "label": "Fairness-Aware Computation Off...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eFairness-Aware Computation Offloading for Mobile Edge Computing with Energy Harvesting\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2025.3552498\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2025.3552498"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_4", "label": "Impact of Rhythm, Tempo, and R...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eImpact of Rhythm, Tempo, and Rest Variations on Pitch Detection in Deep Learning-Based Piano Transcription Models\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2024\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEE62483.2024.10808545\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEE62483.2024.10808545"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_5", "label": "Scale-Based Slicer Placement i...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eScale-Based Slicer Placement in Elastic Optical Networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/OECC56963.2023.10209654\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/OECC56963.2023.10209654"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_6", "label": "Reducing Bandwidth Blocking Ra...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eReducing Bandwidth Blocking Rate in Elastic Optical Networks Through Scale-Based Slicer Placement Strategy\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2023.3274660\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2023.3274660"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_7", "label": "Semantic Bird\u0027View Map Predict...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eSemantic Bird\u0027View Map Prediction Using Horizontally-Aware Pyramid Occupancy Network\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEE59582.2023.10317701\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEE59582.2023.10317701"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_8", "label": "Cache Node Placement Scheme Co...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eCache Node Placement Scheme Considering Maximum Traffic in Content-Centric Networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICOIN56518.2023.10048983\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICOIN56518.2023.10048983"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_9", "label": "International Deployment of Vi...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eInternational Deployment of Visual IoT for Disaster Mitigation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 4\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ITNAC59571.2023.10368538\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ITNAC59571.2023.10368538"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_10", "label": "Spectrum Slicer Placement for ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eSpectrum Slicer Placement for Elastic Optical Network With Sparse Slicers\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2023.3285394\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2023.3285394"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_11", "label": "Elastic optical network for fr...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eElastic optical network for fragmented bandwidth allocation with limited slicers\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICITEE53064.2021.9611931\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICITEE53064.2021.9611931"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_12", "label": "An Image Stabilization Techniq...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAn Image Stabilization Technique for Long-durational Outdoor Footages Obtained by Visual IoT Systems\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/WPMC52694.2021.9700467\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/WPMC52694.2021.9700467"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_13", "label": "Large L-shape Fit Spectrum All...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 38, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eLarge L-shape Fit Spectrum Allocation for Elastic Optical Network with Spectrum Slicing\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 10\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/icoin50884.2021.9333870\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/icoin50884.2021.9333870"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_14", "label": "Spectrum allocation scheme con...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 40, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eSpectrum allocation scheme considering spectrum slicing in elastic optical networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 16\u003cbr\u003e\u003ca href=\"https://doi.org/10.1364/JOCN.422915\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1364/JOCN.422915"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_15", "label": "Development of international m...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eDevelopment of international mirroring system for real-time web of meteorological satellite data\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 3\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/s12145-020-00488-z\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/s12145-020-00488-z"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_16", "label": "Performance Evaluation of High...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePerformance Evaluation of High-Performance and Flexible Protocol on Data Mover Challenge\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/InCIT50588.2020.9310956\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/InCIT50588.2020.9310956"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_17", "label": "Visual-Based Positioning and P...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eVisual-Based Positioning and Pose Estimation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/978-3-030-63820-7_68\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/978-3-030-63820-7_68"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_18", "label": "Dynamic load balancing with le...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eDynamic load balancing with learning model for Sudoku solving system\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1016/j.dcan.2019.03.002\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1016/j.dcan.2019.03.002"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_19", "label": "Elastic optical network with s...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 43, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eElastic optical network with spectrum slicing for fragmented bandwidth allocation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 25\u003cbr\u003e\u003ca href=\"https://doi.org/10.1016/j.osn.2020.100583\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1016/j.osn.2020.100583"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_20", "label": "Performance improvement of hig...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePerformance improvement of high-speed file transfer over JHPCN\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/DASC/PiCom/CBDCom/CyberSciTech.2019.00195\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/DASC/PiCom/CBDCom/CyberSciTech.2019.00195"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_21", "label": "Children Activity Descriptions...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eChildren Activity Descriptions from Visual and Textual Associations\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/978-3-030-33709-4_11\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/978-3-030-33709-4_11"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_22", "label": "Development of high-performanc...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eDevelopment of high-performance and flexible protocol handler for international web accesses\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/HPCC/SmartCity/DSS.2019.00270\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/HPCC/SmartCity/DSS.2019.00270"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_23", "label": "A programming environment for ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA programming environment for visual IoT on raspberry Pi\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/DASC/PiCom/CBDCom/CyberSciTech.2019.00180\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/DASC/PiCom/CBDCom/CyberSciTech.2019.00180"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_57211337605_24", "label": "Design of satellite network-ba...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eDesign of satellite network-based remote control and monitoring system for power plants\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICCSN.2019.8905371\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICCSN.2019.8905371"}]);
+                  edges = new vis.DataSet([{"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_0", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_1", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_2", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_3", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_4", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_5", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_6", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_57211337605_7", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_0", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_1", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_2", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_3", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_4", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_5", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_6", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_7", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_8", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_9", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_10", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_11", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_12", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_13", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_14", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_15", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_16", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_17", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_18", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_19", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_20", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_21", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_22", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_23", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "57211337605", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_57211337605_24", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shadow": {"enabled": true, "color": "rgba(0,0,0,0.15)", "size": 12, "x": 3, "y": 3}, "font": {"size": 16, "face": "Arial,sans-serif", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": {"enabled": true, "type": "curvedCW", "roundness": 0.2}, "color": {"inherit": false}, "width": 2}, "physics": {"enabled": false}, "interaction": {"hover": true, "tooltipDelay": 100, "navigationButtons": true, "keyboard": {"enabled": true}, "zoomView": true, "dragView": true, "dragNodes": true}, "layout": {"randomSeed": 42, "improvedLayout": true, "hierarchical": {"enabled": true, "direction": "LR", "sortMethod": "directed", "nodeSpacing": 200, "levelSeparation": 250, "treeSpacing": 200, "blockShifting": true, "edgeMinimization": true, "parentCentralization": true}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+                  // make a custom popup
+                      var popup = document.createElement("div");
+                      popup.className = 'popup';
+                      popupTimeout = null;
+                      popup.addEventListener('mouseover', function () {
+                          console.log(popup)
+                          if (popupTimeout !== null) {
+                              clearTimeout(popupTimeout);
+                              popupTimeout = null;
+                          }
+                      });
+                      popup.addEventListener('mouseout', function () {
+                          if (popupTimeout === null) {
+                              hidePopup();
+                          }
+                      });
+                      container.appendChild(popup);
+
+
+                      // use the popup event to show
+                      network.on("showPopup", function (params) {
+                          showPopup(params);
+                      });
+
+                      // use the hide event to hide it
+                      network.on("hidePopup", function (params) {
+                          hidePopup();
+                      });
+
+                      // hiding the popup through css
+                      function hidePopup() {
+                          popupTimeout = setTimeout(function () { popup.style.display = 'none'; }, 500);
+                      }
+
+                      // showing the popup
+                      function showPopup(nodeId) {
+                          // get the data from the vis.DataSet
+                          var nodeData = nodes.get([nodeId]);
+                          popup.innerHTML = nodeData[0].title;
+
+                          // get the position of the node
+                          var posCanvas = network.getPositions([nodeId])[nodeId];
+
+                          // get the bounding box of the node
+                          var boundingBox = network.getBoundingBox(nodeId);
+
+                          //position tooltip:
+                          posCanvas.x = posCanvas.x + 0.5 * (boundingBox.right - boundingBox.left);
+
+                          // convert coordinates to the DOM space
+                          var posDOM = network.canvasToDOM(posCanvas);
+
+                          // Give it an offset
+                          posDOM.x += 10;
+                          posDOM.y -= 20;
+
+                          // show and place the tooltip.
+                          popup.style.display = 'block';
+                          popup.style.top = posDOM.y + 'px';
+                          popup.style.left = posDOM.x + 'px';
+                      }
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+        <script type="text/javascript">
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                var nodeId = params.nodes[0];
+                var node = nodes.get(nodeId);
+                if (node && node.url) {
+                    window.open(node.url, '_blank');
+                }
+            }
+        });
+        </script>
+        </body>
+</html>

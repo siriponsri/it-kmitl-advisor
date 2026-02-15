@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #f8fafc;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+             /* position absolute is important and the container has to be relative or absolute as well. */
+          div.popup {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 display:none;
+                 background-color:#f5f4ed;
+                 -moz-border-radius: 3px;
+                 -webkit-border-radius: 3px;
+                 border-radius: 3px;
+                 border: 1px solid #808074;
+                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          /* hide the original tooltip */
+          .vis-tooltip {
+            display:none;
+          }
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 4, "borderWidthSelected": 6, "color": {"background": "#f59e0b", "border": "#d97706", "highlight": {"background": "#fbbf24", "border": "#f59e0b"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "6505772070", "image": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25AA%25E0%25B8%25B8%25E0%25B8%2582%25E0%25B8%25AA%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2595%25E0%25B9%258C-%25E0%25B8%259E%25E0%25B8%25B2%25E0%25B8%2593%25E0%25B8%25B4%25E0%25B8%258A%25E0%25B8%259E%25E0%25B8%25B2%25E0%25B8%259E%25E0%25B8%25B4%25E0%25B8%259A%25E0%25B8%25B9%25E0%25B8%25A5-500x500.jpg\u0026w=640\u0026q=75", "label": "Sooksan Panichpapiboon", "margin": 12, "node_type": "professor", "physics": false, "shape": "circularImage", "size": 60, "title": "\u003cb\u003eSooksan Panichpapiboon\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eClick to view profile\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_6505772070_0", "label": "Mobile", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eMobile\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_6505772070_1", "label": "Network", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eNetwork\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_6505772070_2", "label": "Big Data", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eBig Data\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_6505772070_3", "label": "Deep Learning", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eDeep Learning\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_6505772070_4", "label": "Prediction", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003ePrediction\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_0", "label": "Modeling the Distributions of ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eModeling the Distributions of Taxi Supply: A Case Study in Bangkok\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/s13177-025-00469-w\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/s13177-025-00469-w"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_1", "label": "Characterizing the Distributio...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eCharacterizing the Distributions of Taxi Demand: Is Poisson the Right Model?\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2024\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2024.3394497\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2024.3394497"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_2", "label": "What Separates High-Performing...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eWhat Separates High-Performing Taxis From the Rest? A Case Study in Bangkok\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2024\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2024.3519190\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2024.3519190"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_3", "label": "A Big Data Analysis on Urban M...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 38, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA Big Data Analysis on Urban Mobility: Case of Bangkok\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2022\u003cbr\u003eCitations: 11\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2022.3170068\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2022.3170068"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_4", "label": "A big data analysis on efficie...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA big data analysis on efficiency of bangkok taxi system\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ECTI-CON51831.2021.9454833\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ECTI-CON51831.2021.9454833"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_5", "label": "Real-Time Vehicle Maneuvering ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eReal-Time Vehicle Maneuvering Detection with Digital Compass\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2021.3097752\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2021.3097752"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_6", "label": "Lane Change Detection with Sma...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 39, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eLane Change Detection with Smartphones: A Steering Wheel-Based Approach\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 14\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ACCESS.2020.2994352\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ACCESS.2020.2994352"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_7", "label": "Clearance Estimation through M...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eClearance Estimation through Mobile Sensing\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2018\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICSEC.2017.8443796\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICSEC.2017.8443796"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_8", "label": "Real-Time Lane Change Detectio...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 37, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eReal-Time Lane Change Detection Through Steering Wheel Rotation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2018\u003cbr\u003eCitations: 7\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/VNC.2018.8628461\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/VNC.2018.8628461"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_9", "label": "Travel-time prediction with de...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 49, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eTravel-time prediction with deep learning\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2017\u003cbr\u003eCitations: 43\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TENCON.2016.7848343\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TENCON.2016.7848343"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_10", "label": "Traffic Density Estimation: A ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 43, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eTraffic Density Estimation: A Mobile Sensing Approach\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2017\u003cbr\u003eCitations: 25\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/MCOM.2017.1700693\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/MCOM.2017.1700693"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_11", "label": "Incidents detection through mo...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eIncidents detection through mobile sensing\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2016\u003cbr\u003eCitations: 3\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ECTICon.2016.7561238\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ECTICon.2016.7561238"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_12", "label": "Effective variables for urban ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 38, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEffective variables for urban traffic incident detection\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2016\u003cbr\u003eCitations: 9\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/VNC.2015.7385576\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/VNC.2015.7385576"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_13", "label": "Traffic Sensing Through Accele...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 41, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eTraffic Sensing Through Accelerometers\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2016\u003cbr\u003eCitations: 19\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TVT.2015.2448237\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TVT.2015.2448237"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_14", "label": "Speed estimation through mobil...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eSpeed estimation through mobile sensing\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2015\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TENCON.2014.7022319\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TENCON.2014.7022319"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_15", "label": "Time-headway distributions on ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 42, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eTime-headway distributions on an expressway: Case of bangkok\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2015\u003cbr\u003eCitations: 21\u003cbr\u003e\u003ca href=\"https://doi.org/10.1061/(ASCE)TE.1943-5436.0000731\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1061/(ASCE)TE.1943-5436.0000731"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_16", "label": "Irresponsible forwarding under...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 50, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eIrresponsible forwarding under real intervehicle spacing distributions\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2013\u003cbr\u003eCitations: 45\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TVT.2013.2240026\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TVT.2013.2240026"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_17", "label": "A review of information dissem...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 50, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA review of information dissemination protocols for vehicular ad hoc networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2012\u003cbr\u003eCitations: 269\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/SURV.2011.070711.00131\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/SURV.2011.070711.00131"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_18", "label": "Effects of intervehicle spacin...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 50, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEffects of intervehicle spacing distributions on connectivity of VANET: A case study from measured highway traffic\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2012\u003cbr\u003eCitations: 57\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/MCOM.2012.6316781\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/MCOM.2012.6316781"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_19", "label": "Irresponsible forwarding under...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 37, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eIrresponsible forwarding under general inter-vehicle spacing distributions\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2011\u003cbr\u003eCitations: 6\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ECTICON.2011.5947848\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ECTICON.2011.5947848"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_20", "label": "Exploiting wireless communicat...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 44, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eExploiting wireless communication in vehicle density estimation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2011\u003cbr\u003eCitations: 27\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/TVT.2011.2158566\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/TVT.2011.2158566"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_21", "label": "Connectivity of ad hoc wireles...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 41, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eConnectivity of ad hoc wireless networks: An alternative to graph-theoretic approaches\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2010\u003cbr\u003eCitations: 18\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/s11276-009-0169-y\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/s11276-009-0169-y"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_22", "label": "An analysis of GPS sampling ra...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAn analysis of GPS sampling rates required in travel time estimation\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2009\u003cbr\u003eCitations: 4\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/VNC.2009.5416367\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/VNC.2009.5416367"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_23", "label": "Efficient broadcasting in IEEE...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 44, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEfficient broadcasting in IEEE 802.11 networks through irresponsible forwarding\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2009\u003cbr\u003eCitations: 27\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/GLOCOM.2009.5426212\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/GLOCOM.2009.5426212"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_6505772070_24", "label": "Connectivity requirements for ...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eConnectivity requirements for vehicular networks with single-hop broadcasting\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2009\u003cbr\u003eCitations: 3\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ITST.2009.5399322\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ITST.2009.5399322"}]);
+                  edges = new vis.DataSet([{"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_6505772070_0", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_6505772070_1", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_6505772070_2", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_6505772070_3", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_6505772070_4", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_0", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_1", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_2", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_3", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_4", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_5", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_6", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_7", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_8", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_9", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_10", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_11", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_12", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_13", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_14", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_15", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_16", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_17", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_18", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_19", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_20", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_21", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_22", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_23", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "6505772070", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_6505772070_24", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shadow": {"enabled": true, "color": "rgba(0,0,0,0.15)", "size": 12, "x": 3, "y": 3}, "font": {"size": 16, "face": "Arial,sans-serif", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": {"enabled": true, "type": "curvedCW", "roundness": 0.2}, "color": {"inherit": false}, "width": 2}, "physics": {"enabled": false}, "interaction": {"hover": true, "tooltipDelay": 100, "navigationButtons": true, "keyboard": {"enabled": true}, "zoomView": true, "dragView": true, "dragNodes": true}, "layout": {"randomSeed": 42, "improvedLayout": true, "hierarchical": {"enabled": true, "direction": "LR", "sortMethod": "directed", "nodeSpacing": 200, "levelSeparation": 250, "treeSpacing": 200, "blockShifting": true, "edgeMinimization": true, "parentCentralization": true}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+                  // make a custom popup
+                      var popup = document.createElement("div");
+                      popup.className = 'popup';
+                      popupTimeout = null;
+                      popup.addEventListener('mouseover', function () {
+                          console.log(popup)
+                          if (popupTimeout !== null) {
+                              clearTimeout(popupTimeout);
+                              popupTimeout = null;
+                          }
+                      });
+                      popup.addEventListener('mouseout', function () {
+                          if (popupTimeout === null) {
+                              hidePopup();
+                          }
+                      });
+                      container.appendChild(popup);
+
+
+                      // use the popup event to show
+                      network.on("showPopup", function (params) {
+                          showPopup(params);
+                      });
+
+                      // use the hide event to hide it
+                      network.on("hidePopup", function (params) {
+                          hidePopup();
+                      });
+
+                      // hiding the popup through css
+                      function hidePopup() {
+                          popupTimeout = setTimeout(function () { popup.style.display = 'none'; }, 500);
+                      }
+
+                      // showing the popup
+                      function showPopup(nodeId) {
+                          // get the data from the vis.DataSet
+                          var nodeData = nodes.get([nodeId]);
+                          popup.innerHTML = nodeData[0].title;
+
+                          // get the position of the node
+                          var posCanvas = network.getPositions([nodeId])[nodeId];
+
+                          // get the bounding box of the node
+                          var boundingBox = network.getBoundingBox(nodeId);
+
+                          //position tooltip:
+                          posCanvas.x = posCanvas.x + 0.5 * (boundingBox.right - boundingBox.left);
+
+                          // convert coordinates to the DOM space
+                          var posDOM = network.canvasToDOM(posCanvas);
+
+                          // Give it an offset
+                          posDOM.x += 10;
+                          posDOM.y -= 20;
+
+                          // show and place the tooltip.
+                          popup.style.display = 'block';
+                          popup.style.top = posDOM.y + 'px';
+                          popup.style.left = posDOM.x + 'px';
+                      }
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+        <script type="text/javascript">
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                var nodeId = params.nodes[0];
+                var node = nodes.get(nodeId);
+                if (node && node.url) {
+                    window.open(node.url, '_blank');
+                }
+            }
+        });
+        </script>
+        </body>
+</html>

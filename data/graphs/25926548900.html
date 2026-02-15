@@ -1,0 +1,220 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 900px;
+                 background-color: #f8fafc;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+             /* position absolute is important and the container has to be relative or absolute as well. */
+          div.popup {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 display:none;
+                 background-color:#f5f4ed;
+                 -moz-border-radius: 3px;
+                 -webkit-border-radius: 3px;
+                 border-radius: 3px;
+                 border: 1px solid #808074;
+                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          }
+
+          /* hide the original tooltip */
+          .vis-tooltip {
+            display:none;
+          }
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"borderWidth": 4, "borderWidthSelected": 6, "color": {"background": "#f59e0b", "border": "#d97706", "highlight": {"background": "#fbbf24", "border": "#f59e0b"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "25926548900", "image": "https://www.it.kmitl.ac.th/_next/image?url=https%3A%2F%2Fs3.www.it.kmitl.co%2Fwwwitkmitl%2F%25E0%25B8%25A1%25E0%25B8%25B2%25E0%25B8%2599%25E0%25B8%259E-%25E0%25B8%259E%25E0%25B8%25B1%25E0%25B8%2599%25E0%25B8%2598%25E0%25B9%258C%25E0%25B9%2582%25E0%25B8%2584%25E0%25B8%2581%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25A7%25E0%25B8%2594-500x500.jpg\u0026w=640\u0026q=75", "label": "Manop Phankokkruad", "margin": 12, "node_type": "professor", "physics": false, "shape": "circularImage", "size": 60, "title": "\u003cb\u003eManop Phankokkruad\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eClick to view profile\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25926548900_0", "label": "Classification", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eClassification\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25926548900_1", "label": "Neural Network", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eNeural Network\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25926548900_2", "label": "Network", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eNetwork\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25926548900_3", "label": "Prediction", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003ePrediction\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25926548900_4", "label": "Clustering", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eClustering\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 3, "borderWidthSelected": 5, "color": {"background": "#06b6d4", "border": "#0891b2", "highlight": {"background": "#22d3ee", "border": "#06b6d4"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "topic_25926548900_5", "label": "Algorithm", "margin": 10, "node_type": "topic", "physics": false, "shape": "dot", "size": 45, "title": "\u003cb\u003eAlgorithm\u003c/b\u003e\u003cbr\u003e\u003cspan style=\u0027color:#666\u0027\u003eResearch Area\u003c/span\u003e"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_0", "label": "Improving the Sound Classifica...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eImproving the Sound Classification Accuracy Using CNN-LSTM and MFCC with Audio Augmentation for Diagnosing Respiratory Disease\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2025\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICAIBD64986.2025.11082034\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICAIBD64986.2025.11082034"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_1", "label": "Subcellular Protein Patterns C...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eSubcellular Protein Patterns Classification Using Extreme Gradient Boosting with\u00a0Deep Transfer Learning as\u00a0Feature Extractor\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2024\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/978-3-031-56388-1_9\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/978-3-031-56388-1_9"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_2", "label": "Morphology and Properties of P...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMorphology and Properties of Poly(Lactic Acid) and Polybutylene Succinate and Ethylene-co-Methyl Acrylate-co-Glycidyl Methacrylate Ternary Blends\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/p-jl4d18\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/p-jl4d18"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_3", "label": "Improving Classification Effic...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eImproving Classification Efficiency Based on Combination of Extreme Gradient Boosting and Deep Transfer Learning\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2023\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICCC59590.2023.10507377\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICCC59590.2023.10507377"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_4", "label": "Mechanical, Thermal and Morpho...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMechanical, Thermal and Morphological Properties of Poly(Lactic Acid) and Poly(Butylene Adipate-co-Terephthalate) Blends with Organoclay\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2022\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/p-z5i0zm\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/p-z5i0zm"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_5", "label": "Stages of Progression Classifi...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eStages of Progression Classification of Alzheimer\u0027s Disease Using Deep Transfer Learning Models with Over-Sampling\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2022\u003cbr\u003eCitations: 3\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICoDSE56892.2022.9971931\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICoDSE56892.2022.9971931"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_6", "label": "Performance Analysis and Compa...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePerformance Analysis and Comparison of Cerebral Stroke Prediction Models on Imbalanced Datasets\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2022\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/BCD54882.2022.9900833\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/BCD54882.2022.9900833"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_7", "label": "Ensemble Transfer Learning for...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 47, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEnsemble Transfer Learning for Lung Cancer Detection\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 38\u003cbr\u003e\u003ca href=\"https://doi.org/10.1145/3478905.3478995\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1145/3478905.3478995"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_8", "label": "Influence of cellulose fiber c...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eInfluence of cellulose fiber content on morphology and properties of poly(Lactic acid)/propylene-ethylene copolymer/cellulose composites\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/SSP.315.128\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/SSP.315.128"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_9", "label": "Evaluation of Deep Transfer Le...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEvaluation of Deep Transfer Learning Models in Glaucoma Detection for Clinical Application\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2021\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICOIACT53268.2021.9563969\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICOIACT53268.2021.9563969"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_10", "label": "Improvement of poly(Lactic aci...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eImprovement of poly(Lactic acid) properties by ethylene-octene copolymer and organoclay\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/MSF.1009.43\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/MSF.1009.43"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_11", "label": "A Comparison of Extreme Gradie...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA Comparison of Extreme Gradient Boosting and Convolutional Neural Network-Long Short-Term Memory for Service Demand Forecasting\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/978-3-030-32456-8_60\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/978-3-030-32456-8_60"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_12", "label": "Morphology and properties of p...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMorphology and properties of poly(lactic acid)/ethylene-octene copolymer blends with different organoclay types\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 0\u003c/div\u003e"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_13", "label": "Cost-Sensitive Extreme Gradien...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 40, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eCost-Sensitive Extreme Gradient Boosting for Imbalanced Classification of Breast Cancer Diagnosis\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 17\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICCSCE50387.2020.9204948\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICCSCE50387.2020.9204948"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_14", "label": "COVID-19 Pneumonia detection i...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 38, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eCOVID-19 Pneumonia detection in chest X-ray images using transfer learning of convolutional neural networks\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2020\u003cbr\u003eCitations: 11\u003cbr\u003e\u003ca href=\"https://doi.org/10.1145/3414274.3414496\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1145/3414274.3414496"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_15", "label": "Morphology and properties of p...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMorphology and properties of poly(Lactic acid)/ethylene-octene copolymer nanocomposites\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/MSF.953.47\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/MSF.953.47"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_16", "label": "Improvement of poly(Lactic aci...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eImprovement of poly(Lactic acid) properties by using acrylonitrile-butadiene rubber and polyethylene-g-maleic anhydride\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/MSF.972.178\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/MSF.972.178"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_17", "label": "Prediction of mechanical prope...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 37, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003ePrediction of mechanical properties of polymer materials using extreme gradient boosting on high molecular weight polymers\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 7\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/978-3-319-93659-8_33\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/978-3-319-93659-8_33"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_18", "label": "Morphology, mechanical and the...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMorphology, mechanical and thermal properties of poly(Lactic acid)/propylene-ethylene copolymer/cellulose composites\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/MSF.972.172\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/MSF.972.172"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_19", "label": "Morphology and mechanical prop...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMorphology and mechanical properties of poly(Lactic acid) with propylene-ethylene copolymer and \u03b1-cellulose\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 0\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/MSF.947.200\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/MSF.947.200"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_20", "label": "An application of convolutiona...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eAn application of convolutional neural network-long short-term memory model for service demand forecasting\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 3\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICOIACT46704.2019.8938553\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICOIACT46704.2019.8938553"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_21", "label": "A comparison of efficiency imp...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eA comparison of efficiency improvement for long short-term memory model using convolutional operations and convolutional neural network\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2019\u003cbr\u003eCitations: 5\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/ICOIACT46704.2019.8938410\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/ICOIACT46704.2019.8938410"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_22", "label": "Classification of file duplica...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eClassification of file duplication by hierarchical clustering based on similarity relations\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2018\u003cbr\u003eCitations: 2\u003cbr\u003e\u003ca href=\"https://doi.org/10.1109/FSKD.2017.8393004\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1109/FSKD.2017.8393004"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_23", "label": "Mechanical properties and phas...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 36, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eMechanical properties and phase morphology of poly(lactic acid)/acrylonitrile-butadiene rubber/organoclay nanocomposites prepared by melt blending\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2018\u003cbr\u003eCitations: 4\u003cbr\u003e\u003ca href=\"https://doi.org/10.4028/www.scientific.net/KEM.775.13\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.4028/www.scientific.net/KEM.775.13"}, {"borderWidth": 2, "borderWidthSelected": 4, "color": {"background": "#1e3a8a", "border": "#1e40af", "highlight": {"background": "#3b82f6", "border": "#2563eb"}}, "fixed": false, "font": {"color": "#1e293b"}, "id": "paper_25926548900_24", "label": "Efficient similarity measureme...", "margin": 8, "node_type": "paper", "physics": false, "shape": "dot", "size": 35, "title": "\u003cdiv style=\u0027max-width:300px\u0027\u003e\u003cb\u003eEfficient similarity measurement by the combination of distance algorithms to identify the duplication relativity\u003c/b\u003e\u003cbr\u003e\u003cbr\u003eYear: 2018\u003cbr\u003eCitations: 1\u003cbr\u003e\u003ca href=\"https://doi.org/10.1007/978-3-319-60170-0_17\" target=\"_blank\" style=\"color:#3b82f6\"\u003eView Paper\u003c/a\u003e\u003c/div\u003e\u003cbr\u003e\u003ci style=\"color:#3b82f6\"\u003eClick to open\u003c/i\u003e", "url": "https://doi.org/10.1007/978-3-319-60170-0_17"}]);
+                  edges = new vis.DataSet([{"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25926548900_0", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25926548900_1", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25926548900_2", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25926548900_3", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25926548900_4", "width": 1}, {"color": {"color": "#94a3b8", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "expertise", "to": "topic_25926548900_5", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_0", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_1", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_2", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_3", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_4", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_5", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_6", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_7", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_8", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_9", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_10", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_11", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_12", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_13", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_14", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_15", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_16", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_17", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_18", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_19", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_20", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_21", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_22", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_23", "width": 1}, {"color": {"color": "#cbd5e1", "opacity": 0.5}, "from": "25926548900", "smooth": {"enabled": true, "roundness": 0.6, "type": "continuous"}, "title": "authored", "to": "paper_25926548900_24", "width": 1}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"shadow": {"enabled": true, "color": "rgba(0,0,0,0.15)", "size": 12, "x": 3, "y": 3}, "font": {"size": 16, "face": "Arial,sans-serif", "strokeWidth": 0, "align": "center"}}, "edges": {"smooth": {"enabled": true, "type": "curvedCW", "roundness": 0.2}, "color": {"inherit": false}, "width": 2}, "physics": {"enabled": false}, "interaction": {"hover": true, "tooltipDelay": 100, "navigationButtons": true, "keyboard": {"enabled": true}, "zoomView": true, "dragView": true, "dragNodes": true}, "layout": {"randomSeed": 42, "improvedLayout": true, "hierarchical": {"enabled": true, "direction": "LR", "sortMethod": "directed", "nodeSpacing": 200, "levelSeparation": 250, "treeSpacing": 200, "blockShifting": true, "edgeMinimization": true, "parentCentralization": true}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+                  // make a custom popup
+                      var popup = document.createElement("div");
+                      popup.className = 'popup';
+                      popupTimeout = null;
+                      popup.addEventListener('mouseover', function () {
+                          console.log(popup)
+                          if (popupTimeout !== null) {
+                              clearTimeout(popupTimeout);
+                              popupTimeout = null;
+                          }
+                      });
+                      popup.addEventListener('mouseout', function () {
+                          if (popupTimeout === null) {
+                              hidePopup();
+                          }
+                      });
+                      container.appendChild(popup);
+
+
+                      // use the popup event to show
+                      network.on("showPopup", function (params) {
+                          showPopup(params);
+                      });
+
+                      // use the hide event to hide it
+                      network.on("hidePopup", function (params) {
+                          hidePopup();
+                      });
+
+                      // hiding the popup through css
+                      function hidePopup() {
+                          popupTimeout = setTimeout(function () { popup.style.display = 'none'; }, 500);
+                      }
+
+                      // showing the popup
+                      function showPopup(nodeId) {
+                          // get the data from the vis.DataSet
+                          var nodeData = nodes.get([nodeId]);
+                          popup.innerHTML = nodeData[0].title;
+
+                          // get the position of the node
+                          var posCanvas = network.getPositions([nodeId])[nodeId];
+
+                          // get the bounding box of the node
+                          var boundingBox = network.getBoundingBox(nodeId);
+
+                          //position tooltip:
+                          posCanvas.x = posCanvas.x + 0.5 * (boundingBox.right - boundingBox.left);
+
+                          // convert coordinates to the DOM space
+                          var posDOM = network.canvasToDOM(posCanvas);
+
+                          // Give it an offset
+                          posDOM.x += 10;
+                          posDOM.y -= 20;
+
+                          // show and place the tooltip.
+                          popup.style.display = 'block';
+                          popup.style.top = posDOM.y + 'px';
+                          popup.style.left = posDOM.x + 'px';
+                      }
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    
+        <script type="text/javascript">
+        network.on("click", function (params) {
+            if (params.nodes.length > 0) {
+                var nodeId = params.nodes[0];
+                var node = nodes.get(nodeId);
+                if (node && node.url) {
+                    window.open(node.url, '_blank');
+                }
+            }
+        });
+        </script>
+        </body>
+</html>
