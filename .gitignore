@@ -1,0 +1,70 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# Streamlit
+.streamlit/
+
+# Data files
+data/*.json
+*.csv
+*.xlsx
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Test files
+test_graph.html
+*.html
+
+# Pre-generated graphs (large files)
+data/graphs/
+
+# Logs
+*.log
+
+# API Keys (if accidentally saved)
+.env
+secrets.toml
+
+# Cache
+.cache/
+
+# Backup files
+*_old.py
+*_old.md
+*_backup.*
